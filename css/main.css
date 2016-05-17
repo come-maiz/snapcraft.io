@@ -2692,9 +2692,6 @@ audio:not([controls]) {
   color: #fff; }
   .strip-dark a {
     color: #fff; }
-  .strip-dark img {
-    -webkit-filter: brightness(0) invert(1);
-    filter: brightness(0) invert(1); }
 
 .row-grey {
   border: 0;
