@@ -562,6 +562,12 @@ input[type='submit'],
   input[type='submit']:hover,
   .button--primary:hover {
     background-color: #d44615; }
+  button .external,
+  input[type='button'] .external,
+  input[type='reset'] .external,
+  input[type='submit'] .external,
+  .button--primary .external {
+    background-image: url("https://assets.ubuntu.com/v1/484aba04-external-link-white.svg"); }
 
 .button--secondary {
   color: #e95420;
@@ -1515,6 +1521,56 @@ li {
       position: absolute;
       top: -5px; } }
 
+@media only screen and (min-width: 768px) {
+  .grid-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+
+.grid-list__img {
+  display: block;
+  margin: auto;
+  max-width: 60px; }
+
+.grid-list p {
+  font-size: .875rem; }
+
+.grid-list__item {
+  border-bottom: 1px dotted #888;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 768px) {
+    .grid-list__item > [class*='-col']:first-child {
+      width: 25%;
+      padding-right: 1rem; }
+    .grid-list__item > [class*='-col']:last-child {
+      width: 75%; } }
+  .grid-list__item:last-child {
+    border-bottom: 0; }
+  @media only screen and (min-width: 768px) {
+    .grid-list__item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      border-right: 1px dotted #888;
+      margin: 0;
+      padding: 1.5em .75em 0; }
+      .grid-list__item.last-col {
+        border-right: 0; }
+      .grid-list__item.last-row {
+        border-bottom: 0; } }
+
 .row {
   border-bottom: 1px dotted #888;
   clear: both;
@@ -2133,6 +2189,10 @@ li {
   font-weight: 400;
   src: url("https://assets.ubuntu.com/sites/ubuntu/latest/u/fonts/ubuntumono-r-webfont.woff2") format("woff2"), url("https://assets.ubuntu.com/sites/ubuntu/latest/u/fonts/ubuntumono-r-webfont.woff") format("woff"); }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 body {
   color: #333;
   font-family: Ubuntu, Arial, 'libra sans', sans-serif;
@@ -2350,7 +2410,7 @@ textarea {
     text-transform: uppercase; }
   p,
   li {
-    font-size: .875em; } }
+    font-size: .875rem; } }
 
 @media only screen and (min-width: 1030px) {
   p,
@@ -2613,6 +2673,12 @@ audio:not([controls]) {
 .banner .nav-primary ul li a:visited {
   border: 0; }
 
+.logo img {
+  height: 35px; }
+
+.banner .nav-primary ul {
+  float: right; }
+
 .row {
   padding-top: 40px;
   padding-bottom: 20px; }
@@ -2620,6 +2686,15 @@ audio:not([controls]) {
     .row {
       padding-top: 80px;
       padding-bottom: 60px; } }
+
+.strip-dark {
+  background: #333;
+  color: #fff; }
+  .strip-dark a {
+    color: #fff; }
+  .strip-dark img {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1); }
 
 .row-grey {
   border: 0;
@@ -2706,25 +2781,6 @@ audio:not([controls]) {
     margin: 1rem 0 0;
     text-align: center; }
 
-.card {
-  padding: 2rem 2rem 3rem;
-  border: 1px solid #d2d2d2;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  background-color: #fff; }
-  .card__img {
-    width: 100%;
-    max-width: 150px;
-    max-height: 150px;
-    margin: 0 auto 2rem;
-    display: block; }
-  .card__link {
-    display: inline-block; }
-  .card .external {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 2rem; }
-
 .command-line {
   position: relative;
   -webkit-border-radius: 4px;
@@ -2738,38 +2794,6 @@ audio:not([controls]) {
   padding: .7em 1em;
   color: #fff;
   width: 100%; }
-
-.list--bullets {
-  margin-left: 0; }
-  @media only screen and (min-width: 768px) {
-    .list--bullets {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap; } }
-  .list--bullets-item {
-    padding-left: 25px;
-    position: relative;
-    list-style: none;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-    @media only screen and (min-width: 768px) {
-      .list--bullets-item {
-        width: 50%; } }
-    .list--bullets-item:before {
-      content: '';
-      background-image: url("https://assets.ubuntu.com/v1/c4b02d61-tick-orange.svg");
-      background-repeat: no-repeat;
-      display: block;
-      left: 2px;
-      top: 5px;
-      color: #fff;
-      width: 16px;
-      height: 16px;
-      position: absolute; }
 
 .footer {
   padding: 2rem 1rem 1rem;
@@ -2795,126 +2819,14 @@ audio:not([controls]) {
   background-color: #f7f7f7;
   border-bottom: none; }
   .hero-row__heading {
-    margin-top: 3.5rem; }
+    margin-top: 4.5rem; }
+  .hero-row .intro {
+    font-size: 23px;
+    line-height: 1.5; }
 
-.media-unit {
-  margin: 4rem 0; }
-  .media-unit__img {
-    min-width: 100px;
-    height: auto;
-    margin: auto;
-    display: block;
-    max-height: 100px;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
-    margin-bottom: 1.5rem; }
-  .media-unit__txtwrap {
-    margin-left: 1rem; }
-  @media only screen and (min-width: 468px) {
-    .media-unit {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      margin: 2rem 0; }
-      .media-unit__img {
-        margin: 0; } }
-
-@-webkit-keyframes mediabox {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes mediabox {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@-webkit-keyframes mediaboxhide {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-@keyframes mediaboxhide {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-.mediabox-wrap {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 999;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: mediabox;
-          animation-name: mediabox; }
-
-.mediabox-content {
-  max-width: 853px;
-  display: block;
-  margin: 0 auto;
-  height: 100%;
-  position: relative; }
-
-.mediabox-content iframe {
-  max-width: 100% !important;
-  width: 100% !important;
-  display: block !important;
-  height: 480px !important;
-  border: none !important;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0; }
-
-.mediabox-hide {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: mediaboxhide;
-          animation-name: mediaboxhide; }
-
-.mediabox-close {
-  position: absolute;
-  top: 0;
-  cursor: pointer;
-  bottom: 528px;
-  right: 0px;
-  margin: auto 0;
-  width: 24px;
-  height: 24px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAMvSURBVHja7Js9aBRBFMd/d1lPY6FiJVjY+Fkoxl7wA1Q0prQRS6tgoZV2MWIRRVHUUq3U+JnESrS2sBXBzipREWMlATXwt8gFznC5nd15M7Nn8uC45nZnfr/dY96+N1uTxFKOOks8lgUU/H2t4tJqIQUcAiaBGeBymcECRgO4B/wBPgJ9zkdKcvkclfRL/8ZtSTXH40N+GpLGF8zth6Q9Lse7DHCsDXxVJLSDLyQhb4B+Sb/VOVJJ6ATfKqGvrIDjDvCpJLjAz8d0JwmLDTBQAD62hIakiYJzm5a021VAfwn4WBLKwLdK2JUnIJP0XX4RSoIP/Hy8W3jeepv1dL3nmjwI3DLOExrAU2DA8zwb8xKhGeCuwYQtJTSAZwbwAHdcEqFM0mPZhO/foSHppdFcrraby2IDV0FCcPi8PCClhCjwLplgCgkrDeGv5I3pcjViSogK7yogloTo8EUEhJaQBL6oAGsJ9yVtkrRD0qsU8JKolagKZ8AD4ETFymFXgPOAQpXE5mMWOAk86XZ4n6pwlSSUhvcti1dBghe8RV8gpYQRX3irxkgKCSPABV94y85QTAlm8NatsRgSTOGBUnmAS57w3KiA0Ro3gHOW8KEEAOwE3hvfXWubFauu6A6vCND07OmW9viq5vpsGT3AtRAN2XoA+BfAwQBiTweoNpMZw48BRwKuAoPN7zNVWwZjwAfpO9S7DN5cQmYAPw4cTvAsYPJ3qHcpvNmdUO9ieBMJZQT0AhMVgfeWUC8BP87cjjHfuA6sATY0c4c0EgpUUHslvTaq3l5aUL1N1oarAnxSCVWBTyYhJvyw41XJJI3GkpAH/yYyfHQJi01gdUL4qBKqCh9NQrtBx4wGvGi0XS6T9MhoTkN5AtZVDN5awlTePsGfwDfPjGwYGDKu3s4Cp4BRz/N8cskED0iaqciVt7wTvkra5roKlJEQGt5HwhdJ24vmAUUkDEV+VyCT9NBxbp/bXXnXTNBFQmz4IhI6wrs+C+zvICEVvIuEKUlbrZ4G97WRkBq+k4RJSVusd4ntlfSheVudrQh8q4SbmntH6K2kzSF3if1Xsfzq7LKAJR5/BwCdAQBJn4egPgAAAABJRU5ErkJggg==") no-repeat;
-  background-size: 24px 24px; }
-
-.mediabox-close:hover {
-  opacity: 0.5; }
-
-@media all and (max-width: 768px) {
-  .mediabox-content {
-    max-width: 90%; } }
-
-@media all and (max-width: 600px) {
-  .mediabox-content iframe {
-    height: 320px !important; }
-  .mediabox-close {
-    bottom: 362px; } }
-
-@media all and (max-width: 480px) {
-  .mediabox-content iframe {
-    height: 220px !important; }
-  .mediabox-close {
-    bottom: 262px; } }
+.inline-logos {
+  padding-top: 0; }
+  .inline-logos .inline-logos__item {
+    margin: 0; }
 
 /*# sourceMappingURL=maps/main.css.map */
