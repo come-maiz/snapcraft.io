@@ -2673,8 +2673,10 @@ audio:not([controls]) {
 .banner .nav-primary ul li a:visited {
   border: 0; }
 
-.logo img {
-  height: 35px; }
+.logo {
+  margin: 0; }
+  .logo img {
+    height: 33px; }
 
 .banner .nav-primary ul {
   float: right; }
@@ -2825,5 +2827,8 @@ audio:not([controls]) {
   padding-top: 0; }
   .inline-logos .inline-logos__item {
     margin: 0; }
+
+.grid-list h3 {
+  margin-top: .5em; }
 
 /*# sourceMappingURL=maps/main.css.map */
