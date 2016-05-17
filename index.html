@@ -1,68 +1,129 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<!-- Hero banner -->
-<section class="row hero-row">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>snapcraft - Installing snaps on ubuntu desktop</title>
+    <meta name="description" content="Introducing snaps and commands to install and remove them on Ubuntu 16.04 LTS.
+">
+
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="canonical" href="http://snapcraft.io/">
+</head>
+
+
+<body>
+
+    <header class="banner global" role="banner">
+  <nav role="navigation" class="nav-primary nav-right" id="nav">
+    <span id="main-navigation-link"><a href="#main-navigation">
+        Jump to site nav</a></span>
+    <ul>
+      <li><a href="/get-started">Get started</a></li>
+    </ul>
+  </nav>
+  <div class="nav-toggle">
+    <a href="#nav" class="nav-toggle__link open"></a>
+    <a href="#" class="nav-toggle__link close"></a>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <section class="row hero-row ">
     <div class="wrapper">
-
-        <div class="eight-col">
-
-            <div class="logo">
-                <img class="logo__img" src="https://assets.ubuntu.com/v1/4fd55d51-picto-corepower-orange.svg" alt="Cloud Init logo" />
-                <span class="logo__txt">cloud-init</span>
-            </div>
-
-            <h1 class="hero-row__heading">The standard for customising cloud instances</h1>
-        </div>
-
         <div class="six-col">
-            <a href="https://www.youtube.com/watch?v=-zL3BdbKyGY" class="hero__cta button--primary mediabox">
-                Watch tutorial
-            </a>
+            <h1 class="hero-row__heading">Snapcraft</h1>
+            <p class="intro">The secure and easy way to build and package your applications for Linux.</p>
+        </div>
+        <div class="six-col last-col">
+            <img src="https://assets.ubuntu.com/v1/6c74950c-snappy.svg" alt="" />
         </div>
     </div>
 </section>
 
-<!-- Main selling points -->
 <section class="row">
-
     <div class="wrapper">
-
-        <div class="eight-col">
-
-            <p>Cloud images are operating system templates
-                and every instance starts out as an identical clone of every other
-                instance. It is the user data that gives every cloud instance its
-                personality and cloud-init is the tool applies user data to your
-                instances automatically.</p>
-
-            <p>Use cloud-init to configure:</p>
+        <div class="seven-col">
+            <h2>Snaps work everywhere</h2>
+            <p>Snaps are the best way to install an app on Arch, Ubuntu, Debian or your favorite Linux. They are secure and always up to date. Snaps are faster, easier, safer, and the update system is transactional so your app is never broken.</p>
         </div>
-
-        <div class="twelve-col">
-            <ul class="list--bullets">
-                <li class="list--bullets-item">Setting a default locale</li>
-                <li class="list--bullets-item">Setting the hostname</li>
-                <li class="list--bullets-item">Generating and setting up SSH private keys</li>
-                <li class="list--bullets-item">Setting up ephemeral mount points</li>
+        <div class="five-col last-col">
+            <ul class="inline-logos">
+                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/887474d1-ubuntu.svg" class="inline-logos__image" alt="Ubuntu logo" /></li>
+                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/e0b23092-archlinux.svg" class="inline-logos__image" alt="Arch Linux logo" /></li>
+                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/2eafb62e-openlogo.svg" class="inline-logos__image" alt="Debian logo" /></li>
             </ul>
         </div>
     </div>
 </section>
 
-<!-- Compatible Platforms -->
 <section class="row">
     <div class="wrapper">
         <div class="eight-col">
-            <h2>Works with many popular operating systems</h2>
-            <p>While cloud-init started life in Ubuntu, it is now available for most
-                major Linux and FreeBSD operating systems. For cloud image providers,
-                then cloud-init handles many of the differences between cloud vendors
-                automatically &mdash; for example, the official Ubuntu cloud images are
-                identical across all public and private clouds.
-            </p>
+            <h2>&ldquo;hello-world&rdquo; tour</h2>
+            <p>This tutorial assumes <a href="http://www.ubuntu.com/download/" class="external">Ubuntu 16.04 LTS</a> on your desktop, cloud or server. You can also <a href="https://developer.ubuntu.com/en/snappy/start/"  class="external">install snapd</a> on other flavours of Linux, and when you do the experience is exactly the same.</p>
+        </div>
+        <div class="eight-col">
+            <h3>Snap discovery and the global snap store</h3>
+            <p>From the command line you can see the current featured snaps:</p>
+            <pre class="command-line"><code>$ snap browse
+telegram        1.2  Secure messaging system
+…
+
+Those are the featured snaps today across all devices. You can also
+try ‘snap browse categories’ to see specific types of app.</code></pre>
+            <p>You can see featured snaps in a particular category too:</p>
+            <pre class="command-line"><code>$ snap browse categories
+browser                 office
+database                management
+Containers              appservers
+content-management      java
+
+Try ‘snap browse <category>’
+
+$ snap browse database
+cassandra      3.2  Large-scale document store
+...</code></pre>
+            <p>If you know what you want, you can search the snap name or description:</p>
+            <pre class="command-line"><code>$ snap find hello-world
+Name              Version    Summary
+audovia           3.2.4      Make music using JFugue MusicStrings
+hello-world       6.0        Hello world example
+ubuntu-clock-app  3.6+snap3  Ubuntu Clock for the Unity 7 desktop</code></pre>
+            <p>Install the snap you want with a simple command</p>
+            <pre class="command-line"><code>snap install hello-world</code></pre>
+        </div>
+        <div class="eight-col">
+            <h3>Release channels &mdash; stable, candidate, beta and edge</h3>
+            <p>You can choose if you want to get development versions of an app, by selecting the preferred “channel”. By default, snaps are installed from the stable channel, but there is also a candidate channel which is “soon to be the stable release”, a beta channel and an edge channel.</p>
+            <p>Choose how much risk you want to take on this app and set the channel accordingly with --candidate, --beta or --edge when you install the snap.</p>
+            <p>Switch from stable to the beta channel to get the latest development release:</p>
+            <pre class="command-line"><code>snap install hello-world --beta</code></pre>
+        </div>
+        <div class="eight-col">
+            <h3>Know where your software comes from &mdash; snap publisher and details</h3>
+            <p>The info command shows which channels are available:</p>
+            <pre class="command-line"><code>snap info hello-world
+XXX</code></pre>
+        </div>
+        <div class="eight-col">
+            <h3>Always fresh &mdash; update fast and reliably</h3>
+            <p>Get the latest version of all your snaps by running:</p>
+            <pre class="command-line"><code>snap refresh</code></pre>
+        </div>
+    </div>
+</section>
+
+<section class="row">
+    <div class="wrapper">
+        <div class="eight-col">
+            <h2>Popular snaps</h2>
+            <p>If you are running Ubuntu 16.04 LTS, you can try all of this today. Check out the GUI <a href="http://apps.ubuntu.com">Ubuntu Software centre</a> or just use the command  line to install any of these great snaps:</p>
         </div>
 
         <ul class="equal-height no-bullets twelve-col partner-list">
@@ -71,7 +132,7 @@ layout: default
                     <div class="box__img-wrap">
                         <img class="box__img" src="https://assets.ubuntu.com/v1/887474d1-ubuntu.svg" alt="Ubuntu logo">
                     </div>
-                    <p class="box__txt">Get packages ›</p>
+                    <p class="box__txt">libreoffice</p>
                 </a>
             </li>
             <li class="box three-col">
@@ -79,7 +140,7 @@ layout: default
                     <div class="box__img-wrap">
                         <img class="box__img" src="https://assets.ubuntu.com/v1/e0b23092-archlinux.svg" alt="Arch Linux logo">
                     </div>
-                    <p class="box__txt">Get packages ›</p>
+                    <p class="box__txt">docker</p>
                 </a>
 
             </li>
@@ -88,7 +149,7 @@ layout: default
                     <div class="box__img-wrap">
                         <img class="box__img" src="https://assets.ubuntu.com/v1/31bd1765-centos.svg" alt="Centos logo">
                     </div>
-                    <p class="box__txt">Get packages ›</p>
+                    <p class="box__txt">telegram</p>
                 </a>
             </li>
 
@@ -97,7 +158,7 @@ layout: default
                     <div class="box__img-wrap">
                         <img class="box__img" src="https://assets.ubuntu.com/v1/6947a9e3-redhat.svg" alt="RedHat logo">
                     </div>
-                    <p class="box__txt">Get packages ›</p>
+                    <p class="box__txt">cassandra</p>
                 </a>
             </li>
 
@@ -106,7 +167,7 @@ layout: default
                     <div class="box__img-wrap">
                         <img class="box__img" src="https://assets.ubuntu.com/v1/6fa4b259-freebsd.png" alt="FreeBSD logo">
                     </div>
-                    <p class="box__txt">Get packages ›</p>
+                    <p class="box__txt">owncloud</p>
                 </a>
             </li>
 
@@ -115,7 +176,7 @@ layout: default
                     <div class="box__img-wrap">
                         <img class="box__img" src="https://assets.ubuntu.com/v1/1a53bedd-fedora.svg" alt="Fedora logo">
                     </div>
-                    <p class="box__txt">Get packages ›</p>
+                    <p class="box__txt">lxd</p>
                 </a>
             </li>
 
@@ -124,7 +185,7 @@ layout: default
                     <div class="box__img-wrap">
                         <img class="box__img" src="https://assets.ubuntu.com/v1/2235d892-gentoo.png" alt="Gentoo logo">
                     </div>
-                    <p class="box__txt">Get packages ›</p>
+                    <p class="box__txt">quagga</p>
                 </a>
             </li>
 
@@ -133,7 +194,33 @@ layout: default
                     <div class="box__img-wrap">
                         <img class="box__img" src="https://assets.ubuntu.com/v1/2e497b2e-opensuse.svg" alt="OpenSUSE logo">
                     </div>
-                    <p class="box__txt">Get packages ›</p>
+                    <p class="box__txt">webdm</p>
+                </a>
+            </li>
+            <li class="box three-col">
+                <a href="http://pellaeon.github.io/bsd-cloudinit">
+                    <div class="box__img-wrap">
+                        <img class="box__img" src="https://assets.ubuntu.com/v1/6fa4b259-freebsd.png" alt="FreeBSD logo">
+                    </div>
+                    <p class="box__txt">hangups</p>
+                </a>
+            </li>
+
+            <li class="box three-col">
+                <a href="https://getfedora.org/en/cloud/download/">
+                    <div class="box__img-wrap">
+                        <img class="box__img" src="https://assets.ubuntu.com/v1/1a53bedd-fedora.svg" alt="Fedora logo">
+                    </div>
+                    <p class="box__txt">squid3</p>
+                </a>
+            </li>
+
+            <li class="box three-col">
+                <a href="https://packages.gentoo.org/package/app-emulation/cloud-init">
+                    <div class="box__img-wrap">
+                        <img class="box__img" src="https://assets.ubuntu.com/v1/2235d892-gentoo.png" alt="Gentoo logo">
+                    </div>
+                    <p class="box__txt">jenkins</p>
                 </a>
             </li>
         </ul>
@@ -292,3 +379,29 @@ layout: default
         </div>
     </div>
 </section>
+
+    </div>
+
+    <!-- Footer -->
+<div class="wrapper">
+    <footer class="footer">
+
+        <p class="footer__text">&copy; 2016 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+
+        <ul class="footer__links">
+            <li class="footer__list-item"><a href="http://www.ubuntu.com//legal">Legal information</a><span class="footer__dot"> &#183;</span></li>
+            <li class="footer__list-item"><a href="https://github.com/ubuntudesign/cloud-init/issues/new">Report a bug on this site</a></li>
+        </ul>
+
+    </footer>
+</div>
+
+<script src="js/mediabox.js"></script>
+<script>
+MediaBox('.mediabox');
+</script>
+
+
+</body>
+
+</html>

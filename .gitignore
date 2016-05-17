@@ -1,8 +1,0 @@
-_site
-.sass-cache
-.jekyll-metadata
-.DS_Store
-node_modules
-css/main.css
-css/maps/main.css.map
-.publish
