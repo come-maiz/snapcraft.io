@@ -1,6 +1,6 @@
-# Cloud Init
+# Snapcraft
 
-Codebase for http://cloud-init.io - the marketing website
+Codebase for http://Snapcraft.io - the website
 
 ## Getting Started
 
