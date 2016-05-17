@@ -9,6 +9,23 @@
   }
 }
 
+.banner .nav-primary ul li:last-child,
+.banner .nav-primary ul li a,
+.banner .nav-primary ul li a:link,
+.banner .nav-primary ul li a:visited {
+  border: 0;
+}
+
+.row {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
 // row-grey override
 .row-grey {
   border: 0;
