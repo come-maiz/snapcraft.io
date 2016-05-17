@@ -6,6 +6,11 @@ $dark_aubergine: #2c001e;
   border-bottom: none;
 
   &__heading {
-    margin-top: 3.5rem;
+    margin-top: 4.5rem;
+  }
+
+  .intro {
+    font-size: 23px;
+    line-height: 1.5;
   }
 }

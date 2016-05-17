@@ -16,6 +16,14 @@
   border: 0;
 }
 
+.logo img {
+  height: 35px;
+}
+
+.banner .nav-primary ul {
+  float: right;
+}
+
 .row {
   padding-top: 40px;
   padding-bottom: 20px;
@@ -23,6 +31,20 @@
   @media only screen and (min-width: $breakpoint-medium) {
     padding-top: 80px;
     padding-bottom: 60px;
+  }
+}
+
+.strip-dark {
+  background: $cool-grey;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  img {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
   }
 }
 

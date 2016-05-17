@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="row hero-row ">
+<section class="row hero-row no-border">
     <div class="wrapper">
         <div class="six-col">
             <h1 class="hero-row__heading">Snapcraft</h1>
@@ -14,17 +14,19 @@ layout: default
     </div>
 </section>
 
-<section class="row">
+<section class="row strip-dark no-border">
     <div class="wrapper">
-        <div class="seven-col">
+        <div class="twelve-col no-margin-bottom">
             <h2>Snaps work everywhere</h2>
+        </div>
+        <div class="six-col">
             <p>Snaps are the best way to install an app on Arch, Ubuntu, Debian or your favorite Linux. They are secure and always up to date. Snaps are faster, easier, safer, and the update system is transactional so your app is never broken.</p>
         </div>
-        <div class="five-col last-col">
+        <div class="six-col last-col">
             <ul class="inline-logos">
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/887474d1-ubuntu.svg" class="inline-logos__image" alt="Ubuntu logo" /></li>
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/e0b23092-archlinux.svg" class="inline-logos__image" alt="Arch Linux logo" /></li>
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/2eafb62e-openlogo.svg" class="inline-logos__image" alt="Debian logo" /></li>
+                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/5b108690-ubuntu-white.svg" class="inline-logos__image" alt="Ubuntu logo" /></li>
+                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/25bb61ec-archlinux-white.svg" class="inline-logos__image" alt="Arch Linux logo" /></li>
+                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/451d42f7-debian-white.svg" class="inline-logos__image" alt="Debian logo" /></li>
             </ul>
         </div>
     </div>
@@ -87,6 +89,7 @@ XXX</code></pre>
     </div>
 </section>
 
+
 <section class="row">
     <div class="wrapper">
         <div class="eight-col">
@@ -94,256 +97,114 @@ XXX</code></pre>
             <p>If you are running Ubuntu 16.04 LTS, you can try all of this today. Check out the GUI <a href="http://apps.ubuntu.com">Ubuntu Software centre</a> or just use the command  line to install any of these great snaps:</p>
         </div>
 
-        <ul class="equal-height no-bullets twelve-col partner-list">
-            <li class="box three-col">
-                <a href="https://launchpad.net/ubuntu/+source/cloud-init">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/887474d1-ubuntu.svg" alt="Ubuntu logo">
-                    </div>
-                    <p class="box__txt">libreoffice</p>
-                </a>
+        <ul class="grid-list twelve-col no-bullets no-margin-bottom">
+            <li class="grid-list__item four-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">LibreOffice</a></h3>
+                </div>
             </li>
-            <li class="box three-col">
-                <a href="https://wiki.archlinux.org/index.php/Cloud-init">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/e0b23092-archlinux.svg" alt="Arch Linux logo">
-                    </div>
-                    <p class="box__txt">docker</p>
-                </a>
-
+            <li class="grid-list__item four-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">Docker</a></h3>
+                </div>
             </li>
-            <li class="box three-col">
-                <a href="http://cloud.centos.org/centos/7/images/">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/31bd1765-centos.svg" alt="Centos logo">
-                    </div>
-                    <p class="box__txt">telegram</p>
-                </a>
+            <li class="grid-list__item four-col last-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">Telegram</a></h3>
+                </div>
             </li>
-
-            <li class="box three-col last-col">
-                <a href="http://packages.qa.debian.org/c/cloud-init.html">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/6947a9e3-redhat.svg" alt="RedHat logo">
-                    </div>
-                    <p class="box__txt">cassandra</p>
-                </a>
+            <li class="grid-list__item four-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">Cassandra</a></h3>
+                </div>
             </li>
-
-            <li class="box three-col">
-                <a href="http://pellaeon.github.io/bsd-cloudinit">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/6fa4b259-freebsd.png" alt="FreeBSD logo">
-                    </div>
-                    <p class="box__txt">owncloud</p>
-                </a>
+            <li class="grid-list__item four-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">ownCloud</a></h3>
+                </div>
             </li>
-
-            <li class="box three-col">
-                <a href="https://getfedora.org/en/cloud/download/">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/1a53bedd-fedora.svg" alt="Fedora logo">
-                    </div>
-                    <p class="box__txt">lxd</p>
-                </a>
+            <li class="grid-list__item four-col last-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">LXD</a></h3>
+                </div>
             </li>
-
-            <li class="box three-col">
-                <a href="https://packages.gentoo.org/package/app-emulation/cloud-init">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/2235d892-gentoo.png" alt="Gentoo logo">
-                    </div>
-                    <p class="box__txt">quagga</p>
-                </a>
+            <li class="grid-list__item four-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">Quagga</a></h3>
+                </div>
             </li>
-
-            <li class="box three-col last-col">
-                <a href="https://susestudio.com/">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/2e497b2e-opensuse.svg" alt="OpenSUSE logo">
-                    </div>
-                    <p class="box__txt">webdm</p>
-                </a>
+            <li class="grid-list__item four-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">WebDM</a></h3>
+                </div>
             </li>
-            <li class="box three-col">
-                <a href="http://pellaeon.github.io/bsd-cloudinit">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/6fa4b259-freebsd.png" alt="FreeBSD logo">
-                    </div>
-                    <p class="box__txt">hangups</p>
-                </a>
+            <li class="grid-list__item four-col last-col">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">Hangups</a></h3>
+                </div>
             </li>
-
-            <li class="box three-col">
-                <a href="https://getfedora.org/en/cloud/download/">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/1a53bedd-fedora.svg" alt="Fedora logo">
-                    </div>
-                    <p class="box__txt">squid3</p>
-                </a>
+            <li class="grid-list__item four-col last-row">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">Squid3</a></h3>
+                </div>
             </li>
-
-            <li class="box three-col">
-                <a href="https://packages.gentoo.org/package/app-emulation/cloud-init">
-                    <div class="box__img-wrap">
-                        <img class="box__img" src="https://assets.ubuntu.com/v1/2235d892-gentoo.png" alt="Gentoo logo">
-                    </div>
-                    <p class="box__txt">jenkins</p>
-                </a>
+            <li class="grid-list__item four-col last-row">
+                <div class="one-col ">
+                    <img class="grid-list__img" src="https://placeholdit.imgix.net/~text?txtsize=8&amp;txt=60%C3%9760&amp;w=60&amp;h=60" alt="icon">
+                </div>
+                <div class="three-col last-col">
+                    <h3><a class="external" href="#">Jenkins</a></h3>
+                </div>
             </li>
         </ul>
     </div>
 </section>
 
-<!-- Source Code -->
-<section class="row row-grey source-code">
+<section class="row row-grey">
     <div class="wrapper">
-        <h2>Source code</h2>
-        <div class="equal-height">
-            <div class="four-col card">
-                <img class="card__img" src="https://assets.ubuntu.com/v1/2d779aa4-bazaar+%281%29.svg" alt="Baazar logo">
-                <h3>Baazar</h3>
-                <p>Browse and branch from Bazaar.</p>
-                <a class="external card__link" href="https://code.launchpad.net/cloud-init">Baazar repository</a>
-            </div>
-
-            <div class="four-col card">
-                <img class="card__img" src="https://assets.ubuntu.com/v1/e59251d7-github.svg" alt="GitHub logo">
-                <h3>GitHub</h3>
-                <p>Browse, branch, fork or clone from GitHub.</p>
-                <a class="external card__link" href="https://github.com/openstack/cloud-init">GitHub repository</a>
-            </div>
-
-            <div class="four-col last-col card">
-                <img class="card__img" src="https://assets.ubuntu.com/v1/d656d6b1-picto-download-orange.svg" alt="Download logo">
-                <h3>Download</h3>
-                <p>Download the offically released archives.</p>
-                <a class="external card__link" href="https://launchpad.net/cloud-init/+download">Download project files</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Public Cloud Examples -->
-<section class="row">
-    <div class="wrapper">
-        <div class="twelve-col">
-            <h2 class="muted-heading">Used across the public cloud</h2>
-
-            <ul class="inline-logos">
-                <li class="inline-logos__item">
-                    <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/ff936628-rackspace.svg" alt="Rackspace logo">
-                </li>
-                <li class="inline-logos__item">
-                    <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/39e011de-logo-ovh-300DPI.png" alt="OVH logo">
-                </li>
-                <li class="inline-logos__item">
-                    <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/3006b8c7-vmware.svg" alt="WMware logo">
-                </li>
-                <li class="inline-logos__item">
-                    <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/2b5837e9-logo-microsoft-azure.svg" alt="Microsoft Azure logo">
-                </li>
-                <li class="inline-logos__item">
-                    <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/25b3d138-201509-amazon_aws_4c_en.svg" alt="Amazon Web Services logo">
-                </li>
-                <li class="inline-logos__item">
-                    <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/f7f8709c-logo-joyent.svg" alt="Joyent logo">
-                </li>
-                <li class="inline-logos__item">
-                    <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/a741628b-google-cloud.svg" alt="Google Cloud logo">
-                </li>
-                <li class="inline-logos__item">
-                    <img class="inline-logos__image" src="https://assets.ubuntu.com/v1/e765a8ed-fujitsu.svg" alt="Fujitsu logo">
-                </li>
+        <div class="six-col">
+            <h3>Learn more</h3>
+            <ul class="list">
+                <li><a href="https://developer.ubuntu.com/en/snappy/guides/">Docs</a></li>
+                <li><a href="http://askubuntu.com/search?q=snappy">Ask Ubuntu</a></li>
             </ul>
-            <p class="align-center">
-                <a href="http://partners.ubuntu.com/find-a-partner?programme=certified-public-cloud" class="external">See our other Ubuntu public cloud partners</a>
-            </p>
         </div>
-    </div>
-</section>
-
-<!-- Support channels -->
-<section class="row row-grey support">
-
-    <div class="wrapper">
-
-        <div class="eight-col">
-            <h2>Support</h2>
-        </div>
-
-        <div class="equal-height">
-            <div class="three-col box">
-                <h3>
-                    <a class="external" href="http://cloudinit.readthedocs.org/">Read the docs</a>
-                </h3>
-                <p>Always read the manual &mdash; perhaps your question has already be answered?</p>
-            </div>
-            <div class="three-col box">
-                <h3>
-                    <a class="external" href="http://pingx.net/freenode/cloud-init">Chat on freenode</a>
-                </h3>
-                <p>We have an active IRC community &mdash; get involved!</p>
-            </div>
-            <div class="three-col box">
-                <h3>
-                    <a class="external" href="http://stackexchange.com/search?q=cloud-init">Search on Stack Exchange</a>
-                </h3>
-                <p>Ask questions and search for answers at StackExchange.</p>
-            </div>
-            <div class="three-col last-col box">
-                <h3>
-                    <a class="external" href="https://bugs.launchpad.net/cloud-init/+filebug">Report a bug</a>
-                </h3>
-                <p>Help us improve the software by flagging bugs and issues you find on Launchpad.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About / The Team -->
-<section class="row">
-
-    <div class="wrapper">
-
-        <div class="four-col">
-
-            <h2>About</h2>
-
-            <p>
-                cloud-init is developed and released as free software under the
-                <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 open source
-                license</a>. It was originally designed for the <a href="http://www.ubuntu.com/">
-                Ubuntu</a> distribution of Linux in Amazon EC2, but is now supported on many
-                Linux and UNIX distributions in every major cloud.
-            </p>
-        </div>
-
-        <div class="seven-col prepend-one last-col">
-
-            <h2>The team</h2>
-
-            <div class="media-unit">
-                <img class="media-unit__img" src="https://assets.ubuntu.com/v1/64bd8e20-scott-moser.jpg" alt="Scott Moser profile picture" />
-                <div class="media-unit__txtwrap">
-                    <h3 class="media-unit__heading">Scott Moser</h3>
-                    <p class="media-unit__txt">
-                        <a href="http://ubuntu-smoser.blogspot.co.uk/">Scott</a> is the primary
-                        author and active maintainer of cloud-init, and is a technical leader
-                        on the Ubuntu Server Team for <a href="http://www.canonical.com/">Canonical.</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="media-unit">
-                <img class="media-unit__img" src="https://assets.ubuntu.com/v1/231a0085-joshua-harlow.jpg" alt="Joshua Harlow profile picture" />
-                <div class="media-unit__txtwrap">
-                    <h3 class="media-unit__heading">Joshua Harlow</h3>
-                    <p class="media-unit__txt"><a href="https://launchpad.net/~harlowja">Joshua</a> is an active
-                        maintainer of cloud-init, hacking on clouds for
-                        <a href="https://www.yahoo.com/">Yahoo.</a></p>
-                </div>
-            </div>
+        <div class="six-col last-col">
+            <h3>Contribute</h3>
+            <ul class="list">
+                <li><a href="https://developer.ubuntu.com/en/snappy/build-apps/">Create a snap</a></li>
+                <li><a href="https://github.com/ubuntu-core/snappy">Contribute to Snappy</a></li>
+            </ul>
         </div>
     </div>
 </section>
