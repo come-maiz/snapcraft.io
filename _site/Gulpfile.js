@@ -86,6 +86,6 @@ gulp.task('default', ['browser-sync', 'watch']);
  * Deploy to gh-pages branch to push to Github Pages instance
  */
 gulp.task('deploy', function() {
-  return gulp.src('./_site/**/*')
+  return gulp.src('./**/*')
     .pipe(ghPages());
 });
