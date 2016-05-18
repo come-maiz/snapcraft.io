@@ -1,0 +1,54 @@
+// content wrapper
+.wrapper {
+  max-width: $site-max-width;
+  margin: auto;
+  padding: 1rem;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    padding: 0;
+  }
+}
+
+.banner .nav-primary ul li:last-child,
+.banner .nav-primary ul li a,
+.banner .nav-primary ul li a:link,
+.banner .nav-primary ul li a:visited {
+  border: 0;
+}
+
+.banner .logo {
+  margin: 0;
+
+  img {
+    height: 33px;
+  }
+}
+
+.banner .nav-primary ul {
+  float: right;
+}
+
+.row {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+.strip-dark {
+  background: $cool-grey;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+// row-grey override
+.row-grey {
+  border: 0;
+  margin-top: -1px;
+}
