@@ -2673,9 +2673,9 @@ audio:not([controls]) {
 .banner .nav-primary ul li a:visited {
   border: 0; }
 
-.logo {
+.banner .logo {
   margin: 0; }
-  .logo img {
+  .banner .logo img {
     height: 33px; }
 
 .banner .nav-primary ul {
