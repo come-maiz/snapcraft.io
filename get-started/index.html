@@ -5,8 +5,8 @@ layout: default
 <section class="row hero-row no-border">
     <div class="wrapper">
         <div class="six-col">
-            <h1 class="hero-row__heading">Snapcraft</h1>
-            <p class="intro">The secure and easy way to build and package your applications for Linux.</p>
+            <h1 class="hero-row__heading">Snap any app</h1>
+            <p class="intro">Snapcraft is a build and packaging tool that allows you to build and publish your software as a snap. It makes it easy to incorporate components from different sources and build technologies or solutions. </p>
         </div>
         <div class="five-col prepend-one last-col">
             <img src="https://assets.ubuntu.com/v1/6c74950c-snappy.svg" alt="" />
@@ -14,163 +14,184 @@ layout: default
     </div>
 </section>
 
-<section class="row strip-dark no-border">
-    <div class="wrapper">
-        <div class="twelve-col no-margin-bottom">
-            <h2>Snaps work everywhere</h2>
-        </div>
-        <div class="six-col">
-            <p>Snaps are the best way to install an app on Arch, Ubuntu, Debian or your favorite Linux. They are secure and always up to date. Snaps are faster, easier, safer, and the update system is transactional so your app is never broken.</p>
-        </div>
-        <div class="six-col last-col">
-            <ul class="inline-logos">
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/5b108690-ubuntu-white.svg" class="inline-logos__image" alt="Ubuntu logo" /></li>
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/25bb61ec-archlinux-white.svg" class="inline-logos__image" alt="Arch Linux logo" /></li>
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/451d42f7-debian-white.svg" class="inline-logos__image" alt="Debian logo" /></li>
-            </ul>
-        </div>
-    </div>
-</section>
-
 <section class="row">
     <div class="wrapper">
         <div class="eight-col">
-            <h2>&ldquo;hello-world&rdquo; tour</h2>
-            <p>This tutorial assumes <a href="http://www.ubuntu.com/download/" class="external">Ubuntu 16.04 LTS</a> on your desktop, cloud or server. You can also <a href="https://developer.ubuntu.com/en/snappy/start/"  class="external">install snapd</a> on other flavours of Linux, and when you do the experience is exactly the same.</p>
+            <h2>Requirements</h2>
+            <p>On Ubuntu 16.04 LTS, installing snapcraft is just a command away:</p>
+            <pre class="command-line"><code>sudo apt install snapcraft</code></pre>
         </div>
+
         <div class="eight-col">
-            <h3>Snap discovery and the global snap store</h3>
-            <p>From the command line you can see the current featured snaps:</p>
-            <pre class="command-line"><code>$ snap browse
-telegram        1.2  Secure messaging system
-…
-
-Those are the featured snaps today across all devices. You can also
-try ‘snap browse categories’ to see specific types of app.</code></pre>
-            <p>You can see featured snaps in a particular category too:</p>
-            <pre class="command-line"><code>$ snap browse categories
-browser                 office
-database                management
-Containers              appservers
-content-management      java
-
-Try ‘snap browse <category>’
-
-$ snap browse database
-cassandra      3.2  Large-scale document store
-...</code></pre>
-            <p>If you know what you want, you can search the snap name or description:</p>
-            <pre class="command-line"><code>$ snap find hello-world
-Name              Version    Summary
-audovia           3.2.4      Make music using JFugue MusicStrings
-hello-world       6.0        Hello world example
-ubuntu-clock-app  3.6+snap3  Ubuntu Clock for the Unity 7 desktop</code></pre>
-            <p>Install the snap you want with a simple command</p>
-            <pre class="command-line"><code>snap install hello-world</code></pre>
+            <h2>Get setup with our examples</h2>
+            <p>Run the following command in any directory:</p>
+            <pre class="command-line"><code>snapcraft-examples</code></pre>
+            <p>This is going to create a <code>snapcraft-examples</code> subdirectory, with a few projects just waiting to be snapped. The directory structure looks like:</p>
+            <pre class="command-line"><code>$ cd snapcraft-examples
+$ ls
+01-hello-world-cli/
+02-hello-world-service/
+03-hello-world-desktop-devmode/
+04-hello-world-desktop/
+05-hello-world-combined/</code></pre>
         </div>
+
         <div class="eight-col">
-            <h3>Release channels &mdash; stable, candidate, beta and edge</h3>
-            <p>You can choose if you want to get development versions of an app, by selecting the preferred “channel”. By default, snaps are installed from the stable channel, but there is also a candidate channel which is “soon to be the stable release”, a beta channel and an edge channel.</p>
-            <p>Choose how much risk you want to take on this app and set the channel accordingly with --candidate, --beta or --edge when you install the snap.</p>
-            <p>Switch from stable to the beta channel to get the latest development release:</p>
-            <pre class="command-line"><code>snap install hello-world --beta</code></pre>
+            <h3>A hello world command line</h3>
+            <pre class="command-line"><code>$ cd 01-hello-world-cli
+$ snapcraft</code></pre>
+            <p>This asks snapcraft to run through its lifecycle, building the project and packaging it into a snap that you can install and run on your Ubuntu Desktop 16.04 LTS system:</p>
+            <pre class="command-line"><code>$ sudo snap install hello-world-cli-<yourusername>*.snap --devmode</code></pre>
+            <p>(Don&rsquo;t worry about --devmode for now, we will cover exactly what this is in the 4th example.)</p>
+            <p>Let&rsquo;s run the application:</p>
+            <pre class="command-line"><code>$ hello-world-cli-<yourusername>
+Hello World!</code></pre>
+            <p>Wasn&rsquo;t that easy? Let&rsquo;s dive into that <code>snapcraft.yaml</code>. This is where the rubber meets the road &mdash; where you specify the information necessary for snapcraft to put your snap together.</p>
+            <pre class="command-line"><code>name: hello-world-cli-<your-username>
+version: 0.1
+summary: Hello World
+Description:
+ This demo is intended to show how to build your first snap
+ This code is part of the snapcraft example tour at
+ https://developer.ubuntu.com/snapcraft-getting-started</code></pre>
+            <p>This is the snap&rsquo;s basic metadata. It includes information like the name of the snap, its human-readable version, a one-sentence summary, and a more verbose description. This metadata is what a user will see when browsing the store.</p>
+            <pre class="command-line"><code>parts:
+  hello:
+    plugin: cmake
+    source: src</code></pre>
+            <p>We then create a hello part, which uses the cmake plugin. A plugin refers to a language or build system which snapcraft will use to drive the lifecycle (i.e.; pull, build and install your code). In this case, the code for this part lives in a src subdirectory while <code>snapcraft.yaml</code> is in the toplevel directory.</p>
+            <pre class="command-line"><code>apps:
+  hello-world-cli-<your-username>:
+    command: hello</code></pre>
+            <p><code>apps</code> gives you ways to expose your commands to your snap users. By default, no commands are available to them, so you need to set them explicitly. Here, this binary refers to the </code>hello</code> command, which was created in the build step of the hello part.
+Since the app name matches the snap name, you can simply execute it like:</p>
+            <pre class="command-line"><code>$ hello-world-cli-<your-username>
+Hello world!</code></pre>
         </div>
-        <div class="eight-col">
-            <h3>Know where your software comes from &mdash; snap publisher and details</h3>
-            <p>The info command shows which channels are available:</p>
-            <pre class="command-line"><code>snap info hello-world
-XXX</code></pre>
-        </div>
-        <div class="eight-col">
-            <h3>Always fresh &mdash; update fast and reliably</h3>
-            <p>Get the latest version of all your snaps by running:</p>
-            <pre class="command-line"><code>snap refresh</code></pre>
-        </div>
-    </div>
-</section>
 
-
-<section class="row">
-    <div class="wrapper">
         <div class="eight-col">
-            <h2>Popular snaps</h2>
-            <p>If you are running Ubuntu 16.04 LTS, you can try all of this today. Check out the GUI <a href="http://apps.ubuntu.com">Ubuntu Software centre</a> or just use the command  line to install any of these great snaps:</p>
+          <h2>A hello world service</h2>
+          <p>Let&rsquo;s head over to your second example, a nodejs web service!</p>
+          <pre class="command-line"><code>$ cd ../02-hello-world-service
+$ snapcraft
+$ sudo snap try snap/ --devmode</code></pre>
+          <p>Head over to <a href="http://localhost:8080">http://localhost:8080</a> in your browser and you&rsqwuo;ll be warmly greeted by the running web service.</p>
+          <p>Instead of running <code>snap install</code> we are going to use <code>snap try</code> with the snap directory. <code>snap try</code> will make the <code>snap</code> temporarily available to the system. By doing this you can quickly iterate on your project and have your changes reflected on the system, without ever installing a snap!</p>
+          <p>Let&rsquo;s look at the interesting part of <code>snapcraft.yaml</code> now:</p>
+          <pre class="command-line"><code>parts:
+  hello:
+    plugin: nodejs
+    source: .</code></pre>
+          <p>The <code>hello</code> part is using the nodejs plugin, which, as the name infers, is specialized for node projects. It will take all the npm information from <code>package.json</code>, including dependencies (if any) and install them alongside the rest of this part.</p>
+          <pre class="command-line"><code>apps:
+  hello-service:
+    command: hello-world
+    daemon: simple</code></pre>
+          <p>We declared a <code>hello-world</code> app, and specify that it&rsquo;s a simple (i.e. non-forking) daemon (a service which starts at boot and keeps running on your system). This one is executing the hello-world command.</p>
         </div>
 
-        <ul class="grid-list twelve-col no-bullets no-margin-bottom">
-            <li class="grid-list__item four-col">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/118456e3-logo.png?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>LibreOffice</h3>
-                </div>
-            </li>
-            <li class="grid-list__item four-col">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/c7240e59-docker.svg?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>Docker</h3>
-                </div>
-            </li>
-            <li class="grid-list__item four-col last-col">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/b0e017f5-logo-telegram.svg.png?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>Telegram</h3>
-                </div>
-            </li>
-            <li class="grid-list__item four-col">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/f5637a1a-cassandra-new.svg?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>Cassandra</h3>
-                </div>
-            </li>
-            <li class="grid-list__item four-col">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/7bc0c546-203_350x350_Front_Color-NA.png?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>ownCloud</h3>
-                </div>
-            </li>
-            <li class="grid-list__item four-col last-col">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/08aaf473-image-lxd.svg?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>LXD</h3>
-                </div>
-            </li>
-            <li class="grid-list__item four-col last-row">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/7908fe7b-webdm.svg?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>WebDM</h3>
-                </div>
-            </li>
-            <li class="grid-list__item four-col last-row">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/f70a038b-squid-cache.svg?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>Squid3</h3>
-                </div>
-            </li>
-            <li class="grid-list__item four-col last-row last-col">
-                <div class="one-col ">
-                    <img class="grid-list__img" src="https://assets.ubuntu.com/v1/91838447-226px-Jenkins_logo.svg.png?w=60" alt="icon">
-                </div>
-                <div class="three-col last-col">
-                    <h3>Jenkins</h3>
-                </div>
-            </li>
-        </ul>
+        <div class="eight-col">
+          <h3>A hello world desktop app (devmode)</h3>
+          <p>Our third example is a desktop Qt application, popping up a GUI window.</p>
+          <pre class="command-line"><code>$ cd ../03-hello-world-desktop-devmode
+$ snapcraft update
+$ snapcraft
+$ sudo snap try snap/ --devmode</code></pre>
+          <p>You&rsquo;ll notice that we ran snapcraft update before running snapcraft. We did this because this example uses parts from the cloud, and we need to fetch the cache of those parts before we can actually build the project.</p>
+          <p>Open the Unity dash, look for hello-world-desktop and click on it, and you should see a &ldquo;Hello World&rdquo; window show up.</p>
+          <pre class="command-line"><code>apps:
+  hello-world-desktop:
+    command: qt5-launch hello-world-desktop</code></pre>
+          <p><code>qt5-launch</code> is a tool that prepares the environment for launching the real application. Let&rsquo;s see where the <code>qt5-launch</code> and <code>hello-world-desktop</code> commands are coming from:</p>
+          <pre class="command-line"></code>parts:
+  hello-world:
+    plugin: cmake
+    source: src/
+    build-packages:
+      - qtbase5-dev
+    stage-packages:
+      # Here for the plugins-- they're not linked in automatically.
+      - libqt5gui5
+    after: [qt5conf] # A part in the cloud</code></pre>
+          <p><code>build-packages</code> list the dependencies needed to build the contents of the snap. These aren&rsquo;t packed into the final snap. We&rsquo;ve specified <code>qtbase5-dev</code> here since that package contains headers, libraries, and tools needed to build our app.</p>
+          <p><code>stage-packages</code> list the dependencies needed to actually run the contents of the snap. They&rsquo;ll be packed into the final snap. Here, we want the <code>hello-world</code> part to download and unpack <code>libqt5gui5</code> with all its dependencies. This method can be used to reuse any of the 48000 .deb packages that traditional Ubuntu provides! It&rsquo;s really that easy: just specify the packages you need embedded into your snap.</p>
+          <p><code>after: [qt5conf]</code> lists the parts that must be staged before this part can be built. However, you may have noticed that this YAML doesn’t actually contain the <code>qt5conf</code> part. That&rsquo;s because it&rsquo;s a part in the cloud, which is a way for collaborating, reusing and sharing already-written parts! The previously mentioned <code>qt5-launch</code> tool comes from the <code>qt5conf</code> part, without any additional effort from you.</p>
+          <p>Since we&rsquo;re shipping a graphical application, we&rsquo;d like to be able to expose our application to the desktop with a desktop file. We do that by adding one in <code>setup/gui/hello-world-desktop.desktop</code>.</p>
+        </div>
+
+        <div class="eight-col">
+          <h3>A hello world desktop app</h3>
+          <p>We mentioned earlier that we would explain this whole &ldquo;devmode&rdquo; thing. One of the primary features of snaps is the security they provide, but such security doesn&rsquo;t come for free. It isn&rsquo;t always easy to make an application that runs happily under full confinement; it can be very helpful to ignore that aspect of snaps while you&rsquo;re initially developing it. We do that by installing (or trying) snaps in &ldquo;devmode,&rdquo; which tells snappy to allow the snap to run unconfined. This allows for quick iteration to perfect the functionality of the snap before you need to worry about making it work under confinement.</p>
+          <p>However, we&rsquo;ve reached the point in our examples where we&rsquo;re happy with the functionality of our desktop app, and we&rsquo;re ready to focus on its confinement.</p>
+          <pre class="command-line"><code>$ cd ../04-hello-world-desktop
+$ snapcraft
+$ snap try snap/</code></pre>
+          <p>Notice that we don&rsquo;t have to use <code>--devmode</code> anymore. The application looks identical to our previous example, but there&rsquo;s a very important change made to the snapcraft.yaml:</p>
+          <pre class="command-line"><code>    plugs:
+      - x11</code></pre>
+          <p>The reason we needed to try the previous example in devmode is because when running under confinement, apps don&rsquo;t have access to anything outside the snap, including X. If we tried it without devmode, it would immediately crash as a result. Specifying the x11 plug essentially pokes a hole in the otherwise-complete confinement, telling snappy that this snap requires access to X11.</p>
+        </div>
+
+        <div class="eight-col">
+          <h3>Let&rsquo;s put it all together in a single snap</h3>
+          <pre class="command-line"><code>$ cd ../05-hello-world-combined
+$ snapcraft
+$ snap try snap/</code></pre>
+          <p>The service is running the same as before (just point your browser back to <a href="http://localhost:8080">http://localhost:8080</a>), the desktop app is available on your system, you will notice that the command line now is: <code>hello-world-combined-<your-username>.hello-world-cli.</code></p>
+          <pre class="command-line"><code>apps:
+  hello-world-cli:
+    command: hello
+  hello-service:
+    command: hello-world
+    daemon: simple
+    plugs: [network-bind]
+  hello-world-desktop:
+    command: qt5-launch hello-world-desktop
+    plugs: [x11]</code></pre>
+          <p>The reason for this is that the package name is now different from the apps&rsquo; names. In that case, we don&rsquo;t have the simplification of <code><snapname.appname></code> being turned into a single <code><snapname></code> command.</p>
+          <p>We also added the network-bind plug to the hello-service webserver in order to inform snappy that it needs to listen to incoming network requests while running under confinement.</p>
+          <pre class="command-line"><code>parts:
+  cli:
+    plugin: cmake
+    source: https://github.com/ubuntu-core/snapcraft-examples.git
+    source-subdir: 01-hello-world-cli/src
+  service:
+    plugin: nodejs
+    source: https://github.com/ubuntu-core/snapcraft-examples.git
+    source-subdir: 02-hello-world-service
+  desktop:
+    plugin: cmake
+    source: https://github.com/ubuntu-core/snapcraft-examples.git
+    source-subdir: 04-hello-world-desktop/src
+    build-packages:
+      - qtbase5-dev
+    stage-packages:
+      # Here for the plugins-- they're not linked in automatically.
+      - libqt5gui5
+    after: [qt5conf] # A cloud part</code></pre>
+          <p>The same way we defined multiple apps, we can define multiple parts. You will notice that the code isn&rsquo;t in the snapcraft source project directory directly, but on various external repositories. This turns any source repository like <a href="https://github.com">github</a> or <a href="https://launchpad.net">launchpad</a> into a real open-source store! You can even reference tar files to be downloaded and unpacked!</p>
+          <p>If you don&rsquo;t want to reference the whole repository, just specify source-subdir relative to your <code>source. snapcraft help sources</code> will give you more information about this.</p>
+        </div>
+
+        <div class="eight-col">
+          <h3>Your first snap upload to the store</h3>
+          <p>First, create an account on <a href="https://myapps.developer.ubuntu.com">https://myapps.developer.ubuntu.com</a>, this is your developer portal!</p>
+          <p>Once you get your login, ensure that snapcraft and snap knows about you:</p>
+          <pre class="command-line"><code>$ snapcraft login
+$ snap login</code></pre>
+          <p>Let&rsquo;s register your project name!</p>
+          <pre class="command-line"><code>$ snapcraft register-name
+$ snapcraft release</code></pre>
+          <p>And here we go, your project is now available for other to install them directly on their machines!</p>
+        </div>
+
+        <div class="eight-col">
+          <h3>Go further with snapcraft</h3>
+          <p>Congrats on finishing up this first example tour of snapcraft! Do not hesitate to change the example, scaffold from there, publish and share your love on the social media of your change! (#snapcraft).</p>
+          <p>You can of course also snap your own projects. We have a bunch of plugins available to you for this! Your definitive reference guide for this is available at:</p>
+          <pre class="command-line"><code>$ snapcraft help plugins</code></pre>
+          <p>For more informations on snapcraft: <a href="https://developer.ubuntu.com/en/snappy/build-apps/">https://developer.ubuntu.com/en/snappy/build-apps/</a></p>
+        </div>
     </div>
 </section>
 
