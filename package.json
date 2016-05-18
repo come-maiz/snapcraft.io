@@ -3,18 +3,15 @@
   "version": "1.0.0",
   "description": "Codebase for http://cloud-init.org - the marketing website",
   "main": "_site/index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://barrymcgee@github.com/ubuntudesign/cloud-init.git"
+    "url": "https://github.com/ubuntudesign/cloud-init.git"
   },
   "keywords": [
     "cloud",
     "init"
   ],
-  "author": "Barry McGee <barry.mcgee@canonical.com>",
+  "author": "Canonical Webteam <webteam@canonical.com>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/ubuntudesign/cloud-init/issues"
