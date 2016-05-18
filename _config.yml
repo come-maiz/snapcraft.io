@@ -10,7 +10,7 @@ title: snapcraft
 email: anthony.dillon@canonical.com
 description: > # this means to ignore newlines until "baseurl:"
   Introducing snaps and commands to install and remove them on Ubuntu 16.04 LTS.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "snapcraft.io/" # the subpath of your site, e.g. /blog
 url: "http://snapcraft.io" # the base hostname & protocol for your site
 
 # Build settings
