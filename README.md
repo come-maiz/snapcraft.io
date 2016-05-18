@@ -1,22 +1,30 @@
-# Snapcraft
+# Snapcraft.io
 
-Codebase for http://Snapcraft.io - the website
+The codebase for http://snapcraft.io.
 
 ## Getting Started
 
-To run this project, clone the project, drop into the folder and run;
+To run this project, you need `npm`, `jekyll` and `sass` installed. E.g. Ubuntu:
 
-`npm i`
+``` bash
+sudo apt install nodejs-legacy npm ruby-sass jekyll
+```
 
-...this will install all required dependancies.
+Now, in the project folder, install nodejs dependencies:
 
-To fire up the project, you should then run;
+``` bash
+npm i
+```
 
-`gulp`
+### Run the site
 
-..and navigate to;
+To fire up the project, run;
 
-`http://localhost:3000/`
+``` bash
+node_modules/gulp/bin/gulp.js
+```
+
+This should open `http://localhost:3000/` in your browser.
 
 ## Deploy to Github Pages
 
