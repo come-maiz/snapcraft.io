@@ -9,7 +9,7 @@
 title: snapcraft
 email: anthony.dillon@canonical.com
 description: Introducing snaps and commands to install and remove them on Ubuntu 16.04 LTS.
-baseurl: "/"
+baseurl: ""
 navigation:
 - text: Home
   url: /
