@@ -9,13 +9,13 @@
 title: snapcraft
 email: anthony.dillon@canonical.com
 description: Introducing snaps and commands to install and remove them on Ubuntu 16.04 LTS.
-baseurl: "/snapcraft.io"
-url: "http://snapcraft.io" # the base hostname & protocol for your site
+baseurl: "/"
 navigation:
 - text: Home
   url: /
 - text: Get started
   url: /get-started/
+exclude: ['LICENCE', 'README.md', 'Gulpfile.js', 'package.json', 'node_modules']
 
 # Build settings
 markdown: kramdown
