@@ -32,7 +32,7 @@ To deploy to Github Pages under your local Github username, please run;
 
 `gulp deploy`
 
-You should then be able to view the site at: `http://YOUR-GITHUB-USERNAME.github.io/cloud-init`
+You should then be able to view the site at: `http://YOUR-GITHUB-USERNAME.github.io/snapcraft.io`
 
 ## Licence
 
