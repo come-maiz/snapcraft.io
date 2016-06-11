@@ -1,22 +1,22 @@
 {
-  "name": "cloud-init",
+  "name": "snapcraft.io",
   "version": "1.0.0",
-  "description": "Codebase for http://cloud-init.org - the marketing website",
+  "description": "Codebase for http://snapcraft.io",
   "main": "_site/index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ubuntudesign/cloud-init.git"
+    "url": "https://github.com/ubuntudesign/snapcraft.io.git"
   },
   "keywords": [
-    "cloud",
-    "init"
+    "snap",
+     "snapcraft"
   ],
   "author": "Canonical Webteam <webteam@canonical.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ubuntudesign/cloud-init/issues"
+    "url": "https://github.com/ubuntudesign/snapcraft.io/issues"
   },
-  "homepage": "https://github.com/ubuntudesign/cloud-init#readme",
+  "homepage": "https://github.com/ubuntudesign/snapcraft.io#readme",
   "dependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
