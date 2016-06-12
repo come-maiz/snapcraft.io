@@ -1,0 +1,56 @@
+.responsive-tabs__nav,
+.r-tabs .r-tabs-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  margin-left: -20px;
+  padding: 0;
+}
+
+.responsive-tabs__nav-item {
+  text-align: center;
+  align-self: flex-end;
+  width: 127px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.responsive-tabs__link {
+  height: 100%;
+  outline: none;
+  display: block;
+}
+
+.r-tabs .r-tabs-panel {
+  background: $light-grey;
+  display: none;
+}
+
+.r-tabs .r-tabs-accordion-title {
+  display: none;
+}
+
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+  display: block;
+}
+
+.responsive-tabs__nav-item.r-tabs-state-active {
+  background: #fff;
+}
+
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: 768px) {
+  .r-tabs .r-tabs-nav {
+    display: none;
+  }
+
+  .r-tabs .r-tabs-accordion-title {
+    display: block;
+  }
+}
