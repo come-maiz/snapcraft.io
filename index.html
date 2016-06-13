@@ -6,14 +6,21 @@ layout: default
         <div class="wrapper">
             <div class="six-col">
                 <h1 class="hero-row__heading">Snapcraft</h1>
-                <p class="intro">Package any app for any Linux desktop, server, cloud or device</p>
+                <p class="intro">Package any app for any Linux desktop, server, cloud or device.</p>
             </div>
+            <div class="six-col last-col">
+                
+            </div>
+        </div>
+    </section>
+    <section class="row">
+        <div class="wrapper">
             <div  id="responsive-tabs" class="responsive-tabs twelve-col">
                 <ul class="responsive-tabs__nav twelve-col">
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-1" title="View Arch Linux instructions">
                             <img src="https://assets.ubuntu.com/v1/e0b23092-archlinux.svg" class="responsive-tabs__image" alt="Arch Linux logo" />
-                            <p>View <span class="accessibility-aid">Arch Linux </span>instructions</p>
+                            <p>View <span class="accessibility-aid">Arch </span>instructions</p>
                         </a>
                     </li>
                     <li class="responsive-tabs__nav-item">
@@ -42,8 +49,8 @@ layout: default
                     </li>
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-6" title="View SUSE instructions">
-                            <img src="https://assets.ubuntu.com/v1/2e497b2e-opensuse.svg" class="responsive-tabs__image" alt="SUSE logo" width="90" />
-                            <p>View <span class="accessibility-aid">SUSE</span> instructions</p>
+                            <img src="https://assets.ubuntu.com/v1/2e497b2e-opensuse.svg" class="responsive-tabs__image" alt="OpenSuse logo" width="90" />
+                            <p>View <span class="accessibility-aid">OpenSuse</span> instructions</p>
                         </a>
                     </li>
                     <li class="responsive-tabs__nav-item">
@@ -54,16 +61,16 @@ layout: default
                     </li>
                 </ul>
                 <div id="responsive-tab-content-1" class="twelve-col">
-                    <h3 class="accessibility-aid">Arch Linux instructions</h3>
-                    <pre class="command-line"><code># install on Arch Linux
-sudo add-yum-repo https://rpm.snapcraft.io/path/
-sudo yum install snapd</code></pre>
+                    <h3 class="accessibility-aid">Arch instructions</h3>
+                    <pre class="command-line"><code>$ wget
+http://www.snapcraft.io/downloads/snap-confine-git-1.0.28.r98.740eba6-1-x86_64.pkg.tar.xz
+$ wget http://www.snapcraft.io/downloads/snapd-git-2.0.8.r0.14ff9e2-1-x86_64.pkg.tar.xz
+$ pacman -S snap-confine-git-1.0.28.r98.740eba6-1-x86_64.pkg.tar.xz \ snapd-git-2.0.8.r0.14ff9e2-1-x86_64.pkg.tar.xz</code></pre>
                 </div>
                 <div id="responsive-tab-content-2" class="twelve-col">
                     <h3 class="accessibility-aid">Debian instructions</h3>
-                    <pre class="command-line"><code># install on Debian
-sudo add-yum-repo https://rpm.snapcraft.io/path/
-sudo yum install snapd</code></pre>
+                    <p class="eight-col">An official Debian package is available from the Debian Unstable archive. To install this:</p>
+                    <pre class="command-line"><code>$ sudo apt-get install snapd</code></pre>
                 </div>
                 <div id="responsive-tab-content-3" class="twelve-col">
                     <h3 class="accessibility-aid">Centos instructions</h3>
@@ -73,32 +80,35 @@ sudo yum install snapd</code></pre>
                 </div>
                 <div id="responsive-tab-content-4" class="twelve-col">
                     <h3 class="accessibility-aid">Fedora instructions</h3>
-                    <pre class="command-line"><code># install on Fedora
-sudo add-yum-repo https://rpm.snapcraft.io/path/
-sudo yum install snapd</code></pre>
+                    <p class="eight-col">From a Fedora 23/24 machine, type:</p>
+                    <pre class="command-line"><code>$ wget
+http://www.snapcraft.io/downloads/snap-confine-2.0-1.fc24.x86_64.rpm
+$ wget http://www.snapcraft.io/downloads/snapd-2.0.8-1.fc24.x86_64.rpm
+$ dnf install squashfs-tools
+$ sudo rpm -Uvh snap-confine-2.0-1.fc24.x86_64.rpm snapd-2.0.8-1.fc24.x86_64.rpm</code></pre>
                 </div>
                 <div id="responsive-tab-content-5" class="twelve-col">
                     <h3 class="accessibility-aid">Red hat instructions</h3>
                     <pre class="command-line"><code># install on Red hat
 sudo add-yum-repo https://rpm.snapcraft.io/path/
-sudo yum install snapd</code></pre>
+sudo yum install snapd</code></pre>         
                 </div>
                 <div id="responsive-tab-content-6" class="twelve-col">
-                    <h3 class="accessibility-aid">SUSE instructions</h3>
-                    <pre class="command-line"><code># install on SUSE
+                    <h3 class="accessibility-aid">OpenSuse instructions</h3>
+                    <pre class="command-line"><code># install on OpenSuse
 sudo add-yum-repo https://rpm.snapcraft.io/path/
 sudo yum install snapd</code></pre>
                 </div>
                 <div id="responsive-tab-content-7" class="twelve-col">
-                    <h3 class="accessibility-aid">Ubuntu instructions</h3>
-                    <pre class="command-line"><code># install on Ubuntu
-sudo add-yum-repo https://rpm.snapcraft.io/path/
-sudo yum install snapd</code></pre>
+                    <div class="eight-col">
+                        <h3 class="accessibility-aid">Ubuntu instructions</h3>
+                        <p>On Ubuntu desktop 16.04 LTS and all flavors such as Ubuntu Mate, Kubuntu, Ubuntu GNOME, Lubuntu, Xubuntu, and others, snapd is already installed by default! Nothing to do here :)</p>
+                    </div>
                 </div>
             </div>
-                <div class="eight-col">
-                    <p>Snaps work on almost every Linux distribution or device. Click the logos for installation instructions, or build snapd <a href="http://www.github.com/snapcore/snapd">from source</a>.</p>
-                </div>
+            <div class="eight-col">
+                <p>Snaps work on almost every Linux distribution or device. Click the logos for installation instructions, or build snapd <a href="http://www.github.com/snapcore/snapd">from source</a>.</p>
+            </div>
         </div>
     </section>
 
@@ -274,3 +284,22 @@ XXX</code></pre>
         </div>
     </section>
     
+<!-- jQuery with fallback to the 1.* for old IE -->
+<!--[if lt IE 9]>
+    <script src="https://assets.ubuntu.com/v1/b66ed708-jquery-1.11.0.min.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="https://assets.ubuntu.com/v1/98884258-jquery-2.1.0.min.js"></script>
+<!--<![endif]-->
+
+<script src="js/jquery.responsiveTabs.min.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#responsive-tabs').responsiveTabs({
+            startCollapsed: true,
+            setHash: false,
+            scrollToAccordion: true,
+        });
+    });
+</script>

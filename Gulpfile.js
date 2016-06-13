@@ -62,7 +62,8 @@ gulp.task('sass', function () {
    return gulp.src('_js/*.js')
      .pipe(uglify())
      .pipe(gulp.dest('_site/js'))
-     .pipe(browserSync.reload({stream:true}));
+     .pipe(browserSync.reload({stream:true}))
+     .pipe(gulp.dest('js'));
  });
 
 /**
