@@ -41,15 +41,16 @@
 .responsive-tabs__link,
 .responsive-tabs__link:active {
   height: 100%;
-  outline: none;
   display: block;
+  outline: none;
 }
 
 .r-tabs .r-tabs-panel {
   background: $light-grey;
   border: 1px solid #e1e1e1;
-  padding: 20px;
   display: none;
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
 .r-tabs .r-tabs-accordion-title {

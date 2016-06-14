@@ -46,6 +46,12 @@ layout: default
                             <p class="for-small">View Fedora instructions</p>
                         </a>
                     </li>
+                    <li class="responsive-tabs__nav-item">
+                        <a class="responsive-tabs__link" href="#responsive-tab-content-5" title="View Gentoo instructions">
+                            <img src="https://assets.ubuntu.com/v1/2235d892-gentoo.png" class="responsive-tabs__image not-for-small" alt="Gentoo logo" width="90" />
+                            <p class="for-small">View Gentoo instructions</p>
+                        </a>
+                    </li>
                     <!--<li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-5" title="View Red hat instructions">
                             <img src="https://assets.ubuntu.com/v1/f7002708-redhat.svg" class="responsive-tabs__image not-for-small" alt="Red hat logo" />
@@ -89,6 +95,12 @@ sudo yum install snapd</code></pre>
                         <p>To install <code>snapd</code> type: <code>sudo dnf install snapd</code> and log-out or reboot.</p>
                         
                         <p>Important: on Fedora 24 you currently have to switch SELinux to permissive mode. This restriction will be lifted later. Please edit <code>/etc/selinux/config</code> and change the file to contain <code>SELINUX=permissive</code>. After this change you have to reboot your system.</p>
+                    </div>
+                </div>
+                <div id="responsive-tab-content-5" class="twelve-col">
+                    <div class="eight-col">
+                        <h3 class="accessibility-aid">Gentoo</h3>
+                        <p>First install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a> then <a href="https://github.com/zyga/snapd-gentoo".>snapd.ebuild</a></p>
                     </div>
                 </div>
                 <!--<div id="responsive-tab-content-5" class="twelve-col">
