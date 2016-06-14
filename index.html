@@ -21,7 +21,7 @@ layout: default
         <div class="wrapper">
             <div  id="responsive-tabs" class="responsive-tabs twelve-col">
                 <h2 class="for-small muted-heading">Enable snaps</h2>
-                <ul class="responsive-tabs__nav twelve-col">
+                <ul class="responsive-tabs__nav twelve-col clearfix">
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-1" title="View Arch Linux instructions">
                             <img src="https://assets.ubuntu.com/v1/e0b23092-archlinux.svg" class="responsive-tabs__image not-for-small" alt="Arch Linux logo" />
@@ -65,14 +65,14 @@ layout: default
                         </a>
                     </li>
                 </ul>
-                <div id="responsive-tab-content-1" class="twelve-col">
+                <div id="responsive-tab-content-1" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Arch instructions</h3>
                         <p>To install <code>snapd</code> you need to have one of the <a class="external" href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helpers</a> installed.</p>
                         <p>For example if you have pacaur installed just type <code>pacaur -S snapd</code> and log-out or reboot.</p>
                     </div>
                 </div>
-                <div id="responsive-tab-content-2" class="twelve-col">
+                <div id="responsive-tab-content-2" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Debian instructions</h3>
                         <p>An official Debian package is available from the <a class="external" href="https://wiki.debian.org/DebianUnstable">Debian Unstable archive</a>. To install this:</p>
@@ -85,7 +85,7 @@ layout: default
 sudo add-yum-repo https://rpm.snapcraft.io/path/
 sudo yum install snapd</code></pre>
                 </div> -->
-                <div id="responsive-tab-content-4" class="twelve-col">
+                <div id="responsive-tab-content-4" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Fedora instructions</h3>
                         <p>From a Fedora 23/24 machine, type:</p>
@@ -97,7 +97,7 @@ sudo yum install snapd</code></pre>
                         <p>Important: on Fedora 24 you currently have to switch SELinux to permissive mode. This restriction will be lifted later. Please edit <code>/etc/selinux/config</code> and change the file to contain <code>SELINUX=permissive</code>. After this change you have to reboot your system.</p>
                     </div>
                 </div>
-                <div id="responsive-tab-content-5" class="twelve-col">
+                <div id="responsive-tab-content-5" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Gentoo</h3>
                         <p>First install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a> then <a href="https://github.com/zyga/snapd-gentoo".>snapd.ebuild</a></p>
@@ -109,14 +109,14 @@ sudo yum install snapd</code></pre>
 sudo add-yum-repo https://rpm.snapcraft.io/path/
 sudo yum install snapd</code></pre>         
                 </div>-->
-                <div id="responsive-tab-content-6" class="twelve-col">
+                <div id="responsive-tab-content-6" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Ubuntu instructions</h3>
                         <p>On Ubuntu desktop 16.04 LTS and all flavors such as Ubuntu Mate, Kubuntu, Ubuntu GNOME, Lubuntu, Xubuntu, and others, snapd is already installed by default! Nothing to do here :)</p>
                     </div>
                 </div>
             </div>
-            <div class="twelve-col align-center">
+            <div class="twelve-col align-center clearfix">
                 <p>Click for installation instructions, or <a href="http://www.github.com/snapcore/snapd">build from source</a>.</p>
             </div>
         </div>
@@ -176,9 +176,9 @@ hello-world    6.1      canonical  -      Hello world example</code></pre>
                 <p>Each snap might include multiple related commands, with a default command that has the same name as the snap itself. Additional commands are prefixed with the snap name:</p>
 
                 <pre class="command-line"><code>$ hello
- Hello world!
- $ hello.command
- XXX</code></pre>
+Hello world!
+$ hello.command
+XXX</code></pre>
  
                 <p>Snaps can also install services that run in the background, such as web servers or content management systems. Those will start automatically when you install the snap.</p>
                 
