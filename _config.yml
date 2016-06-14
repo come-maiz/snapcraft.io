@@ -9,12 +9,13 @@
 title: snapcraft
 email: anthony.dillon@canonical.com
 description: Introducing snaps and commands to install and remove them on Ubuntu 16.04 LTS.
+keywords: snappy, Ubuntu Core, Ubuntu 16.04 LTS, snaps, apps, debs, snap, docker, coreos, atomic, snapcraft, snapd
 baseurl: ""
 navigation:
 - text: Home
   url: /
-- text: Get started
-  url: /get-started/
+- text: Create
+  url: /create/
 exclude: ['LICENCE', 'README.md', 'Gulpfile.js', 'package.json', 'node_modules']
 
 # Build settings

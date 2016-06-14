@@ -1,16 +1,12 @@
-
-$command-line-color: #2c001e !default;
-
 .command-line {
   position: relative;
   border-radius: 4px;
-  background-color: $command-line-color;
-  border: 1px solid $command-line-color;
+  background-color: $light-grey;
   overflow: hidden;
   font-size: 1em;
   font-family: Ubuntu Mono;
   font-weight: 300;
   padding: .7em 1em;
-  color: $white;
+  color: $cool-grey;
   width: 100%;
 }

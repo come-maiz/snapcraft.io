@@ -3,10 +3,22 @@ $dark_aubergine: #2c001e;
 .hero-row {
   @extend %vf-clearfix;
   background-color: $light-grey;
+  background-image: url('https://assets.ubuntu.com/v1/0a11c33e-meizu-pro5-background.png');
+  background-position: center right;
+  background-size: cover;
   border-bottom: none;
+  padding-top: 20px;
+  padding-bottom: 0;
+  
+  @media only screen and (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
 
-  &__heading {
-    margin-top: 4.5rem;
+  @media only screen and (min-width: 984px) {
+    &__heading {
+      margin-top: 2rem;
+    }
   }
 
   .intro {
