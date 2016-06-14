@@ -34,24 +34,24 @@ layout: default
                             <p class="for-small">View Debian instructions</p>
                         </a>
                     </li>
-                    <li class="responsive-tabs__nav-item">
+                    <!--<li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-3" title="View Centos instructions">
                             <img src="https://assets.ubuntu.com/v1/31bd1765-centos.svg" class="responsive-tabs__image not-for-small" alt="Centos logo" />
                             <p class="for-small">View Centos instructions</p>
                        </a>
-                    </li>
+                    </li>-->
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-4" title="View Fedora instructions">
                             <img src="https://assets.ubuntu.com/v1/a7d04c56-Fedora_logo_and_wordmark.svg" class="responsive-tabs__image not-for-small" alt="Fedora logo" />
                             <p class="for-small">View Fedora instructions</p>
                         </a>
                     </li>
-                    <li class="responsive-tabs__nav-item">
+                    <!--<li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-5" title="View Red hat instructions">
                             <img src="https://assets.ubuntu.com/v1/f7002708-redhat.svg" class="responsive-tabs__image not-for-small" alt="Red hat logo" />
                             <p class="for-small">View Red hat instructions</p>
                         </a>
-                    </li>
+                    </li>-->
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-6" title="View Ubuntu instructions">
                             <img src="https://assets.ubuntu.com/v1/887474d1-ubuntu.svg" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
@@ -60,38 +60,43 @@ layout: default
                     </li>
                 </ul>
                 <div id="responsive-tab-content-1" class="twelve-col">
-                    <h3 class="accessibility-aid">Arch instructions</h3>
-                    <pre class="command-line"><code>$ wget
-http://www.snapcraft.io/downloads/snap-confine-git-1.0.28.r98.740eba6-1-x86_64.pkg.tar.xz
-$ wget http://www.snapcraft.io/downloads/snapd-git-2.0.8.r0.14ff9e2-1-x86_64.pkg.tar.xz
-$ pacman -S snap-confine-git-1.0.28.r98.740eba6-1-x86_64.pkg.tar.xz \ snapd-git-2.0.8.r0.14ff9e2-1-x86_64.pkg.tar.xz</code></pre>
+                    <div class="eight-col">
+                        <h3 class="accessibility-aid">Arch instructions</h3>
+                        <p>To install <code>snapd</code> you need to have one of the <a class="external" href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helpers</a> installed.</p>
+                        <p>For example if you have pacaur installed just type <code>pacaur -S snapd</code> and log-out or reboot.</p>
+                    </div>
                 </div>
                 <div id="responsive-tab-content-2" class="twelve-col">
-                    <h3 class="accessibility-aid">Debian instructions</h3>
-                    <p class="eight-col">An official Debian package is available from the Debian Unstable archive. To install this:</p>
-                    <pre class="command-line"><code>$ sudo apt-get install snapd</code></pre>
+                    <div class="eight-col">
+                        <h3 class="accessibility-aid">Debian instructions</h3>
+                        <p>An official Debian package is available from the <a class="external" href="https://wiki.debian.org/DebianUnstable">Debian Unstable archive</a>. To install this:</p>
+                        <p>To install <code>snapd</code> type: <code>sudo apt install snapd</code> and log-out or reboot.</p>
+                    </div>
                 </div>
-                <div id="responsive-tab-content-3" class="twelve-col">
+                <!--<div id="responsive-tab-content-3" class="twelve-col">
                     <h3 class="accessibility-aid">Centos instructions</h3>
                     <pre class="command-line"><code># install on Centos
 sudo add-yum-repo https://rpm.snapcraft.io/path/
 sudo yum install snapd</code></pre>
-                </div>
+                </div> -->
                 <div id="responsive-tab-content-4" class="twelve-col">
-                    <h3 class="accessibility-aid">Fedora instructions</h3>
-                    <p class="eight-col">From a Fedora 23/24 machine, type:</p>
-                    <pre class="command-line"><code>$ wget
-http://www.snapcraft.io/downloads/snap-confine-2.0-1.fc24.x86_64.rpm
-$ wget http://www.snapcraft.io/downloads/snapd-2.0.8-1.fc24.x86_64.rpm
-$ dnf install squashfs-tools
-$ sudo rpm -Uvh snap-confine-2.0-1.fc24.x86_64.rpm snapd-2.0.8-1.fc24.x86_64.rpm</code></pre>
+                    <div class="eight-col">
+                        <h3 class="accessibility-aid">Fedora instructions</h3>
+                        <p>From a Fedora 23/24 machine, type:</p>
+                        
+                        <p>To enable this repository type: <code>sudo dnf copr enable zyga/snapcore</code>.</p>
+                        
+                        <p>To install <code>snapd</code> type: <code>sudo dnf install snapd</code> and log-out or reboot.</p>
+                        
+                        <p>Important: on Fedora 24 you currently have to switch SELinux to permissive mode. This restriction will be lifted later. Please edit <code>/etc/selinux/config</code> and change the file to contain <code>SELINUX=permissive</code>. After this change you have to reboot your system.</p>
+                    </div>
                 </div>
-                <div id="responsive-tab-content-5" class="twelve-col">
+                <!--<div id="responsive-tab-content-5" class="twelve-col">
                     <h3 class="accessibility-aid">Red hat instructions</h3>
                     <pre class="command-line"><code># install on Red hat
 sudo add-yum-repo https://rpm.snapcraft.io/path/
 sudo yum install snapd</code></pre>         
-                </div>
+                </div>-->
                 <div id="responsive-tab-content-6" class="twelve-col">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Ubuntu instructions</h3>
