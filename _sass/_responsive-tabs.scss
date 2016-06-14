@@ -1,3 +1,9 @@
+.responsive-tabs {
+  .command-line {
+    padding: 0;
+  }
+}
+
 .responsive-tabs__nav,
 .r-tabs .r-tabs-nav {
   display: flex;
@@ -9,17 +15,27 @@
   margin: 0;
   margin-left: -20px;
   padding: 0;
+  
+  a {
+    outline: none;
+  }
+  
 }
 
 .responsive-tabs__nav-item {
   text-align: center;
   align-self: flex-end;
-  width: 127px;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 10px;
+}
+
+.responsive-tabs__image {
+  max-width: 127px;
 }
 
 .responsive-tabs__link,
