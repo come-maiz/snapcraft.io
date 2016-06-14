@@ -19,19 +19,17 @@
   a {
     outline: none;
   }
-  
 }
 
 .responsive-tabs__nav-item {
   text-align: center;
   align-self: flex-end;
   margin-left: 20px;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 0;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
+  float: left;
 }
 
 .responsive-tabs__image {
