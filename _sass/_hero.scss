@@ -4,6 +4,13 @@ $dark_aubergine: #2c001e;
   @extend %vf-clearfix;
   background-color: $light-grey;
   border-bottom: none;
+  padding-top: 20px;
+  padding-bottom: 0;
+  
+  @media only screen and (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
 
   @media only screen and (min-width: 984px) {
     &__heading {
