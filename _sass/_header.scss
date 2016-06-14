@@ -1,0 +1,16 @@
+// remove mo
+.banner {
+  #nav:hover ul,
+  .nav-toggle {
+    display: none;
+  }
+  
+  .logo {
+    margin-left: 10px;
+    
+    @media only screen and (min-width: 984px) {
+      margin-left: 0;
+    }
+  }
+}
+
