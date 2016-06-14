@@ -3,7 +3,14 @@
 
   .inline-logos__item {
     margin: 0;
+    margin-right: 20px;
+    margin-bottom: 30px;
   }
+}
+
+.inline-logos .inline-logos__image {
+  max-height: 90px;
+  max-width: 240px;
 }
 
 .grid-list {

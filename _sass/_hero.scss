@@ -5,8 +5,10 @@ $dark_aubergine: #2c001e;
   background-color: $light-grey;
   border-bottom: none;
 
-  &__heading {
-    margin-top: 2rem;
+  @media only screen and (min-width: 984px) {
+    &__heading {
+      margin-top: 2rem;
+    }
   }
 
   .intro {
