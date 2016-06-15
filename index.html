@@ -89,11 +89,11 @@ sudo yum install snapd</code></pre>
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Fedora instructions</h3>
                         <p>From a Fedora 23/24 machine, type:</p>
-                        
+
                         <p>To enable this repository type: <code>sudo dnf copr enable zyga/snapcore</code>.</p>
-                        
+
                         <p>To install <code>snapd</code> type: <code>sudo dnf install snapd</code> and log-out or reboot.</p>
-                        
+
                         <p>Important: on Fedora 24 you currently have to switch SELinux to permissive mode. This restriction will be lifted later. Please edit <code>/etc/selinux/config</code> and change the file to contain <code>SELINUX=permissive</code>. After this change you have to reboot your system.</p>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ sudo yum install snapd</code></pre>
                     <h3 class="accessibility-aid">Red hat instructions</h3>
                     <pre class="command-line"><code># install on Red hat
 sudo add-yum-repo https://rpm.snapcraft.io/path/
-sudo yum install snapd</code></pre>         
+sudo yum install snapd</code></pre>
                 </div>-->
                 <div id="responsive-tab-content-6" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
@@ -129,7 +129,7 @@ sudo yum install snapd</code></pre>
             </div>
             <div class="seven-col">
                 <p>Snaps work on any distribution or device. Snaps are faster to install, easier to create, safer to run, and they update automatically and transactionally so your app is always fresh and never broken.</p>
-                
+
                 <p>The public collection of snaps includes the latest and best apps from GitHub and beyond, so you have the whole world of Linux apps at your fingertips. Take the tour below to experience 'hello world' as a snap, or jump to the <a href="/create">developer guide</a> to create your own snaps.</p>
             </div>
             <div class="five-col last-col">
@@ -150,24 +150,26 @@ sudo yum install snapd</code></pre>
             </div>
             <div class="eight-col">
                 <h3>Log in to the global snap store</h3>
-                <p>The snap store holds a public collection of snaps, and delivers them to clouds, devices and private infrastructure. Sign in once from your device (you can require two-factor authentication for extra security) then you will be able to fetch snaps on demand:</p>
-                
+                <p>The snap store holds a public collection of snaps, and delivers them to clouds, devices and private infrastructure. <a class="external" href="https://login.ubuntu.com/+login">Sign-in</a> once from your device (you can require two-factor authentication for extra security) and then you will be able to fetch snaps on demand:</p>
+
                 <pre class="command-line"><code>$ snap login me@myself.com
 Password: *********
-2-factor: ****** 
-Welcome!                   
-</code></pre>   
-        
+2-factor: ******
+Welcome!
+</code></pre>
+
+                <p>Snaps don&rsquo;t intrinsically depend on the Ubuntu store, that&rsquo;s just what <code>snapd</code> does today, and we expect people will have different stores for their snaps in future.</p>
+
                 <p>The store contains both public and private snaps.</p>
-                
-                <p>Anybody can publish a snap, but if you search the store you will only see snaps that have been reviewed and judged to be of good quality, and which can be installed securely. We call these the &lsquo;promoted&rsquo; snaps, and you can search them for a matching name or description:</p>       
-                    
+
+                <p>Anybody can publish a snap, but if you search the store you will only see snaps that have been reviewed and judged to be of good quality, and which can be installed securely. We call these the &lsquo;promoted&rsquo; snaps, and you can search them for a matching name or description:</p>
+
                 <pre class="command-line"><code>$ snap find hello
 Name           Version  Developer  Notes  Summary
 hello          2.10     canonical  -      GNU Hello, the "hello world" snap
 hello-huge     1.0      noise      -      A really big snap
 hello-world    6.1      canonical  -      Hello world example</code></pre>
-  
+
                 <p>As long as you know the name of the snap you want, and it is public or your own private snap, you can install it using its name directly. But if you search the store, you’ll only see public, promoted results.</p>
 
                 <p>Install the snap you want. We’ll start with GNU Hello, from the Free Software Foundation:</p>
@@ -179,26 +181,26 @@ hello-world    6.1      canonical  -      Hello world example</code></pre>
 Hello world!
 $ hello.command
 XXX</code></pre>
- 
+
                 <p>Snaps can also install services that run in the background, such as web servers or content management systems. Those will start automatically when you install the snap.</p>
-                
+
                 <p>See the snaps installed on your system with &lsquo;snap list&rsquo;, which will also tell you the software version, the unique revision, the developer of the installed snap, and any extra information such as whether the snap is in developer mode or not:</p>
-               
+
                 <pre class="command-line"><code>$ snap list
 Name           Version               Rev  Developer  Notes
 hello          2.10                  26   canonical  -
 ubuntu-core    16.04+20160419.20-55  109  canonical  -
-webdm          0.17                  21   canonical  -</code></pre>            
-               
-               
+webdm          0.17                  21   canonical  -</code></pre>
+
+
                 <h3>Always fresh – update fast and reliably</h3>
-               
+
                 <p>Snaps are updated automatically in the background every day. You can manually get the latest version of all your snaps with snap refresh which will bring you completely up to date for all snaps, unless you specify particular snaps to refresh.</p>
-               
+
                 <h3>Release channels - stable, candidate, beta and edge</h3>
                 <p>Developers can publish stable, release candidate, beta and edge versions of a snap, at the same time. This enables them to engage with users who are willing to test upcoming changes, and it enables users to decide how close to the leading edge of development they want to be.</p>
                 <p>By default, snaps are installed from the stable channel, but there is also a candidate channel which by convention will preview the next stable release, a beta channel and an edge channel.</p>
-               
+
                 <pre class="command-line"><code>$ snap install hello --channel=beta</code></pre>
 
                 <p>Run the beta version of the command:</p>
@@ -208,7 +210,7 @@ Hello, snap padawan!</code></pre>
                 <h3>Developer mode</h3>
                 <p>When a developer is working on a snap, they may want to let it run without the strict security confinement that is expected of stable, published snaps for general consumption. This is done by specifying <code>--devmode</code> on installation, to give permission for this snap to be run without that confinement.</p>
                 <p>Developers can publish snaps that require <code>--devmode</code> to work, but they can only publish those to beta or edge channels, not stable or candidate channels. As a user, you can install those beta or edge versions using <code>--devmode</code> as well. Bear in mind that you should NEVER do this unless you absolutely trust the developer with all the information on your system.</p>
-                
+
                <pre class="command-line"><code>$ snap install flubber --channel=beta
 Error: this version of foo requires devmode.
 $ snap install flubber --channel=beta --devmode
@@ -252,7 +254,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
                         <h3>Notes</h3>
                     </div>
                 </li>
-                
+
                 <li class="grid-list__item four-col">
                     <div class="one-col ">
                         <img class="grid-list__img" src="https://assets.ubuntu.com/v1/476aaa77-cassandra.svg" alt="icon">
@@ -277,7 +279,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
                         <h3>Shout</h3>
                     </div>
                 </li>
-                
+
                 <li class="grid-list__item four-col last-row">
                     <div class="one-col ">
                         <img class="grid-list__img" src="https://assets.ubuntu.com/v1/d96a74dd-moon-buggy.svg" alt="icon">
@@ -335,7 +337,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
             </div>
         </div>
     </section>
-    
+
 <!-- jQuery with fallback to the 1.* for old IE -->
 <!--[if lt IE 9]>
     <script src="https://assets.ubuntu.com/v1/b66ed708-jquery-1.11.0.min.js"></script>
