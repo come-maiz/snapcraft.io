@@ -69,7 +69,7 @@ snapcraft-tour/20-PARTS-PLUGINS:
 $ ls
 snapcraft.yaml</code></pre>
 
-            <p>Notice that <code>snapcraft.yaml</code> is the only file in the directory. Snapcraft doesn't need anything else as it will fetch everything it needs to build the snap, using the <code>snapcraft.yaml</code> description for the snaTake a look inside:</p>
+            <p>Notice that <code>snapcraft.yaml</code> is the only file in the directory. Snapcraft doesn't need anything else as it will fetch everything it needs to build the snap, using the <code>snapcraft.yaml</code> description for the snap. Take a look inside:</p>
 
             <pre class="command-line"><code>$ more snapcraft.yaml
 name: hello
@@ -90,7 +90,7 @@ parts:
 
             <p>Don't worry about everything in there just yet. The snapcraft tool will interpret this file, fetch and install everything that is needed, build it, and give you a snap.</p>
 
-            <p>Start by building this snap, noting that you’ll be prompted for your system password each time run <code>snapcraft</code>:</p>
+            <p>Start by building this snap, noting that you’ll be prompted for your system password each time you run <code>snapcraft</code>:</p>
 
             <pre class="command-line"><code>$ snapcraft
 [sudo] password for [your user name]:  ***
@@ -127,7 +127,7 @@ hello  2.10     X1</code></pre>
 
             <p>The version is purely human-readable, it isn't used for any particular purpose other than keeping you aware of what's on your system. Two different snaps can claim to have the same version (in fact, when you have daily builds of a snap, it will almost always have a version like "2.1b3" for every build until the version is updated).</p>
 
-            <p>The revision for a snap is unique. In this example, because you built the snap locally, it gets a local alphanumeric revision that is unique on this machine only. When you load a snap from the store the revision is an integer number that exactly identifies the snap that is installed. While you can't do this for local revisions, with snaps loaded from the store you can compare revisions on two machines to determine if they have exactly the same content installed.</p>
+            <p>The revision for a snap is unique. In this example, because you built the snap locally, it gets a local alphanumeric revision that is unique on this machine only. When you load a snap from the store, the revision is an integer number that exactly identifies the snap that is installed. While you can't do this for local revisions, with snaps loaded from the store you can compare revisions on two machines to determine if they have exactly the same content installed.</p>
 
             <p>You can also confirm details of all the snaps you've installed:</p>
 
