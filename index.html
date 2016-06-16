@@ -68,15 +68,18 @@ layout: default
                 <div id="responsive-tab-content-1" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Arch instructions</h3>
-                        <p>To install <code>snapd</code> you need to have one of the <a class="external" href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helpers</a> installed.</p>
-                        <p>For example if you have pacaur installed just type <code>pacaur -S snapd</code> and log-out or reboot.</p>
+                        <p>Use one of the <a class="external" href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helpers</a> to install snapd. For example, with pacaur:</p>
+                        <pre class="command-line"><code>pacaur -S snapd
+# enable the snapd systemd service:
+sudo systemctl enable –now snapd.service</code></pre>
+                        
                     </div>
                 </div>
                 <div id="responsive-tab-content-2" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Debian instructions</h3>
-                        <p>An official Debian package is available from the <a class="external" href="https://wiki.debian.org/DebianUnstable">Debian Unstable archive</a>. To install this:</p>
-                        <p>To install <code>snapd</code> type: <code>sudo apt install snapd</code> and log-out or reboot.</p>
+                        <p>On <a href="https://wiki.debian.org/DebianUnstable">Debian Sid</a>:</p>
+<pre class="command-line"><code>sudo apt install snapd</code></pre>
                     </div>
                 </div>
                 <!--<div id="responsive-tab-content-3" class="twelve-col">
@@ -88,19 +91,24 @@ sudo yum install snapd</code></pre>
                 <div id="responsive-tab-content-4" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Fedora instructions</h3>
-                        <p>From a Fedora 23/24 machine, type:</p>
+                        <p>On Fedora 23 or 24:</p>
+                        <pre class="command-line"><code>sudo dnf copr enable zyga/snapcore.
+sudo dnf install snapd
+# enable the snapd systemd service:
+sudo systemctl enable –now snapd.service
 
-                        <p>To enable this repository type: <code>sudo dnf copr enable zyga/snapcore</code>.</p>
-
-                        <p>To install <code>snapd</code> type: <code>sudo dnf install snapd</code> and log-out or reboot.</p>
-
-                        <p>Important: on Fedora 24 you currently have to switch SELinux to permissive mode. This restriction will be lifted later. Please edit <code>/etc/selinux/config</code> and change the file to contain <code>SELINUX=permissive</code>. After this change you have to reboot your system.</p>
+# SELinux support is in beta, so on Fedora 24 you currently have to:
+sudo setenforce 0
+# to persist, edit /etc/selinux/config to set SELINUX=permissive and reboot.</code></pre>  
                     </div>
                 </div>
                 <div id="responsive-tab-content-5" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Gentoo</h3>
-                        <p>First install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a> then <a href="https://github.com/zyga/snapd-gentoo".>snapd.ebuild</a></p>
+                        <p>Install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a> then <a href="https://github.com/zyga/snapd-gentoo".>snapd.ebuild</a></p>
+                        <pre class="command-line"><code># enable the snapd systemd service:
+sudo systemctl enable –now snapd.service</code></pre>
+
                     </div>
                 </div>
                 <!--<div id="responsive-tab-content-5" class="twelve-col">
@@ -112,7 +120,8 @@ sudo yum install snapd</code></pre>
                 <div id="responsive-tab-content-6" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col">
                         <h3 class="accessibility-aid">Ubuntu instructions</h3>
-                        <p>On Ubuntu desktop 16.04 LTS and all flavors such as Ubuntu Mate, Kubuntu, Ubuntu GNOME, Lubuntu, Xubuntu, and others, snapd is already installed by default! Nothing to do here :)</p>
+                        <p>On Ubuntu 16.04 LTS and flavors, snapd is usually installed by default. If needed:</p>
+                        <pre class="command-line"><code>sudo apt install snapd</code></pre>
                     </div>
                 </div>
             </div>
