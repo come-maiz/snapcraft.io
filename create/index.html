@@ -7,12 +7,12 @@ layout: default
         <div class="six-col">
             <h1 class="hero-row__heading">Learn to make a snap</h1>
             <div class="five-col">
-                <img class="for-small" src="https://assets.ubuntu.com/v1/e5388dd6-snaps-hero%403x-1.png?w=480" alt="" />
+                <img class="for-small" src="{{ site.asset_path }}e5388dd6-snaps-hero%403x-1.png?w=480" alt="" />
             </div>
             <p class="intro">Snapcraft is a snappy packaging tool.</p>
         </div>
         <div class="six-col last-col">
-            <img class="not-for-small" src="https://assets.ubuntu.com/v1/e5388dd6-snaps-hero%403x-1.png?w=600" alt="" />
+            <img class="not-for-small" src="{{ site.asset_path }}e5388dd6-snaps-hero%403x-1.png?w=600" alt="" />
        </div>
     </div>
 </section>
@@ -329,7 +329,7 @@ $ sudo snap install hello-debug_2.10_*.snap
                 <li>prime/</li>
             </ul>
 
-            <p><code>parts/</code> contains one subdirectory for each part: <code>gnu-bash</code> and <code>gnu-hello</code>. Each part's subdirectory has a <code>src/</code> directory (to where the code is pulled), <code>build/</code> where the build is append, and <code>install/</code> where make install is processed.</p>
+            <p><code>parts/</code> contains one subdirectory for each part: <code>gnu-bash</code> and <code>gnu-hello</code>. Each part's subdirectory has a <code>src/</code> directory (to where the code is pulled), <code>build/</code> where the build happens, and <code>install/</code> where <code>make install</code> is processed.</p>
 
             <p><code>stage/</code> is where all the content from <code>parts/&lt;part_name&gt;/install</code> is copied and consolidated in a single directory.</p>
 

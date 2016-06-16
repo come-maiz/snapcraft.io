@@ -11,6 +11,7 @@ email: anthony.dillon@canonical.com
 description: Introducing snaps and commands to install and remove them on Ubuntu 16.04 LTS.
 keywords: snappy, Ubuntu Core, Ubuntu 16.04 LTS, snaps, apps, debs, snap, docker, coreos, atomic, snapcraft, snapd
 baseurl: ""
+asset_path: https://assets.ubuntu.com/v1/
 navigation:
 - text: Home
   url: /
