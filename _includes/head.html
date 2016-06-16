@@ -6,12 +6,12 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} - Snaps are universal Linux packages</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <link rel="icon" type="image/png" href="https://assets.ubuntu.com/cb22ba5d-favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="https://assets.ubuntu.com/49a1a858-favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ site.asset_path }}cb22ba5d-favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{{ site.asset_path }}49a1a858-favicon-32x32.png" sizes="32x32" />
     
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://assets.ubuntu.com/3361409d-apple-touch-icon-144x144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://assets.ubuntu.com/5fe4d3c8-apple-touch-icon-114x114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://assets.ubuntu.com/09460d9a-apple-touch-icon-72x72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="https://assets.ubuntu.com/cc66da65-apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.asset_path }}3361409d-apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.asset_path }}5fe4d3c8-apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.asset_path }}09460d9a-apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="{{ site.asset_path }}cc66da65-apple-touch-icon-precomposed.png" />
     <link rel="stylesheet" href="/css/main.css">
 </head>

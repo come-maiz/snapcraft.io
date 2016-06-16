@@ -49,6 +49,7 @@
   display: none;
   padding: 20px;
   padding-bottom: 10px;
+  animation-duration: 1s;
 }
 
 .r-tabs .r-tabs-accordion-title {
@@ -90,7 +91,7 @@
 }
 
 /* Accordion responsive breakpoint */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .r-tabs .r-tabs-nav {
     display: none;
   }

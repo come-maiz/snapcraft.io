@@ -7,13 +7,13 @@ layout: default
             <div class="five-col">
                <h1 class="hero-row__heading">Snapcraft</h1>
                 <div class="five-col">
-                    <img class="for-small" src="https://assets.ubuntu.com/v1/e5388dd6-snaps-hero%403x-1.png?w=480" alt="" />
+                    <img class="for-small" src="{{ site.asset_path }}e5388dd6-snaps-hero%403x-1.png?w=480" alt="" />
                 </div>
                 <p class="intro four-col">Package any app for any Linux desktop, server, cloud or device.</p>
                 <p><a class="button--primary" href="/create">Create a snap</a></p>
             </div>
             <div class="six-col prepend-one last-col">
-                <img class="not-for-small" src="https://assets.ubuntu.com/v1/e5388dd6-snaps-hero%403x-1.png?w=600" alt="" />
+                <img class="not-for-small" src="{{ site.asset_path }}e5388dd6-snaps-hero%403x-1.png?w=600" alt="" />
            </div>
         </div>
     </section>
@@ -24,43 +24,43 @@ layout: default
                 <ul class="responsive-tabs__nav twelve-col clearfix">
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-1" title="View Arch Linux instructions">
-                            <img src="https://assets.ubuntu.com/v1/e0b23092-archlinux.svg" class="responsive-tabs__image not-for-small" alt="Arch Linux logo" />
+                            <img src="{{ site.asset_path }}e0b23092-archlinux.svg" class="responsive-tabs__image not-for-small" alt="Arch Linux logo" />
                             <p class="for-small">View Arch instructions</p>
                         </a>
                     </li>
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-2" title="View Debian instructions">
-                            <img src="https://assets.ubuntu.com/v1/2eafb62e-openlogo.svg" class="responsive-tabs__image not-for-small" alt="Debian logo" width="60" />
+                            <img src="{{ site.asset_path }}2eafb62e-openlogo.svg" class="responsive-tabs__image not-for-small" alt="Debian logo" width="60" />
                             <p class="for-small">View Debian instructions</p>
                         </a>
                     </li>
                     <!--<li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-3" title="View Centos instructions">
-                            <img src="https://assets.ubuntu.com/v1/31bd1765-centos.svg" class="responsive-tabs__image not-for-small" alt="Centos logo" />
+                            <img src="{{ site.asset_path }}31bd1765-centos.svg" class="responsive-tabs__image not-for-small" alt="Centos logo" />
                             <p class="for-small">View Centos instructions</p>
                        </a>
                     </li>-->
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-4" title="View Fedora instructions">
-                            <img src="https://assets.ubuntu.com/v1/a7d04c56-Fedora_logo_and_wordmark.svg" class="responsive-tabs__image not-for-small" alt="Fedora logo" />
+                            <img src="{{ site.asset_path }}a7d04c56-Fedora_logo_and_wordmark.svg" class="responsive-tabs__image not-for-small" alt="Fedora logo" />
                             <p class="for-small">View Fedora instructions</p>
                         </a>
                     </li>
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-5" title="View Gentoo instructions">
-                            <img src="https://assets.ubuntu.com/v1/2235d892-gentoo.png" class="responsive-tabs__image not-for-small" alt="Gentoo logo" width="90" />
+                            <img src="{{ site.asset_path }}2235d892-gentoo.png" class="responsive-tabs__image not-for-small" alt="Gentoo logo" width="90" />
                             <p class="for-small">View Gentoo instructions</p>
                         </a>
                     </li>
                     <!--<li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-5" title="View Red hat instructions">
-                            <img src="https://assets.ubuntu.com/v1/f7002708-redhat.svg" class="responsive-tabs__image not-for-small" alt="Red hat logo" />
+                            <img src="{{ site.asset_path }}f7002708-redhat.svg" class="responsive-tabs__image not-for-small" alt="Red hat logo" />
                             <p class="for-small">View Red hat instructions</p>
                         </a>
                     </li>-->
                     <li class="responsive-tabs__nav-item">
                         <a class="responsive-tabs__link" href="#responsive-tab-content-6" title="View Ubuntu instructions">
-                            <img src="https://assets.ubuntu.com/v1/887474d1-ubuntu.svg" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
+                            <img src="{{ site.asset_path }}887474d1-ubuntu.svg" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
                             <p class="for-small">View Ubuntu instructions</p>
                         </a>
                     </li>
@@ -134,9 +134,9 @@ sudo yum install snapd</code></pre>
             </div>
             <div class="five-col last-col">
                 <ul class="inline-logos">
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/c24cb4b9-logo-intel.svg" class="inline-logos__image" alt="Intel logo" /></li>
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/15214c8e-logo-arm.png" alt="ARM logo" /></li>
-                <li class="inline-logos__item"><img src="https://assets.ubuntu.com/v1/47e40767-power8.png" class="inline-logos__image" alt="POWER logo" /></li>
+                <li class="inline-logos__item"><img src="{{ site.asset_path }}c24cb4b9-logo-intel.svg" class="inline-logos__image" alt="Intel logo" /></li>
+                <li class="inline-logos__item"><img src="{{ site.asset_path }}15214c8e-logo-arm.png" alt="ARM logo" /></li>
+                <li class="inline-logos__item"><img src="{{ site.asset_path }}47e40767-power8.png" class="inline-logos__image" alt="POWER logo" /></li>
                 </ul>
             </div>
         </div>
@@ -178,10 +178,9 @@ hello-world    6.1      canonical  -      Hello world example</code></pre>
                 <p>Each snap might include multiple related commands, with a default command that has the same name as the snap itself. Additional commands are prefixed with the snap name:</p>
 
                 <pre class="command-line"><code>$ hello
-Hello world!
-$ hello.command
-XXX</code></pre>
-
+Hello, world!
+$ hello.universe
+Hello, universe!</code></pre>
                 <p>Snaps can also install services that run in the background, such as web servers or content management systems. Those will start automatically when you install the snap.</p>
 
                 <p>See the snaps installed on your system with &lsquo;snap list&rsquo;, which will also tell you the software version, the unique revision, the developer of the installed snap, and any extra information such as whether the snap is in developer mode or not:</p>
@@ -232,7 +231,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
             <ul class="grid-list twelve-col no-bullets no-margin-bottom">
                 <li class="grid-list__item four-col">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/e512b0e2-jenkins.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}e512b0e2-jenkins.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>Jenkins</h3>
@@ -240,7 +239,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
                 </li>
                 <li class="grid-list__item four-col">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/3ea99f54-htop.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}3ea99f54-htop.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>htop</h3>
@@ -248,7 +247,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
                 </li>
                 <li class="grid-list__item four-col last-col">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/3ad2e1e3-notes.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}3ad2e1e3-notes.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>Notes</h3>
@@ -257,7 +256,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
 
                 <li class="grid-list__item four-col">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/476aaa77-cassandra.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}476aaa77-cassandra.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>Cassandra</h3>
@@ -265,7 +264,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
                 </li>
                 <li class="grid-list__item four-col">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/24badefc-freecad.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}24badefc-freecad.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>Freecad</h3>
@@ -273,7 +272,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
                 </li>
                 <li class="grid-list__item four-col last-col">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/aacc8ea7-shout.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}aacc8ea7-shout.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>Shout</h3>
@@ -282,7 +281,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
 
                 <li class="grid-list__item four-col last-row">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/d96a74dd-moon-buggy.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}d96a74dd-moon-buggy.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>moon-buggy</h3>
@@ -290,7 +289,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
                 </li>
                 <li class="grid-list__item four-col last-row">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/c675c7a0-webdm.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}c675c7a0-webdm.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>WebDM</h3>
@@ -298,7 +297,7 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
                 </li>
                 <li class="grid-list__item four-col last-row last-col">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="https://assets.ubuntu.com/v1/b0f30b97-hangups.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}b0f30b97-hangups.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>Hangups</h3>
@@ -340,10 +339,10 @@ Do you still want to install ‘flubber’? [y/N] N</code></pre>
 
 <!-- jQuery with fallback to the 1.* for old IE -->
 <!--[if lt IE 9]>
-    <script src="https://assets.ubuntu.com/v1/b66ed708-jquery-1.11.0.min.js"></script>
+    <script src="{{ site.asset_path }}b66ed708-jquery-1.11.0.min.js"></script>
 <![endif]-->
 <!--[if gte IE 9]><!-->
-    <script src="https://assets.ubuntu.com/v1/98884258-jquery-2.1.0.min.js"></script>
+    <script src="{{ site.asset_path }}98884258-jquery-2.1.0.min.js"></script>
 <!--<![endif]-->
 
 <script src="js/jquery.responsiveTabs.min.js" type="text/javascript"></script>
