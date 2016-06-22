@@ -3,9 +3,9 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var sourcemaps = require('gulp-sourcemaps');
-var ghPages = require('gulp-gh-pages');
-var uglify = require('gulp-uglify');
+var sourcemaps  = require('gulp-sourcemaps');
+var ghPages     = require('gulp-gh-pages');
+var uglify      = require('gulp-uglify');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'

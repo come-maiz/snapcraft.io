@@ -66,7 +66,7 @@ layout: default
                     </li>
                 </ul>
                 <div id="responsive-tab-content-1" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col">
+                    <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Arch instructions</h3>
                         <p>Use one of the <a class="external" href="https://wiki.archlinux.org/index.php/AUR_helpers">AUR helpers</a> to install snapd. For example, with pacaur:</p>
                         <pre class="command-line"><code>pacaur -S snapd
@@ -76,7 +76,7 @@ sudo systemctl enable --now snapd.service</code></pre>
                     </div>
                 </div>
                 <div id="responsive-tab-content-2" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col">
+                    <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Debian instructions</h3>
                         <p>On <a href="https://wiki.debian.org/DebianUnstable">Debian Sid</a>:</p>
 <pre class="command-line"><code>sudo apt install snapd</code></pre>
@@ -89,7 +89,7 @@ sudo add-yum-repo https://rpm.snapcraft.io/path/
 sudo yum install snapd</code></pre>
                 </div> -->
                 <div id="responsive-tab-content-4" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col">
+                    <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Fedora instructions</h3>
                         <p>On Fedora 23 or 24:</p>
                         <pre class="command-line"><code>sudo dnf copr enable zyga/snapcore
@@ -103,7 +103,7 @@ sudo setenforce 0
                     </div>
                 </div>
                 <div id="responsive-tab-content-5" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col">
+                    <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Gentoo</h3>
                         <p>Install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a> then <a href="https://github.com/zyga/snapd-gentoo".>snapd.ebuild</a></p>
                         <pre class="command-line"><code># enable the snapd systemd service:
@@ -118,15 +118,14 @@ sudo add-yum-repo https://rpm.snapcraft.io/path/
 sudo yum install snapd</code></pre>
                 </div>-->
                 <div id="responsive-tab-content-6" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col">
+                    <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Ubuntu instructions</h3>
-                        <p>On Ubuntu 16.04 LTS and flavors, snapd is usually installed by default. If needed:</p>
                         <pre class="command-line"><code>sudo apt install snapd</code></pre>
                     </div>
                 </div>
             </div>
             <div class="twelve-col align-center clearfix">
-                <p>Click for installation instructions, or <a href="http://www.github.com/snapcore/snapd">build from source</a>.</p>
+                <p>Click for installation instructions, or <a href="http://www.github.com/snapcore/snapd">build <code>snapd</code> from source</a>.</p>
             </div>
         </div>
     </section>
