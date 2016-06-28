@@ -23,6 +23,15 @@
     padding: 0 .25rem;
   }
 
+  &__heading {
+    color: $warm-grey;
+    font-size: 1em;
+    letter-spacing: .05em;
+    margin-bottom: 0;
+    padding-bottom: .75em;
+    text-transform: uppercase;
+  }
+
   @media only screen and (min-width: $breakpoint-large) {
     padding: 2rem 0 1rem;
   }
