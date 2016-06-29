@@ -1,0 +1,2833 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: you@example.com\n"
+"POT-Creation-Date: 2016-06-29 13:59:16.220963\n"
+"PO-Revision-Date: 2016-06-29 13:59:16.220963\n"
+"Last-Translator: you <you@example.com>\n"
+"Language-Team: English <yourteam@example.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../index.html
+msgid "or on"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"Each snap might include multiple related commands, with a default command "
+"that has the same name as the snap itself. Additional commands are prefixed "
+"with the snap name:"
+msgstr ""
+
+#: ../index.html
+msgid "$ hello Hello, snap padawan!"
+msgstr ""
+
+#: ../index.html
+msgid "View Gentoo instructions"
+msgstr ""
+
+#: ../index.html
+msgid "$ hello Hello, world! $ hello.universe Hello, universe!"
+msgstr ""
+
+#: ../index.html
+msgid "Snaps don"
+msgstr ""
+
+#: ../index.html
+msgid "developer guide"
+msgstr ""
+
+#: ../index.html
+msgid "Gentoo"
+msgstr ""
+
+#: ../index.html
+msgid "Debian instructions"
+msgstr ""
+
+#: ../index.html
+msgid "A 'snap' is a universal Linux package"
+msgstr ""
+
+#: ../index.html
+msgid "View Fedora instructions"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"As long as you know the name of the snap you want, and it is public or your "
+"own private snap, you can install it using its name directly. But if you "
+"search the store, you’ll only see public, promoted results."
+msgstr ""
+
+#: ../index.html
+msgid ""
+"When a developer is working on a snap, they may want to let it run without "
+"the strict security confinement that is expected of stable, published snaps "
+"for general consumption. This is done by specifying"
+msgstr ""
+
+#: ../index.html
+msgid "then"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"# enable the snapd systemd service: sudo systemctl enable --now "
+"snapd.service"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"Snaps work on any distribution or device. Snaps are faster to install, "
+"easier to create, safer to run, and they update automatically and "
+"transactionally so your app is always fresh and never broken."
+msgstr ""
+
+#: ../index.html
+msgid "Notes"
+msgstr ""
+
+#: ../index.html
+msgid "s just what"
+msgstr ""
+
+#: ../index.html
+msgid "View Arch instructions"
+msgstr ""
+
+#: ../index.html
+msgid "and then you will be able to fetch snaps on demand:"
+msgstr ""
+
+#: ../index.html
+msgid "Package any app for any Linux desktop, server, cloud or device."
+msgstr ""
+
+#: ../index.html
+msgid "t intrinsically depend on the Ubuntu store, that"
+msgstr ""
+
+#: ../index.html
+msgid "Ask Ubuntu"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"Anybody can publish a snap, but if you search the store you will only see "
+"snaps that have been reviewed and judged to be of good quality, and which "
+"can be installed securely. We call these the"
+msgstr ""
+
+#: ../index.html
+msgid "or just use the command line to install any of these great snaps:"
+msgstr ""
+
+#: ../index.html
+msgid "moon-buggy"
+msgstr ""
+
+#: ../index.html
+msgid "Snaps have a very simple internal structure"
+msgstr ""
+
+#: ../index.html
+msgid "On Fedora 23 or 24:"
+msgstr ""
+
+#: ../index.html
+msgid "The 'hello' world tour"
+msgstr ""
+
+#: ../index.html
+msgid "Contribute to Ubuntu Core"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"Snaps are updated automatically in the background every day. You can "
+"manually get the latest version of all your snaps with snap refresh which "
+"will bring you completely up to date for all snaps, unless you specify "
+"particular snaps to refresh."
+msgstr ""
+
+#: ../index.html
+msgid "htop"
+msgstr ""
+
+#: ../index.html
+msgid "AUR helpers"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"Install the snap you want. We’ll start with GNU Hello, from the Free "
+"Software Foundation:"
+msgstr ""
+
+#: ../index.html
+msgid "View Debian instructions"
+msgstr ""
+
+#: ../index.html
+msgid "WebDM"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"Developers can publish stable, release candidate, beta and edge versions of "
+"a snap, at the same time. This enables them to engage with users who are "
+"willing to test upcoming changes, and it enables users to decide how close "
+"to the leading edge of development they want to be."
+msgstr ""
+
+#: ../index.html
+msgid "Learn more"
+msgstr ""
+
+#: ../index.html
+msgid "Jenkins"
+msgstr ""
+
+#: ../index.html
+msgid "Developer mode"
+msgstr ""
+
+#: ../index.html
+msgid "Snapcraft"
+msgstr ""
+
+#: ../index.html
+msgid "installed on your desktop, cloud, VM or server. You may need to"
+msgstr ""
+
+#: ../index.html
+msgid "Hangups"
+msgstr ""
+
+#: ../index.html
+msgid "to create your own snaps."
+msgstr ""
+
+#: ../index.html
+msgid "Creating snaps is easy!"
+msgstr ""
+
+#: ../index.html
+msgid "--- layout: default ---"
+msgstr ""
+
+#: ../index.html
+msgid "#snappy channel on Freenode"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"If you are running Ubuntu 16.04 LTS, you can try all of this without having "
+"to install"
+msgstr ""
+
+#: ../index.html
+msgid "Want to get to know more about snaps, Snapcraft and Ubuntu Core?"
+msgstr ""
+
+#: ../index.html
+msgid "See the snaps installed on your system with"
+msgstr ""
+
+#: ../index.html
+msgid "Debian Sid"
+msgstr ""
+
+#: ../index.html
+msgid "Create a snap"
+msgstr ""
+
+#: ../index.html
+msgid "Ubuntu instructions"
+msgstr ""
+
+#: ../index.html
+msgid "Fedora instructions"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"$ snap install flubber --channel=beta Error: this version of foo requires "
+"devmode. $ snap install flubber --channel=beta --devmode WARNING: snaps "
+"installed in devmode are not confined. You are trusting all the private data"
+" on this system to the developer \"frankie\". Do you still want to install "
+"‘flubber’? [y/N] N"
+msgstr ""
+
+#: ../index.html
+msgid "Always fresh – update fast and reliably"
+msgstr ""
+
+#: ../index.html
+msgid "to install snapd. For example, with pacaur:"
+msgstr ""
+
+#: ../index.html
+msgid "and join the snap crafting community"
+msgstr ""
+
+#: ../index.html
+msgid "Click for installation instructions, or"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"The snap store holds a public collection of snaps, and delivers them to "
+"clouds, devices and private infrastructure."
+msgstr ""
+
+#: ../index.html
+msgid "Enable snaps"
+msgstr ""
+
+#: ../index.html
+msgid "Contribute"
+msgstr ""
+
+#: ../index.html
+msgid "Sign-in"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"$ snap login me@myself.com Password: ********* 2-factor: ****** Welcome!"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"sudo dnf copr enable zyga/snapcore sudo dnf install snapd # enable the snapd"
+" systemd service: sudo systemctl enable --now snapd.service # SELinux "
+"support is in beta, so on Fedora 24 you currently have to: sudo setenforce 0"
+" # to persist, edit /etc/selinux/config to set SELINUX=permissive and "
+"reboot."
+msgstr ""
+
+#: ../index.html
+msgid "$ snap install hello --channel-beta"
+msgstr ""
+
+#: ../index.html
+msgid "Cassandra"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"$ snap find hello Name Version Developer Notes Summary hello 2.10 canonical "
+"- GNU Hello, the \"hello world\" snap hello-huge 1.0 noise - A really big "
+"snap hello-world 6.1 canonical - Hello world example"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"pacaur -S snapd # enable the snapd systemd service: sudo systemctl enable "
+"--now snapd.service"
+msgstr ""
+
+#: ../index.html
+msgid "we have a fun crowd of people who hang out on the"
+msgstr ""
+
+#: ../index.html
+msgid "snaps, and you can search them for a matching name or description:"
+msgstr ""
+
+#: ../index.html
+msgid "Shout"
+msgstr ""
+
+#: ../index.html
+msgid ". Check out snaps on"
+msgstr ""
+
+#: ../index.html
+msgid "Developers can publish snaps that require"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"$ snap list Name Version Rev Developer Notes hello 2.10 26 canonical - "
+"ubuntu-core 16.04+20160419.20-55 109 canonical - webdm 0.17 21 canonical -"
+msgstr ""
+
+#: ../index.html
+msgid "."
+msgstr ""
+
+#: ../index.html
+msgid ":"
+msgstr ""
+
+#: ../index.html
+msgid "This tutorial assumes you have"
+msgstr ""
+
+#: ../index.html
+msgid "Run the beta version of the command:"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"$ snap refresh hello --channel=beta Name Version Rev Developer Notes hello "
+"2.10.1 29 canonical - hello (beta) installed"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"to work, but they can only publish those to beta or edge channels, not "
+"stable or candidate channels. As a user, you can install those beta or edge "
+"versions using"
+msgstr ""
+
+#: ../index.html
+msgid "The store contains both public and private snaps."
+msgstr ""
+
+#: ../index.html
+msgid "Release channels"
+msgstr ""
+
+#: ../index.html
+msgid "Install"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"you can easily craft them by hand! But the easiest way to build a snap is "
+"with snapcraft, which supports building from source and from existing "
+"packages. Snapcraft also handles publishing your snaps to the world. Read "
+"how to"
+msgstr ""
+
+#: ../index.html
+msgid "stable, candidate, beta and edge"
+msgstr ""
+
+#: ../index.html
+msgid "create a snap"
+msgstr ""
+
+#: ../index.html
+msgid "snap-confine.ebuild"
+msgstr ""
+
+#: ../index.html
+msgid "snapd.ebuild"
+msgstr ""
+
+#: ../index.html
+msgid "promoted"
+msgstr ""
+
+#: ../index.html
+msgid "$ snap install hello"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"Note that you could have directly installed hello from the beta channel via:"
+msgstr ""
+
+#: ../index.html
+msgid "Freecad"
+msgstr ""
+
+#: ../index.html
+msgid "On"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"Snaps can also install services that run in the background, such as web "
+"servers or content management systems. Those will start automatically when "
+"you install the snap."
+msgstr ""
+
+#: ../index.html
+msgid "snap list"
+msgstr ""
+
+#: ../index.html
+msgid "Read the docs"
+msgstr ""
+
+#: ../index.html
+msgid "snapcraft@lists.snapcraft.io"
+msgstr ""
+
+#: ../index.html
+msgid "--devmode"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"as well. Bear in mind that you should NEVER do this unless you absolutely "
+"trust the developer with all the information on your system."
+msgstr ""
+
+#: ../index.html
+msgid "build"
+msgstr ""
+
+#: ../index.html
+msgid "uappexplorer.com"
+msgstr ""
+
+#: ../index.html
+msgid "Log in to the global snap store"
+msgstr ""
+
+#: ../index.html
+msgid "Arch instructions"
+msgstr ""
+
+#: ../index.html
+msgid "Interested in building snaps or working with Ubuntu Core?"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"on installation, to give permission for this snap to be run without that "
+"confinement."
+msgstr ""
+
+#: ../index.html
+msgid "sudo apt install snapd"
+msgstr ""
+
+#: ../index.html
+msgid "Use one of the"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"By default, snaps are installed from the stable channel, but there is also a"
+" candidate channel which by convention will preview the next stable release,"
+" a beta channel and an edge channel."
+msgstr ""
+
+#: ../index.html
+msgid "snapd"
+msgstr ""
+
+#: ../index.html
+msgid "before continuing."
+msgstr ""
+
+#: ../index.html
+msgid "Popular snaps"
+msgstr ""
+
+#: ../index.html
+msgid ""
+", which will also tell you the software version, the unique revision, the "
+"developer of the installed snap, and any extra information such as whether "
+"the snap is in developer mode or not:"
+msgstr ""
+
+#: ../index.html
+msgid "Ubuntu 16.04 LTS"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"The public collection of snaps includes the latest and best apps from GitHub"
+" and beyond, so you have the whole world of Linux apps at your fingertips. "
+"Take the tour below to experience 'hello world' as a snap, or jump to the"
+msgstr ""
+
+#: ../index.html
+msgid ""
+"does today, and we expect people will have different stores for their snaps "
+"in future."
+msgstr ""
+
+#: ../index.html
+msgid "View Ubuntu instructions"
+msgstr ""
+
+#: ../index.html
+msgid "from source"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"lists the dependencies needed to actually run the contents of the snap. "
+"They'll be packed into the final snap. Here, the requirement is for the "
+"hello-world part to download and unpack"
+msgstr ""
+
+#: ../create/index.html
+msgid "Here the"
+msgstr ""
+
+#: ../create/index.html
+msgid "qt5-launch"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You can build your own plugin and reference it from your part. To do this, "
+"copy your plugin into"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"interface. The plug then connects to the network-bind slot provided by the "
+"base OS as an helper."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"] snapcraft [options] cleanbuild snapcraft [options] login snapcraft "
+"[options] logout snapcraft [options] upload"
+msgstr ""
+
+#: ../create/index.html
+msgid "file is just a"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"stage: Move the files installed from different parts into a single directory"
+msgstr ""
+
+#: ../create/index.html
+msgid "to"
+msgstr ""
+
+#: ../create/index.html
+msgid "Beta is used to provide preview releases of semi-stable changes"
+msgstr ""
+
+#: ../create/index.html
+msgid "Note that the snap has both a version and a revision."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"parts: godd: plugin: go source: https://github.com/mvo5/godd.git gnu-hello: "
+"plugin: autotools source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz"
+msgstr ""
+
+#: ../create/index.html
+msgid "In the"
+msgstr ""
+
+#: ../create/index.html
+msgid "plugin for the part."
+msgstr ""
+
+#: ../create/index.html
+msgid "is processed."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Here the hello part uses the nodejs plugin, a plugin to handle Node.js "
+"projects. It takes all the npm information from"
+msgstr ""
+
+#: ../create/index.html
+msgid "has copied the content of"
+msgstr ""
+
+#: ../create/index.html
+msgid "prime/"
+msgstr ""
+
+#: ../create/index.html
+msgid "parts-intro: A \"part\" is a reusable component of a snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ hello-debug.hello $ hello-debug.bash"
+msgstr ""
+
+#: ../create/index.html
+msgid "When debugging your snap when it is installed in strict mode (without"
+msgstr ""
+
+#: ../create/index.html
+msgid "directory (to where the code is pulled),"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"file might have changed. It's generally preferable to be explicit with your "
+"parts, so people know what they are getting and can reproduce the snap build"
+" process easily."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"] lists the parts that must be staged before this part can be built. "
+"However, you may have noticed that this YAML doesn't actually contain the"
+msgstr ""
+
+#: ../create/index.html
+msgid "The key components of"
+msgstr ""
+
+#: ../create/index.html
+msgid "Can deliver an application"
+msgstr ""
+
+#: ../create/index.html
+msgid ", which by default will only rebuild any parts missing from your snap."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"This tour walks you through the making of snaps. It starts with an overview "
+"of the snap format before introducing you to Snapcraft, the most widely used"
+" tool for creating snaps. After running through the basics of using "
+"Snapcraft the tour takes an in depth look at the key components that make up"
+" a snap. By the end of the tour you'll know how to create snaps so, if you "
+"want to, you can create them by hand or make your own snappy tools."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"To take this tour of snaps and Snapcraft, you'll need to have Snapcraft 2.11"
+" or later installed. If you've already installed Snapcraft you can check the"
+" version:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Don't worry about everything in there just yet. The snapcraft tool will "
+"interpret this file, fetch and install everything that is needed, build it, "
+"and give you a snap."
+msgstr ""
+
+#: ../create/index.html
+msgid "$ hello Hello, world!"
+msgstr ""
+
+#: ../create/index.html
+msgid "As you can see"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"subdirectory in your current working directory. The directory structure will"
+" look like:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"to pull the updated source code from that repository, remembering to do a"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Snapcraft also lets you work with individual commands so you can update and "
+"customize your snap. This section looks at some of those options and shows "
+"how you could clean and rebuild the gnu-bash part."
+msgstr ""
+
+#: ../create/index.html
+msgid "snap-file"
+msgstr ""
+
+#: ../create/index.html
+msgid "snappy-debug"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"When the source code in an online or local repository changes you can use"
+msgstr ""
+
+#: ../create/index.html
+msgid "snap install"
+msgstr ""
+
+#: ../create/index.html
+msgid "version"
+msgstr ""
+
+#: ../create/index.html
+msgid "stage-packages"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"parts: hello-world: plugin: cmake source: src/ build-packages: - qtbase5-dev"
+" stage-packages: # Here for the plugins-- they're not linked in "
+"automatically. - libqt5gui5 after: [qt5conf] # A part in the cloud"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ ls snapcraft-tour/** snapcraft-tour/README.md snapcraft-tour/00-SNAPCRAFT:"
+" 01-easy-start 02-parts snapcraft-tour/10-SNAPS: 01-service 02-service-"
+"confined snapcraft-tour/20-PARTS-PLUGINS: 01-reusable-part"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft upload"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ ls parts/gnu-bash/** parts/gnu-bash/bin: pkg-config parts/gnu-bash/build: "
+"parts/gnu-bash/install: parts/gnu-bash/src: [...] lot of files parts/gnu-"
+"bash/state: pull parts/gnu-bash/ubuntu:"
+msgstr ""
+
+#: ../create/index.html
+msgid "has created some new directories and populated"
+msgstr ""
+
+#: ../create/index.html
+msgid "directory into a single"
+msgstr ""
+
+#: ../create/index.html
+msgid "Snapcraft can tell you which plugins it has installed:"
+msgstr ""
+
+#: ../create/index.html
+msgid "apps: hello-service: command: hello-world daemon: simple"
+msgstr ""
+
+#: ../create/index.html
+msgid "LXD, the container hypervisor"
+msgstr ""
+
+#: ../create/index.html
+msgid "["
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"you get a 404 page with no content and it would seem that the service can't "
+"serve web requests now."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft clean Cleaning snapping area for gnu-hello Cleaning staging area"
+" for gnu-hello Cleaning build for gnu-hello Cleaning pulled source for gnu-"
+"hello Cleaning up parts directory Cleaning up priming area $ ls "
+"hello_2.10_amd64.snap snapcraft.yaml"
+msgstr ""
+
+#: ../create/index.html
+msgid "In this part definition:"
+msgstr ""
+
+#: ../create/index.html
+msgid "button on the page you return to."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+") provides a small wrapper that will launch the real binaries: typically a "
+"small shell script that sets"
+msgstr ""
+
+#: ../create/index.html
+msgid "The default action in the Snapcraft lifecycle is to compress the"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft stage Skipping pull gnu-bash (already ran) Skipping pull gnu-"
+"hello (already ran) Skipping build gnu-bash (already ran) Skipping build "
+"gnu-hello (already ran) Staging gnu-bash Skipping stage gnu-hello (already "
+"ran) As you can see snapcraft stage has now added stage/bin/bash: $ ls "
+"stage/** stage/bin: bash bashbug hello stage/share: doc info locale man "
+"stage/var: bash"
+msgstr ""
+
+#: ../create/index.html
+msgid "Can (and in most cases will) be made up of several parts"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"app is declared and specified as a simple (i.e. non-forking) daemon (a "
+"service that starts at boot and keeps running on your system). This daemon "
+"executes the"
+msgstr ""
+
+#: ../create/index.html
+msgid "] plug. This plug is then declared in the"
+msgstr ""
+
+#: ../create/index.html
+msgid "apps: defining services and commands"
+msgstr ""
+
+#: ../create/index.html
+msgid "src/"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"lists the dependencies needed to build the contents of the snap. These "
+"aren't packed into the final snap."
+msgstr ""
+
+#: ../create/index.html
+msgid "30 - STORE"
+msgstr ""
+
+#: ../create/index.html
+msgid "/var/log/syslog"
+msgstr ""
+
+#: ../create/index.html
+msgid ". Get inspiration from"
+msgstr ""
+
+#: ../create/index.html
+msgid "tarball"
+msgstr ""
+
+#: ../create/index.html
+msgid "hello-debug.hello"
+msgstr ""
+
+#: ../create/index.html
+msgid "10 - SNAPS"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft tour Snapcraft tour initialized in ./snapcraft-tour/ "
+"Instructions are in the README, or https://snapcraft.io/create/#begin"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Is created in a number of stages that pull and build parts, before creating "
+"the snap package"
+msgstr ""
+
+#: ../create/index.html
+msgid "Snapcraft commands"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You can refer to local source as well. For example, you can make a part that"
+" refers to a subdirectory where the part source code is kept:"
+msgstr ""
+
+#: ../create/index.html
+msgid "Learn to make a snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "Delivering services (in addition to apps) in your snaps"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Parts from local source that use local files on your machine. For example "
+"(as seen in"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"How plugs and slots enable snaps to consume resources outside the "
+"confinement (or make their own resources available to other snaps)"
+msgstr ""
+
+#: ../create/index.html
+msgid "You can also confirm details of all the snaps you've installed:"
+msgstr ""
+
+#: ../create/index.html
+msgid "tool comes from the"
+msgstr ""
+
+#: ../create/index.html
+msgid "Click on the"
+msgstr ""
+
+#: ../create/index.html
+msgid "Once you've registered your snap name, go back to your"
+msgstr ""
+
+#: ../create/index.html
+msgid ": apps:"
+msgstr ""
+
+#: ../create/index.html
+msgid "directories:"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft-tour"
+msgstr ""
+
+#: ../create/index.html
+msgid "topic"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"In order to share your snaps with the world, you will need to publish them "
+"in the Store. First, create an account on"
+msgstr ""
+
+#: ../create/index.html
+msgid "archive of this"
+msgstr ""
+
+#: ../create/index.html
+msgid "hello-world-desktop"
+msgstr ""
+
+#: ../create/index.html
+msgid "hello-service"
+msgstr ""
+
+#: ../create/index.html
+msgid ") files, from your build system. Then"
+msgstr ""
+
+#: ../create/index.html
+msgid "meta/snap.yaml"
+msgstr ""
+
+#: ../create/index.html
+msgid "build: Build a specific part, or all of them"
+msgstr ""
+
+#: ../create/index.html
+msgid ", the application looks identical to the previous example."
+msgstr ""
+
+#: ../create/index.html
+msgid "Specifying the"
+msgstr ""
+
+#: ../create/index.html
+msgid "golang: The Golang plugin"
+msgstr ""
+
+#: ../create/index.html
+msgid "squashfs file."
+msgstr ""
+
+#: ../create/index.html
+msgid "tag"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft prime"
+msgstr ""
+
+#: ../create/index.html
+msgid "pull: Pulling dependencies to refresh code"
+msgstr ""
+
+#: ../create/index.html
+msgid "Read the docs"
+msgstr ""
+
+#: ../create/index.html
+msgid "), you can look in"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft help Usage: snapcraft [options] [--enable-geoip --no-parallel-"
+"build] snapcraft [options] init snapcraft [options] pull ["
+msgstr ""
+
+#: ../create/index.html
+msgid "is where all the content from"
+msgstr ""
+
+#: ../create/index.html
+msgid "This is the simplest possible snap. It has only one part, called"
+msgstr ""
+
+#: ../create/index.html
+msgid "Parts from online sources, such as"
+msgstr ""
+
+#: ../create/index.html
+msgid "is the actual snap content. The"
+msgstr ""
+
+#: ../create/index.html
+msgid "...] [--no-parallel-build] snapcraft [options] stage ["
+msgstr ""
+
+#: ../create/index.html
+msgid "libqt5gui5"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ more snapcraft.yaml [...] confinement: devmode"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"part, without any additional effort from you. This way you can make use of "
+"and build upon what others have created"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"to move all the relevant content into stage/ (to prepare for creating the "
+"snap package):"
+msgstr ""
+
+#: ../create/index.html
+msgid "parts/plugins/x-"
+msgstr ""
+
+#: ../create/index.html
+msgid "To see parts built and shared by others"
+msgstr ""
+
+#: ../create/index.html
+msgid "arch"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ sudo apt install snapcraft"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The tour includes all the example source code and files in a series of "
+"subdirectories, which you load using the Snapcraft tool:"
+msgstr ""
+
+#: ../create/index.html
+msgid "github"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Most of the content should be self explanatory, the obvious components to "
+"deliver the Node.js capabilities and the service. However the two "
+"highlighted files may not be so obvious."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ cd ../02-service-confined $ snapcraft $ sudo snap install hello-world-"
+"service_0.1_*.snap Name Version Rev Developer Notes hello-world-service 0.1 "
+"x3 -"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"When you make a snap, you bundle together all the pieces you want your app "
+"to provide for itself, rather than consume them from the base operating "
+"system. Normally, that means combining several different pieces of code, "
+"because your app probably isn't so simple that it consists of a single piece"
+" of code that runs without any supporting components."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Stable is what most users will consume and as the name suggests, should be "
+"your most polished and tested versions"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ sudo snap install hello_2.10_*.snap hello 2.10 installed 64.64 MB / 64.64 "
+"MB [=============================] 100.00 % 3.97 MB/s Name Version Rev "
+"Developer Notes hello 2.10 X1"
+msgstr ""
+
+#: ../create/index.html
+msgid "Requirements"
+msgstr ""
+
+#: ../create/index.html
+msgid "Your contributions will always be welcome!"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You'll have seen that Snapcraft fetched the source code, configured and "
+"built it. The snap is now available in your directory, along with new parts,"
+" prime, and snap directories."
+msgstr ""
+
+#: ../create/index.html
+msgid "qtbase5-dev"
+msgstr ""
+
+#: ../create/index.html
+msgid "confinement: strict"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"To enable snaps to access external resources (or make their own resources "
+"available to other snaps) a system of plugs and slots is used. A plug is a "
+"request for access to an external interface, while a slot is an interface "
+"provided by the snap."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Snapcraft will checkout a specific branch from the source tree. This only "
+"works on multi-branch repositories from git and hg (mercurial). - source-"
+"tag:"
+msgstr ""
+
+#: ../create/index.html
+msgid "Creating a"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"https://github.com/ubuntu-"
+"core/snapcraft/blob/master/demos/godd/snapcraft.yaml"
+msgstr ""
+
+#: ../create/index.html
+msgid "has now deleted all your directories from the"
+msgstr ""
+
+#: ../create/index.html
+msgid "01-easy-start: a single snapcraft.yaml describes a snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "The first exception is that"
+msgstr ""
+
+#: ../create/index.html
+msgid "Save Changes"
+msgstr ""
+
+#: ../create/index.html
+msgid ","
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You can follow the same registration process for names that you have rights."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+", including dependencies (if any) and installs them alongside the service's "
+"JavaScript code."
+msgstr ""
+
+#: ../create/index.html
+msgid ". You can see this from the help for snapcraft:"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ ls hello_2.10_amd64.snap parts snap snapcraft.yaml prime"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ cd ../../10-SNAPS/01-service $ snapcraft $ sudo snap install hello-world-"
+"service_0.1_*.snap --devmode Name Version Rev Developer Notes hello-world-"
+"service 0.1 x1 devmode"
+msgstr ""
+
+#: ../create/index.html
+msgid "command as defined in the"
+msgstr ""
+
+#: ../create/index.html
+msgid "architectures: - amd64"
+msgstr ""
+
+#: ../create/index.html
+msgid "branch-name"
+msgstr ""
+
+#: ../create/index.html
+msgid "10-SNAPS/01-service/"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You'll need to choose a unique developer namespace as part of the account "
+"creation process. In a future version, developer branches of reserved name "
+"snaps will be referred to by this name (for example firefox@mark)."
+msgstr ""
+
+#: ../create/index.html
+msgid "name"
+msgstr ""
+
+#: ../create/index.html
+msgid "] snapcraft [options] snap ["
+msgstr ""
+
+#: ../create/index.html
+msgid "Open your browser at"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ snapcraft upload hello-world_1.0_*.snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "The more interesting attribute of"
+msgstr ""
+
+#: ../create/index.html
+msgid "squashfs"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"part. That's because it's a part in the cloud, which is a way for "
+"collaborating, reusing, and sharing already-written parts. The previously "
+"mentioned"
+msgstr ""
+
+#: ../create/index.html
+msgid "|"
+msgstr ""
+
+#: ../create/index.html
+msgid "Adding"
+msgstr ""
+
+#: ../create/index.html
+msgid "to delete a specific part:"
+msgstr ""
+
+#: ../create/index.html
+msgid "parts/"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Once you've confirmed your account, you're ready to start pushing your snaps"
+" to the Store. Make sure Snapcraft and snap know about you by logging in "
+"using the email address you provided at signup:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You can ask Snapcraft itself for a full specification of all the ways to "
+"refer to source:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snap install hello-mark Name Version Rev Developer hello-mark 1.0 1 sabdfl"
+msgstr ""
+
+#: ../create/index.html
+msgid "And you'll have a hand crafted snap file."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"By the time you've finished this tour, you'll know your way around most of "
+"these."
+msgstr ""
+
+#: ../create/index.html
+msgid "of the hello app you'll have noticed a section called parts:"
+msgstr ""
+
+#: ../create/index.html
+msgid "parts: hello: plugin: nodejs source: ."
+msgstr ""
+
+#: ../create/index.html
+msgid ".snapcraft.yaml"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"has been specified here since that package contains the headers, libraries, "
+"and tools needed to build the app"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"or other runtime specific environment variables. Snapcraft generated these "
+"wrappers for you."
+msgstr ""
+
+#: ../create/index.html
+msgid "https://wiki.ubuntu.com/Snappy/Parts"
+msgstr ""
+
+#: ../create/index.html
+msgid "You've already seen the last part in"
+msgstr ""
+
+#: ../create/index.html
+msgid "install/"
+msgstr ""
+
+#: ../create/index.html
+msgid "and added some wrapper and metadata scripts:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"name: hello-world-service confinement: strict apps: hello-service: command: "
+"command-hello-service.wrapper daemon: simple plugs: - network-bind ..."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft snap prime/ Snapping 'hello-debug' - Snapped hello-"
+"debug_2.10_amd64.snap"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Parts are reusable components that can be used when building a snap. They're"
+" analogous to a library that you would call in your program. There are three"
+" types of parts:"
+msgstr ""
+
+#: ../create/index.html
+msgid "Create a snap"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ cd ../../20-PARTS-PLUGINS/01-reusable-part $ snapcraft $ sudo snap install"
+" hello-world-desktop_0.1_*.snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "The structure of a snap's content and the option to hand build a snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "build-packages"
+msgstr ""
+
+#: ../create/index.html
+msgid "qt5conf"
+msgstr ""
+
+#: ../create/index.html
+msgid "file can optionally be called"
+msgstr ""
+
+#: ../create/index.html
+msgid "--output"
+msgstr ""
+
+#: ../create/index.html
+msgid ", you can run the confined version of the hello world service:"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ snapcraft help autotools $ snapcraft help make"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft prime Skipping pull gnu-hello (already ran) Skipping pull gnu-"
+"bash (already ran) Skipping build gnu-hello (already ran) Skipping build "
+"gnu-bash (already ran) Skipping stage gnu-hello (already ran) Skipping stage"
+" gnu-bash (already ran) Skipping prime gnu-hello (already ran) Priming gnu-"
+"bash"
+msgstr ""
+
+#: ../create/index.html
+msgid "network-bind"
+msgstr ""
+
+#: ../create/index.html
+msgid "plugs-and-slots: integration with the system and other snaps"
+msgstr ""
+
+#: ../create/index.html
+msgid "foo-stable.tar.gz"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Now you've got to grips with some basic and advanced snap features, it's "
+"worth gaining an understanding of what's inside a snap. And seeing the "
+"snap's content is easy, as it's all in the"
+msgstr ""
+
+#: ../create/index.html
+msgid "directory, create the final snap in its correct location using"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You've now added some depth to your knowledge of snaps and learned about:"
+msgstr ""
+
+#: ../create/index.html
+msgid "(highlighted)"
+msgstr ""
+
+#: ../create/index.html
+msgid "If you now open"
+msgstr ""
+
+#: ../create/index.html
+msgid "Snapcraft is a snappy packaging tool."
+msgstr ""
+
+#: ../create/index.html
+msgid "There are four channels available for your use:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+". Snapcraft has a plugin system so that it can drive different build systems"
+" for different parts. In this case,"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The example snap in the first part of this guide delivered a simple terminal"
+" application. However, you can deliver any type of application or service "
+"with a snap that you might do with a standard deb package. This example "
+"shows how you do this for a service:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"parts: foo-stable: plugin: autotools source: "
+"http://releases.foo.org/download/foo-stable.tar.gz"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft build"
+msgstr ""
+
+#: ../create/index.html
+msgid "plugs: [network-bind]"
+msgstr ""
+
+#: ../create/index.html
+msgid "part"
+msgstr ""
+
+#: ../create/index.html
+msgid "Publish"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ cd ../02-parts $ more snapcraft.yaml name: hello-debug version: \"2.10\" "
+"summary: GNU Hello with Bash for debugging description: GNU hello prints a "
+"friendly greeting. This is part of the snapcraft tour at "
+"https://snapcraft.io/create/ apps: hello: command: hello bash: command: bash"
+" parts: gnu-hello: plugin: autotools source: "
+"http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz gnu-bash: plugin: autotools "
+"configflags: [\"--infodir=/var/bash/info\"] source: "
+"http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz"
+msgstr ""
+
+#: ../create/index.html
+msgid "contains one subdirectory for each part:"
+msgstr ""
+
+#: ../create/index.html
+msgid ". Each part's subdirectory has a"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ sudo snap install hello-world-service_0.1_*.snap Name Version Rev "
+"Developer Notes hello-world-service 0.1 x2 -"
+msgstr ""
+
+#: ../create/index.html
+msgid "sharing: Sharing your parts with other developers"
+msgstr ""
+
+#: ../create/index.html
+msgid "' with your snap name:"
+msgstr ""
+
+#: ../create/index.html
+msgid "See"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Use \"hello-\" suffixed by your name for this exercise (for example hello-"
+"mark), since you don't have rights to the \"hello\" snap name."
+msgstr ""
+
+#: ../create/index.html
+msgid ".py"
+msgstr ""
+
+#: ../create/index.html
+msgid ".snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "and"
+msgstr ""
+
+#: ../create/index.html
+msgid "for sandbox denials. Alternatively, you may use the '"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"is the only file in the directory. Snapcraft doesn't need anything else as "
+"it will fetch everything it needs to build the snap, using the"
+msgstr ""
+
+#: ../create/index.html
+msgid "revisions: You get a new revision every time you push"
+msgstr ""
+
+#: ../create/index.html
+msgid "./configure"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"describes the snap, and it should be at the top of your directory tree."
+msgstr ""
+
+#: ../create/index.html
+msgid "PATH"
+msgstr ""
+
+#: ../create/index.html
+msgid "devspace: You can generally publish your own version of a snap"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Armed with this information you can, if you wish, build your snap package "
+"more directly by:"
+msgstr ""
+
+#: ../create/index.html
+msgid "--devmode"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Now, everything you need for the hello app is inside the snap file. You can "
+"install it locally:"
+msgstr ""
+
+#: ../create/index.html
+msgid "scons"
+msgstr ""
+
+#: ../create/index.html
+msgid "name_version_arch.snap"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"directory is copied there. Binaries are stripped, wrappers are generated by "
+"Snapcraft, and the snap metadata files are also generated there. The final"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The features of parts shared by this last method are the focus of our next "
+"example:"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft snap"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Next, you might want to do some housekeeping and get rid of all the files "
+"that were created in the process of building the snap:"
+msgstr ""
+
+#: ../create/index.html
+msgid "Now build and install it:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"directory. The directory name itself doesn't matter, you just need to ensure"
+" you provide any required wrapper and meta ("
+msgstr ""
+
+#: ../create/index.html
+msgid "One last thing to be aware of is that the"
+msgstr ""
+
+#: ../create/index.html
+msgid "You can use"
+msgstr ""
+
+#: ../create/index.html
+msgid "You then would specify"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snap list Name Version Rev Developer Notes hello 2.10 X1 - ubuntu-core "
+"16.04+20160531.11-56 122 canonical -"
+msgstr ""
+
+#: ../create/index.html
+msgid "The"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft [options] list-plugins snapcraft [options] tour ["
+msgstr ""
+
+#: ../create/index.html
+msgid "is the plugin,"
+msgstr ""
+
+#: ../create/index.html
+msgid ". Snapcraft will look for"
+msgstr ""
+
+#: ../create/index.html
+msgid "bzr"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ ls parts/gnu-bash/build/ [...] lots of files $ ls parts/gnu-bash/install/ "
+"[...] lots of files"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"first. You can pull the code for all your dependencies or only the parts you"
+" know have changed by using"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+". This part is also just about the simplest kind of part. It only has two "
+"attributes; the source code location (which is instructing Snapcraft to pull"
+" the source from the gnu.org website) and the plugin to use when building "
+"this part, namely"
+msgstr ""
+
+#: ../create/index.html
+msgid "Which can be run with the"
+msgstr ""
+
+#: ../create/index.html
+msgid "hello-world-desktop: command: qt5-launch hello-world-desktop"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"This scanlog command will tail the syslog and make suggestions on what "
+"interfaces to use and suggest changes to make to your snap so it will work "
+"within the sandbox."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft build Skipping pull gnu-bash (already ran) Skipping pull gnu-"
+"hello (already ran) Preparing to build gnu-bash Building gnu-bash "
+"./configure --prefix= --infodir=/var/bash/info [...] Skipping build gnu-"
+"hello (already ran)"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The version is purely human-readable, it isn't used for any particular "
+"purpose other than keeping you aware of what's on your system. Two different"
+" snaps can claim to have the same version (in fact, when you have daily "
+"builds of a snap, it will almost always have a version like \"2.1b3\" for "
+"every build until the version is updated)."
+msgstr ""
+
+#: ../create/index.html
+msgid "...] snapcraft [options] clean ["
+msgstr ""
+
+#: ../create/index.html
+msgid "plugins: Each part is built using a snapcraft plugin"
+msgstr ""
+
+#: ../create/index.html
+msgid "20 - PARTS &amp; PLUGINS"
+msgstr ""
+
+#: ../create/index.html
+msgid "00 - SNAPCRAFT"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Snapcraft uses a single text file to describe the entire build process for a"
+" snap: the snapcraft.yaml file. Over the course of this tour you'll learn "
+"how to create this file for your own snaps. You can see an example in this "
+"directory:"
+msgstr ""
+
+#: ../create/index.html
+msgid "directory. You can use and debug the snap's content from here."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ sudo snap install snappy-debug $ sudo snap connect snappy-debug:log-"
+"observe ubuntu-core:log-observe $ sudo /snap/bin/snappy-debug.security "
+"scanlog hello-world-service"
+msgstr ""
+
+#: ../create/index.html
+msgid "confinement and devmode"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"gnu-hello: plugin: autotools source: "
+"http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ ls prime/ bin command-bash.wrapper command-hello.wrapper meta share var"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"See https://github.com/ubuntu-"
+"core/snapcraft/blob/master/demos/libpipeline/snapcraft.yaml"
+msgstr ""
+
+#: ../create/index.html
+msgid "https://myapps.developer.ubuntu.com"
+msgstr ""
+
+#: ../create/index.html
+msgid "You may have noticed the"
+msgstr ""
+
+#: ../create/index.html
+msgid "But notice this involves an extra tool"
+msgstr ""
+
+#: ../create/index.html
+msgid "gnu-bash"
+msgstr ""
+
+#: ../create/index.html
+msgid "where the build happens, and"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+". You can generally snap anything that follows that convention very easily, "
+"just use the"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"plug essentially pokes a hole in the otherwise-complete confinement, telling"
+" snappy that this snap requires access to the network through the"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft clean"
+msgstr ""
+
+#: ../create/index.html
+msgid "(its name and version) and the architecture you're building on:"
+msgstr ""
+
+#: ../create/index.html
+msgid "Having built all the parts for your snap, use"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"will be explained in the next chapter, so for now open http://localhost:8000"
+" in your browser and you'll find the running web service."
+msgstr ""
+
+#: ../create/index.html
+msgid "...] [--step"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft pull"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+". This is your developer portal. Here you can customize how your snap is "
+"presented, review each new upload, and control publishing."
+msgstr ""
+
+#: ../create/index.html
+msgid "that enabled this are:"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ snapcraft login $ snap login you@yourdomain.com"
+msgstr ""
+
+#: ../create/index.html
+msgid "You can install snaps directly with"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Unless you specify a different directory name, the tour will be created in a"
+" new"
+msgstr ""
+
+#: ../create/index.html
+msgid "where"
+msgstr ""
+
+#: ../create/index.html
+msgid "names: you can reserve names for software you publish"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"file and update the name field. Run Snapcraft again to quickly rebuild with "
+"the new name. With that done, the new revision of your snap can be uploaded "
+"to the Store:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft help sources Common 'source' options. Unless the part plugin "
+"overrides this behaviour, a part can use these 'source' keys in its "
+"definition. They tell snapcraft where to pull source code for that part, and"
+" how to unpack it if necessary. - source: url-or-path A URL or path to some "
+"source tree to build. It can be local ('./src/foo') or remote "
+"('https://foo.org/...'), and can refer to a directory tree or a tarball or a"
+" revision control repository ('git:...'). - source-type: git, bzr, hg, tar "
+"or zip In some cases the source string is not enough to identify the version"
+" control system or compression algorithm. The source-type key can tell "
+"snapcraft exactly how to treat that content. - source-branch:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"with all its dependencies. This method can reuse any of the 48000 .deb "
+"packages that traditional Ubuntu provides. It's really that easy: just "
+"specify the packages you need embedded into your snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "Learn more"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Snapcraft will checkout the specific tag from the source tree revision "
+"control system. - source-subdir: path Snapcraft will checkout the repository"
+" or unpack the archive referred to by the 'source' keyword into parts/"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Your upload is now ready to be released into the stable channel. Click the"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ snapcraft ... $ sudo snap install hello-debug_2.10_*.snap ..."
+msgstr ""
+
+#: ../create/index.html
+msgid ", and"
+msgstr ""
+
+#: ../create/index.html
+msgid "command."
+msgstr ""
+
+#: ../create/index.html
+msgid "uses the"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"had already been pulled, when you first built the snap, so it's not pulled "
+"again."
+msgstr ""
+
+#: ../create/index.html
+msgid "plugin_name"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"to build any parts that haven't been built and install them in their part "
+"directory, or specify specific parts to be built:"
+msgstr ""
+
+#: ../create/index.html
+msgid "after:"
+msgstr ""
+
+#: ../create/index.html
+msgid "Once you're satisfied with the snap created in the"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Snap revisions uniquely identify the exact build of a snap that is "
+"installed. snapcraft clean will remove all the build artifacts."
+msgstr ""
+
+#: ../create/index.html
+msgid "/src/ but it will only copy the specified subdirectory into parts/"
+msgstr ""
+
+#: ../create/index.html
+msgid "part-name"
+msgstr ""
+
+#: ../create/index.html
+msgid "Open the URL that was returned from"
+msgstr ""
+
+#: ../create/index.html
+msgid "plugin"
+msgstr ""
+
+#: ../create/index.html
+msgid "https://myapps.developer.ubuntu.com/"
+msgstr ""
+
+#: ../create/index.html
+msgid "Contribute"
+msgstr ""
+
+#: ../create/index.html
+msgid "You'll also see that Snapcraft has created various subdirectories:"
+msgstr ""
+
+#: ../create/index.html
+msgid "hello-world-service"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ cd snapcraft-tour/00-SNAPCRAFT/01-easy-start $ ls snapcraft.yaml"
+msgstr ""
+
+#: ../create/index.html
+msgid "):"
+msgstr ""
+
+#: ../create/index.html
+msgid "hello-debug.bash"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft.yaml"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ ls parts/gnu-bash/ bin"
+msgstr ""
+
+#: ../create/index.html
+msgid "02-parts: Snapcraft makes snaps out of parts"
+msgstr ""
+
+#: ../create/index.html
+msgid "hello-mark"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"All snaps run confined by default. They're able to access any functions in "
+"the snap and data written to their own private writable area, but have "
+"restricted and secured access to the system."
+msgstr ""
+
+#: ../create/index.html
+msgid "LD_LIBRARY_PATH"
+msgstr ""
+
+#: ../create/index.html
+msgid "gnu-hello"
+msgstr ""
+
+#: ../create/index.html
+msgid "Take the snapcraft tour"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"https://myapps.developer.ubuntu.com/dev/click-apps/register-name-dispute/"
+msgstr ""
+
+#: ../create/index.html
+msgid "clean: Resetting individual parts or the whole snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "Adding the built assets and code"
+msgstr ""
+
+#: ../create/index.html
+msgid "40 - CONFINEMENT"
+msgstr ""
+
+#: ../create/index.html
+msgid "command is essential, especially if you craft your own"
+msgstr ""
+
+#: ../create/index.html
+msgid "To indicate that this snap is now confined."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"How all snaps are confined (unable to access system resources) but can be "
+"unconfined with"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"removes the directories and data created by Snapcraft. By default it will "
+"delete all the directories and data created by Snapcraft from your snap's "
+"directory. However, you can use"
+msgstr ""
+
+#: ../create/index.html
+msgid "The next example is a more interesting snap that uses two parts:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"However, in most cases once you've cleaned a part from your snap directories"
+" you can rebuild the part and snap using"
+msgstr ""
+
+#: ../create/index.html
+msgid "This file ("
+msgstr ""
+
+#: ../create/index.html
+msgid "snapfile.snap"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Plugins tell Snapcraft how to build the content of the snap's parts. You'll "
+"probably use the supplied plugins for most of your snaps. However, you can "
+"add your own plugins for other languages. Details of how to do this are "
+"beyond this get started, but if you would like to explore more here are a "
+"couple of plugin examples and basic building details:"
+msgstr ""
+
+#: ../create/index.html
+msgid "option was used in snap install. Reinstall the snap without it:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"We can, if needed, rename snaps to ensure they match the expectations of "
+"most users. If you are the publisher most users expect for a name then claim"
+" it at:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"If you would like to publish your own parts, you can contribute them on the "
+"wiki at"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft pull Skipping pull gnu-hello (already ran) Preparing to pull "
+"gnu-bash Pulling gnu-bash"
+msgstr ""
+
+#: ../create/index.html
+msgid "https://wiki.ubuntu.com/snapcraft/parts"
+msgstr ""
+
+#: ../create/index.html
+msgid "Notice that"
+msgstr ""
+
+#: ../create/index.html
+msgid "In this section of the tour you've seen how a snap:"
+msgstr ""
+
+#: ../create/index.html
+msgid "metadata: snap.yaml defines the properties of a snap"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You should see the 1.0 version in the lefthand column. Clicking on that link"
+" will bring up further details about this revision. Here you can edit the "
+"list of channels it should be released into."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Locally created snaps have their own local revisions that are specific to "
+"that system."
+msgstr ""
+
+#: ../create/index.html
+msgid "Adding a wrapper file"
+msgstr ""
+
+#: ../create/index.html
+msgid "$ snapcraft help go x-plugins: Local plugins"
+msgstr ""
+
+#: ../create/index.html
+msgid "make"
+msgstr ""
+
+#: ../create/index.html
+msgid "snap: compress any directory into a single .snap squashfs file"
+msgstr ""
+
+#: ../create/index.html
+msgid "Finally, run your snap:"
+msgstr ""
+
+#: ../create/index.html
+msgid "prime: Move the files needed for the snap into place"
+msgstr ""
+
+#: ../create/index.html
+msgid "Finally, there has been one further very important change made to the"
+msgstr ""
+
+#: ../create/index.html
+msgid "part."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"confinement: strict description: This example demonstrates how to have "
+"nodejs webserver. This is part of the snapcraft tour at "
+"https://snapcraft.io/create/ name: hello-world-service summary: A hello "
+"world style nodejs webserver app version: 0.1"
+msgstr ""
+
+#: ../create/index.html
+msgid "The resulting snap is a single file called"
+msgstr ""
+
+#: ../create/index.html
+msgid "is copied and consolidated in a single directory."
+msgstr ""
+
+#: ../create/index.html
+msgid "make install"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You can publish your own version of a snap, provided you do so under a name "
+"you have rights to. New names can be registered by clicking the New Snap "
+"button on the developer portal, or by visiting:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Now you'll build on the knowledge you've gained about snaps, by looking at "
+"the other types of snap app types and some of the key technology that "
+"underpins snaps."
+msgstr ""
+
+#: ../create/index.html
+msgid "directory:"
+msgstr ""
+
+#: ../create/index.html
+msgid "hello-world"
+msgstr ""
+
+#: ../create/index.html
+msgid "https://myapps.developer.ubuntu.com/dev/click-apps/register-name/"
+msgstr ""
+
+#: ../create/index.html
+msgid "autoconf-make: The standard \"configure, make, make install\" plugin"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The bash app pointing to the bash binary (command) and is executed using"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The build you uploaded is now the selected revision in the stable channel, "
+"meaning that installs of your snap will select this upload by default."
+msgstr ""
+
+#: ../create/index.html
+msgid "Recap"
+msgstr ""
+
+#: ../create/index.html
+msgid "prime/command-hello-service.wrapper"
+msgstr ""
+
+#: ../create/index.html
+msgid "commands come from:"
+msgstr ""
+
+#: ../create/index.html
+msgid "command is shorthand for the real command, which is"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft list-plugins ant copy kernel nodejs tar-content autotools go "
+"make python2 catkin jdk maven python3 cmake kbuild nil scons"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The revision for a snap is unique. In this example, because you built the "
+"snap locally, it gets a local alphanumeric revision that is unique on this "
+"machine only. When you load a snap from the store, the revision is an "
+"integer number that exactly identifies the snap that is installed. While you"
+" can't do this for local revisions, with snaps loaded from the store you can"
+" compare revisions on two machines to determine if they have exactly the "
+"same content installed."
+msgstr ""
+
+#: ../create/index.html
+msgid "In some trees it may be preferable to name the snapcraft YAML file"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Each stage of the tour is in a separate subdirectory, with number prefixes "
+"showing the sequence. In each directory you'll find a README with the "
+"instructions from this page relevant to that directory, so you don't need to"
+" continually switch between the browser and your terminal as you follow the "
+"tour."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"/build/ Note that plugins might well define their own semantics for the "
+"'source' keywords, because they handle specific build systems, and many "
+"languages have their own built-in packaging systems (think CPAN, PyPI, NPM)."
+" In those cases you want to refer to the help text for the specific plugin. "
+"snapcraft help"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ more snapcraft.yaml name: hello version: \"2.10\" summary: GNU Hello, the "
+"\"hello world\" snap description: GNU hello prints a friendly greeting. This"
+" is part of the snapcraft tour at https://snapcraft.io/create/ confinement: "
+"strict apps: hello: command: hello parts: gnu-hello: plugin: autotools "
+"source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz"
+msgstr ""
+
+#: ../create/index.html
+msgid "structure: the directory layout of a snap"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Now, every time someone runs Snapcraft with the foo-stable part, they might "
+"get a different codebase from the previous person to build the same part, "
+"because the"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Here are the things you should be comfortable with, before you move on. A"
+msgstr ""
+
+#: ../create/index.html
+msgid "description for the snap. Take a look inside:"
+msgstr ""
+
+#: ../create/index.html
+msgid "Contribute to Ubuntu Core"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Edge is for your most recent changes, probably untested and with no "
+"guarantees attached"
+msgstr ""
+
+#: ../create/index.html
+msgid ") [--devel] snapcraft (-h | --help) snapcraft --version"
+msgstr ""
+
+#: ../create/index.html
+msgid "' snap to assist you:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Here, the snap was built on an amd64 machine, so the architecture used in "
+"the file name reflects that. The following commands use globs so you don't "
+"need to replace the architecture accordingly."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"https://github.com/ubuntu-core/snapcraft/blob/master/snapcraft/plugins/go.py"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Start by building this snap, noting that you’ll be prompted for your system "
+"password each time you run"
+msgstr ""
+
+#: ../create/index.html
+msgid "or open the snap from the developer portal front page:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"when installing the snap for testing and development (you must always "
+"specify"
+msgstr ""
+
+#: ../create/index.html
+msgid "--- layout: default ---"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft [sudo] password for [your user name]: *** Preparing to pull gnu-"
+"hello Pulling gnu-hello Preparing to build gnu-hello Building gnu-hello ... "
+"Snapped hello_2.10_amd64.snap"
+msgstr ""
+
+#: ../create/index.html
+msgid "build conventions — essentially"
+msgstr ""
+
+#: ../create/index.html
+msgid "...] snapcraft [options] prime ["
+msgstr ""
+
+#: ../create/index.html
+msgid "Want to get to know more about snaps, Snapcraft and Ubuntu Core?"
+msgstr ""
+
+#: ../create/index.html
+msgid "package.json"
+msgstr ""
+
+#: ../create/index.html
+msgid "parts: foo-forked: plugin: autotools source: ./src/foo"
+msgstr ""
+
+#: ../create/index.html
+msgid "step"
+msgstr ""
+
+#: ../create/index.html
+msgid "So now, without using"
+msgstr ""
+
+#: ../create/index.html
+msgid "_"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"By default snaps run in a restrictive sandbox to ensure that snaps only "
+"access the system and other snaps in controlled ways. confinement is used in"
+msgstr ""
+
+#: ../create/index.html
+msgid "will create a snap from the folder content."
+msgstr ""
+
+#: ../create/index.html
+msgid "00-SNAPCRAFT/01-easy-start/"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ ls prime/** prime/CHANGELOG.md prime/command-hello-service.wrapper "
+"prime/LICENSE prime/README.md prime/bin: hello-world node npm prime/etc: "
+"prime/include: node prime/lib: node_modules prime/meta: snap.yaml "
+"prime/share: doc man systemtap"
+msgstr ""
+
+#: ../create/index.html
+msgid "file, with two exceptions:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"However, once you're happy with the functionality of your snap you'll need "
+"to focus on its confinement."
+msgstr ""
+
+#: ../create/index.html
+msgid "autotools"
+msgstr ""
+
+#: ../create/index.html
+msgid "or"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"It will also install and run on any Linux distribution with an up-to-date "
+"version of"
+msgstr ""
+
+#: ../create/index.html
+msgid "/install"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft stage"
+msgstr ""
+
+#: ../create/index.html
+msgid "snap.yaml"
+msgstr ""
+
+#: ../create/index.html
+msgid "The result is that two apps are exposed:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"file provides the configuration file for the snap's content and is similar "
+"to the"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"name: hello-world-service confinement: devmode apps: hello-service: command:"
+" command-hello-service.wrapper daemon: simple plugs: - network-bind ..."
+msgstr ""
+
+#: ../create/index.html
+msgid "$ snapcraft --version 2.11"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"snap needs to have access to the network, so it can listen for and serve "
+"requests, this access is requested using the ["
+msgstr ""
+
+#: ../create/index.html
+msgid "."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"and iterate until it is working properly under confinement. When satisfied, "
+"you may indicate it works under confinement with:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"includes a specification of the architecture that the snap has been built "
+"for"
+msgstr ""
+
+#: ../create/index.html
+msgid "Congratulations, you've just made and installed your first snap."
+msgstr ""
+
+#: ../create/index.html
+msgid "stage/"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You can cd into each directory and work through the README, or follow along "
+"on this page."
+msgstr ""
+
+#: ../create/index.html
+msgid "http://localhost:8000"
+msgstr ""
+
+#: ../create/index.html
+msgid "has now populated both the"
+msgstr ""
+
+#: ../create/index.html
+msgid "build/"
+msgstr ""
+
+#: ../create/index.html
+msgid ":"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"enables you to run the snap outside the confinement sandbox and get "
+"unrestricted access to system resources, in this case, listening to the "
+"network. However, you do need to tell the snap that it can run in devmode, "
+"by making a declaration in"
+msgstr ""
+
+#: ../create/index.html
+msgid ", or"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Each of these plugins knows how to drive a particular set of conventions for"
+" a particular build system. The important distinction is that Snapcraft is "
+"not itself a build system. It doesn't replace"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"As you can see a snap is a single file. The name of the file is based on "
+"information in the"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ more snap/meta/snap.yaml apps: hello-service: command: command-hello-"
+"service.wrapper daemon: simple plugs: - network-bind"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"when installing in devmode regardless of how confinement is set in your "
+"yaml). Once the application is working well in devmode, install it without "
+"specifying"
+msgstr ""
+
+#: ../create/index.html
+msgid "Is defined by a single"
+msgstr ""
+
+#: ../create/index.html
+msgid "part_name"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"$ snapcraft clean gnu-bash Cleaning priming area for gnu-bash Cleaning "
+"staging area for gnu-bash Cleaning build for gnu-bash Cleaning pulled source"
+" for gnu-bash"
+msgstr ""
+
+#: ../create/index.html
+msgid "wrapper: defining how the binaries are launched"
+msgstr ""
+
+#: ../create/index.html
+msgid "...] [--enable-geoip] snapcraft [options] build ["
+msgstr ""
+
+#: ../create/index.html
+msgid "autoconf"
+msgstr ""
+
+#: ../create/index.html
+msgid "To simplify development,"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+". Instead, a part describes which of those build systems to use, so that "
+"Snapcraft can drive the build system that the part author selected."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The hello world service needs to listen to the network (a restricted and "
+"secured part of the system), but hasn't been setup with the additional "
+"permissions to do so yet."
+msgstr ""
+
+#: ../create/index.html
+msgid "Stable"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"You first met parts at the start of this guide and have been working with "
+"them in all the examples so far. So, it's time to take a closer look at how "
+"parts work and the options they provide you. Then there are a couple of "
+"references for plugins, in case you would like to explore further."
+msgstr ""
+
+#: ../create/index.html
+msgid "The Snapcraft tool will do all the work if you just type"
+msgstr ""
+
+#: ../create/index.html
+msgid "file"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"to specify whether or not the snap is expected to work correctly when the "
+"specified interfaces are connected and the snap is confined. You specify "
+"strict to indicate the snap works properly when confined or devmode to "
+"indicate it only works properly when unconfined. If confinement is "
+"unspecified, the snap is assumed to work correctly when confined since "
+"developers are expected to develop their snaps for running in the sandbox. "
+"You're only allowed to upload snaps to the stable channel when strict "
+"confinement is used."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Uploading your snap won't make it immediately available for installation. "
+"You'll have to choose the channel(s) you wish to release into."
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"If you haven't installed Snapcraft, it's available on Ubuntu 16.04 LTS:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"confinement: specify how the snap can be used with the security sandbox"
+msgstr ""
+
+#: ../create/index.html
+msgid "] snapcraft [options] help (topics |"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"The hello app pointing to the hello binary (the command) inside the snap. "
+"The command can be executed using"
+msgstr ""
+
+#: ../create/index.html
+msgid "snapcraft snap prime/"
+msgstr ""
+
+#: ../create/index.html
+msgid "publication: Users only see your published revisions"
+msgstr ""
+
+#: ../create/index.html
+msgid "Running"
+msgstr ""
+
+#: ../create/index.html
+msgid "to simplify development"
+msgstr ""
+
+#: ../create/index.html
+msgid "Ask Ubuntu"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Candidate is used to vet uploads that should require no further code changes"
+" before moving to stable"
+msgstr ""
+
+#: ../create/index.html
+msgid "Interested in building snaps or working with Ubuntu Core?"
+msgstr ""
+
+#: ../create/index.html
+msgid "Edit"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"This enables quick iteration to perfect the functionality of the snap before"
+" you need to worry about making it work under confinement."
+msgstr ""
+
+#: ../create/index.html
+msgid ", or any code repository you like. For example:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"When first making a snap it is often useful to specify confinement: devmode "
+"in your YAML like so:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+", and will use either one, but it will error out if you've both there. If "
+"you're uncertain, the recommendation is to use"
+msgstr ""
+
+#: ../create/index.html
+msgid "link next to the Channels field. In the page that appears, select"
+msgstr ""
+
+#: ../create/index.html
+msgid "and click"
+msgstr ""
+
+#: ../create/index.html
+msgid "You can confirm this by installing the snap locally, replacing '"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+". The second difference is that there is no parts definition (as the parts "
+"are now in the snap and no longer need to be defined)."
+msgstr ""
+
+#: ../create/index.html
+msgid "Get more info from:"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+", which prepares the environment for launching the real application. These"
+msgstr ""
+
+#: ../create/index.html
+msgid "directory"
+msgstr ""
+
+#: ../create/index.html
+msgid ""
+"Many parts will specify an explicit file version for the source, as this one"
+" does. This ensures that everybody who builds this part gets exactly the "
+"same code, because it's fetched from the same file. However, you could point"
+" to a source that will change every time there is a new release:"
+msgstr ""
