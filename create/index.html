@@ -591,6 +591,8 @@ apps:
     daemon: simple
     plugs:
     - network-bind
+  <b>architectures:
+  - amd64</b>
 confinement: strict
 description: This example demonstrates how to have nodejs webserver. This is part
   of the snapcraft tour at https://snapcraft.io/create/
@@ -598,7 +600,7 @@ name: hello-world-service
 summary: A hello world style nodejs webserver app
 version: 0.1</code></pre>
 
-            <p>The first exception is that <code>snap.yaml</code> includes a specification of the architecture that the snap has been built for (highlighted). The second difference is that there is no parts definition (as the parts are now in the snap and no longer need to be defined).</p>
+            <p>The first exception is that <code>snap.yaml</code> includes a specification of the architecture that the snap has been built for <strong>(highlighted)</strong>. The second difference is that there is no parts definition (as the parts are now in the snap and no longer need to be defined).</p>
 
             <p>Armed with this information you can, if you wish, build your snap package more directly by:</p>
 
