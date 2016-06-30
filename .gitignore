@@ -7,3 +7,4 @@ css/main.css
 css/maps/main.css.map
 .publish
 npm-debug.log
+translate-html/**/*.pyc
