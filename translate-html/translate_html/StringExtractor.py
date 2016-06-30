@@ -102,7 +102,7 @@ class StringExtractor(object):
     """
     def __init__(self):
         self.files = self._load_files()
-        self.potfile = polib.POFile()
+        self.potfile = polib.POFile(check_for_duplicates=True)
         time_str = datetime.now().isoformat(' ')
         self.potfile.metadata = {
             'Project-Id-Version': '1.0',
