@@ -308,7 +308,9 @@ apps:
                 to other snap slots to consume those services. Imagine two snaps
                 A and B that need to talk to each other:</p>
 
-                IMAGE
+                <p>
+                    <img src="{{ site.asset_path }}9229834c-Snapcraft-Interfaces-plugs-and-slots.svg" />
+                </p>
 
                 <p>There are many interfaces that are defined and can be used by
                 snap developers to describe the ways their snaps should be
@@ -317,8 +319,9 @@ apps:
                 documents or other services like OpenGL.</p>
 
                 <p>The interfaces are declared in the snap.yaml metadata:</p>
-
-                IMAGE
+                <p>
+                    <img src="{{ site.asset_path }}ac7a226c-Snapcraft%28dot%29io+-+YAML+metadata.svg" />
+                </p>
 
                 <p>Snaps can share files with other snaps from the same vendor,
                 or with community-maintained shared snaps which act as libraries
@@ -341,7 +344,9 @@ apps:
                 and the host OS through a set of plugs and slots with matching
                 interfaces. It’s a very elegant world.</p>
 
-                IMAGE
+                <p>
+                    <img src="{{ site.asset_path }}e635d3b2-Snapcraft%28dot%29io+-+Architecture.svg" />
+                </p>
 
                 <p>The snap system will present all the snap apps under /snap/bin/
                 so with that on your $PATH you can easily run snap commands. It
@@ -476,7 +481,7 @@ Hello (beta) 1.2 installed</code></pre>
             </div>
 
             <ul class="grid-list twelve-col no-bullets no-margin-bottom">
-                <li class="grid-list__item four-col">
+                <li class="grid-list__item three-col">
                     <div class="one-col ">
                         <img class="grid-list__img" src="{{ site.asset_path }}e512b0e2-jenkins.svg" alt="icon">
                     </div>
@@ -484,7 +489,7 @@ Hello (beta) 1.2 installed</code></pre>
                         <h3>Jenkins</h3>
                     </div>
                 </li>
-                <li class="grid-list__item four-col">
+                <li class="grid-list__item three-col">
                     <div class="one-col ">
                         <img class="grid-list__img" src="{{ site.asset_path }}3ea99f54-htop.svg" alt="icon">
                     </div>
@@ -492,7 +497,7 @@ Hello (beta) 1.2 installed</code></pre>
                         <h3>htop</h3>
                     </div>
                 </li>
-                <li class="grid-list__item four-col last-col">
+                <li class="grid-list__item three-col ">
                     <div class="one-col ">
                         <img class="grid-list__img" src="{{ site.asset_path }}3ad2e1e3-notes.svg" alt="icon">
                     </div>
@@ -501,7 +506,7 @@ Hello (beta) 1.2 installed</code></pre>
                     </div>
                 </li>
 
-                <li class="grid-list__item four-col">
+                <li class="grid-list__item three-col last-col">
                     <div class="one-col ">
                         <img class="grid-list__img" src="{{ site.asset_path }}476aaa77-cassandra.svg" alt="icon">
                     </div>
@@ -509,7 +514,7 @@ Hello (beta) 1.2 installed</code></pre>
                         <h3>Cassandra</h3>
                     </div>
                 </li>
-                <li class="grid-list__item four-col">
+                <li class="grid-list__item three-col">
                     <div class="one-col ">
                         <img class="grid-list__img" src="{{ site.asset_path }}24badefc-freecad.svg" alt="icon">
                     </div>
@@ -517,7 +522,7 @@ Hello (beta) 1.2 installed</code></pre>
                         <h3>Freecad</h3>
                     </div>
                 </li>
-                <li class="grid-list__item four-col last-col">
+                <li class="grid-list__item three-col">
                     <div class="one-col ">
                         <img class="grid-list__img" src="{{ site.asset_path }}aacc8ea7-shout.svg" alt="icon">
                     </div>
@@ -526,15 +531,15 @@ Hello (beta) 1.2 installed</code></pre>
                     </div>
                 </li>
 
-                <li class="grid-list__item four-col last-row">
+                <li class="grid-list__item three-col">
                     <div class="one-col ">
-                        <img class="grid-list__img" src="{{ site.asset_path }}d96a74dd-moon-buggy.svg" alt="icon">
+                        <img class="grid-list__img" src="{{ site.asset_path }}f6f28277-stellarium.jpg" alt="icon">
                     </div>
                     <div class="three-col last-col">
-                        <h3>moon-buggy</h3>
+                        <h3>Stellarium</h3>
                     </div>
                 </li>
-                <li class="grid-list__item four-col last-row">
+                <li class="grid-list__item three-col last-col">
                     <div class="one-col ">
                         <img class="grid-list__img" src="{{ site.asset_path }}c675c7a0-webdm.svg" alt="icon">
                     </div>
@@ -542,12 +547,36 @@ Hello (beta) 1.2 installed</code></pre>
                         <h3>WebDM</h3>
                     </div>
                 </li>
-                <li class="grid-list__item four-col last-row last-col">
+                <li class="grid-list__item three-col last-row">
                     <div class="one-col ">
                         <img class="grid-list__img" src="{{ site.asset_path }}b0f30b97-hangups.svg" alt="icon">
                     </div>
                     <div class="three-col last-col">
                         <h3>Hangups</h3>
+                    </div>
+                </li>
+                <li class="grid-list__item three-col last-row">
+                    <div class="one-col ">
+                        <img class="grid-list__img" src="{{ site.asset_path }}db5bc323-Krita_Application_Logo.svg" alt="icon">
+                    </div>
+                    <div class="three-col last-col">
+                        <h3>Krita</h3>
+                    </div>
+                </li>
+                <li class="grid-list__item three-col last-row">
+                    <div class="one-col ">
+                        <img class="grid-list__img" src="{{ site.asset_path }}eab7c752-VLC_Icon.svg" alt="icon">
+                    </div>
+                    <div class="three-col last-col">
+                        <h3>VLC</h3>
+                    </div>
+                </li>
+                <li class="grid-list__item three-col last-row last-col">
+                    <div class="one-col ">
+                        <img class="grid-list__img" src="{{ site.asset_path }}42162c8b-Blender_Logo.svg" alt="icon">
+                    </div>
+                    <div class="three-col last-col">
+                        <h3>Blender</h3>
                     </div>
                 </li>
             </ul>
