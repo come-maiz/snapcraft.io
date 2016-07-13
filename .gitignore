@@ -8,3 +8,5 @@ css/maps/main.css.map
 .publish
 npm-debug.log
 translate-html/**/*.pyc
+docs/
+_includes/docs-navigation.html
