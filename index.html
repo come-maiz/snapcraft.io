@@ -61,42 +61,53 @@ layout: default
                             <p class="for-small">View Ubuntu instructions</p>
                         </a>
                     </li>
+                    <li class="responsive-tabs__nav-item">
+                        <a class="responsive-tabs__link" href="#responsive-tab-content-7" title="View OpenSuse instructions">
+                            <img src="{{ site.asset_path }}583f0880-opensuse.png" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
+                            <p class="for-small">View OpenSuse instructions</p>
+                        </a>
+                    </li>
                 </ul>
                 <div id="responsive-tab-content-1" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Arch instructions</h3>
                         <pre class="command-line"><code>sudo pacman -S snapd</code></pre>
-
                     </div>
                 </div>
                 <div id="responsive-tab-content-2" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Debian instructions</h3>
-                        <p>On <a href="https://wiki.debian.org/DebianUnstable">Debian Sid</a>:</p>
+                        <p>On Sid:</p>
 <pre class="command-line"><code>sudo apt install snapd</code></pre>
                     </div>
                 </div>
                 <div id="responsive-tab-content-4" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Fedora instructions</h3>
-                        <p>On Fedora 23 or 24:</p>
-                        <pre class="command-line"><code>sudo dnf copr enable zyga/snapcore
+                        <pre class="command-line">
+<code>sudo dnf copr enable zyga/snapcore
 sudo dnf install snapd
-# enable the snapd systemd service:
-sudo systemctl enable --now snapd.service
 
-# SELinux support is in beta, so on Fedora 24 you currently have to:
+# enable the snapd systemd service:
+sudo systemctl enable –now snapd.service
+
+# SELinux support is in beta, so currently:
 sudo setenforce 0
-# to persist, edit /etc/selinux/config to set SELINUX=permissive and reboot.</code></pre>
+
+# to persist, edit /etc/selinux/config
+to set SELINUX=permissive and reboot.</code>
+                        </pre>
                     </div>
                 </div>
                 <div id="responsive-tab-content-5" class="responsive-tab__content twelve-col clearfix">
                     <div class="eight-col no-margin-bottom">
                         <h3 class="accessibility-aid">Gentoo</h3>
-                        <p>Install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a> then <a href="https://github.com/zyga/snapd-gentoo".>snapd.ebuild</a></p>
-                        <pre class="command-line"><code># enable the snapd systemd service:
-sudo systemctl enable --now snapd.service</code></pre>
-
+                        <p>Install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a>
+                        then <a href="https://github.com/zyga/snapd-gentoo">snapd.ebuild</a></p>
+                        <pre class="command-line">
+<code># enable the snapd systemd service:
+sudo systemctl enable --now snapd.service</code>
+                        </pre>
                     </div>
                 </div>
                 <div id="responsive-tab-content-6" class="responsive-tab__content twelve-col clearfix">
@@ -105,6 +116,13 @@ sudo systemctl enable --now snapd.service</code></pre>
                         <pre class="command-line"><code>sudo apt install snapd</code></pre>
                     </div>
                 </div>
+                <div id="responsive-tab-content-7" class="responsive-tab__content twelve-col clearfix">
+                    <div class="eight-col no-margin-bottom">
+                        <h3 class="accessibility-aid">OpenSuse instructions</h3>
+                        <pre class="command-line"><code>TBC</code></pre>
+                    </div>
+                </div>
+
             </div>
             <div class="twelve-col align-center clearfix">
                 <p>Click for installation instructions, or <a href="http://www.github.com/snapcore/snapd">build <code>snapd</code> from source</a>.</p>
@@ -141,6 +159,202 @@ sudo systemctl enable --now snapd.service</code></pre>
     <section class="row">
         <div class="wrapper">
             <div class="eight-col">
+                <h2>How do snaps work?</h2>
+                <p>A snap is a fancy zip file containing an application together
+                with its dependencies, and a description of how it should safely
+                be run on your system, especially the different ways it should
+                talk to other software.</p>
+                <p>Most importantly snaps are designed to be secure, sandboxed,
+                containerised applications isolated from the underlying system
+                and from other applications. Snaps allow the safe installation
+                of apps from any vendor on mission critical devices and desktops.</p>
+
+                <p>Try this (you may need to <a href="#">install snapd</a>)</p>
+
+                <pre class="command-line">
+<code>$ sudo snap install hello-world</code></pre>
+
+                <p>Now you have installed a snap. You can take a look inside the
+                snap very easily, it shows up as a new directory on your system:</p>
+
+                <pre class="command-line">
+<code>$ cd /snap/hello-world/current/
+
+$ tree
+.
+├── bin                 ← this directory structure is just for convenience
+│   ├── echo               there is no hardcoded structure requirement other
+│   ├── env                than meta/snap.yaml
+│   ├── evil
+│   ├── sh
+│   ├── showdev
+│   └── usehw
+└── meta                 ← your snap must have this directory
+    ├── icon.png         ← no prizes for guessing what this is
+    └── snap.yaml        ← this is the required metadata</code></pre>
+
+                <p>So a snap is very easy to create. Just put all the files you need
+                into a directory, use whatever subdirectory structure you want. That
+                directory will be compressed into a squashfs - a zipped directory -
+                and then it will be mounted at /snap/<name>/current when the snap is
+                installed. Your snap apps will know where they are mounted because
+                that is provided as the $SNAP environment variable when snap apps
+                are run.</p>
+
+                <p>The only actual hard requirement on a snap structure is that you
+                have a file called meta/snap.yaml inside your snap directory, which
+                describes security requirements and how the snap should be integrated
+                with other parts of the system. Let’s take a look at that snap.yaml
+                for the hello-world snap (colour added for emphasis):</p>
+
+                <pre class="command-line">
+<code>$ cat meta/snap.yaml
+name: hello-world
+version: 6.1
+architectures: [ all ]
+summary: "The 'hello-world' of snaps"
+description: |
+    This is a simple snap example that includes a few interesting binaries
+    to demonstrate snaps and their confinement.
+    * hello-world.env  - dump the env of commands run inside app sandbox
+    * hello-world.evil - show how snappy sandboxes binaries
+    * hello-world.sh   - enter interactive shell that runs in app sandbox
+    * hello-world      - simply output text
+apps:
+ env:
+   command: bin/env
+ evil:
+   command: bin/evil
+ sh:
+   command: bin/sh
+ hello-world:
+   command: bin/echo</code></pre>
+
+                <p>The top metadata is easy, that’s just descriptive. One thing to
+                remember is that the version is purely for humans, the snap system
+                won’t ever treat that version as special or try to compare versions
+                between snaps. That’s just so you know what the developer thinks about
+                this software.</p>
+
+                <p>Note the explicit list of “apps” exported by this snap. Each app
+                is explicitly named (‘env’, ‘evil’, ‘sh’, and ‘hello-world’) and each
+                gets a distinctive command, which is path relative to $SNAP. The name
+                of the app doesn’t have to match the command.</p>
+                <p>The special app here is ‘hello-world’, because it has the same name
+                as the snap itself, it’s the default app in the snap and you can run
+                it just by typing ‘hello-world’ after the snap is installed. The others
+                need to be namespaces, so ‘hello-world.evil’ will execute the bin/evil
+                command in the snap.</p>
+                <p>A snap can declare daemons to be started as well, this one just
+                describes some apps.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="wrapper">
+            <div class="eight-col">
+                <h2>Snaps are read-only and have segregated data stores</h2>
+                <p>Snaps are read-only for security. We want to prevent a hostile
+                party from sneakily changing the software on your machine, so you
+                cannot modify a snap that is installed on your system. This also
+                means you can always check the signature on the snap, even long
+                after you installed it, to make sure it is still exactly the
+                software you intended. If you want to modify a snap, you can
+                usually build your own version of it, especially if it is open
+                source.</p>
+                <p>So where can a snap write data? Each snap gets its own set of
+                writable directories which have specific properties. There are
+                two directories which the snap can write to independent of the
+                user. One of these is versioned - each time the snap is upgraded
+                the data is saved and the new snap revision can upgrade its copy.
+                The other ‘common’ data directory is not versioned and is used
+                for big blobs of data that you don’t want to duplicate across
+                revisions of the snap:</p>
+
+                <pre class="command-line">
+<code>/var/snap/<name>/current/  ← $SNAP_DATA is the versioned snap data directory
+/var/snap/<name>/common/   ← $SNAP_COMMON will not be versioned on upgrades</code></pre>
+
+                <p>Typically, configuration is stored in one of these, along with
+                system-wide data for the snap.</p>
+
+                <p>There are also an equivalent two writable directories for each
+                snap in the user home, which can be used to store snap data that
+                is specific to one user or another, separately:</p>
+
+                <pre class="command-line">
+<code>~/snap/<name>/current/      ← $SNAP_USER_DATA that can be rolled back
+~/snap/<name>/common/       ← $SNAP_USER_COMMON unversioned user-specific data</code></pre>
+
+                <p>This way applications can be immutable for security reasons
+                while still offering a full and rich user experience. To learn
+                more about the makeup of a snap please see the
+                <a href="http://snapcraft.io/docs/architecture/snap/">snap
+                architecture article.</a></p>
+            </div>
+
+            <div class="eight-col">
+                <h3>Snap integration with interfaces, plugs and slots</h3>
+                <p> Snaps are safely confined in their separate sandboxes by
+                sophisticated kernel security mechanisms. That means that snaps
+                can’t peek around at your data - other than the data you give
+                them - if they are compromised. But what if you need your snap
+                to talk to another one? For example, what if your snap needs to
+                talk to a database? That’s where snaps get really amazing.</p>
+                <p>They can use ‘interfaces’ - standard and well-defined ways to
+                provide and consume services from one another. Snaps can offer
+                ‘slots’ to provide services, and declare ‘plugs’ that connect
+                to other snap slots to consume those services. Imagine two snaps
+                A and B that need to talk to each other:</p>
+
+                IMAGE
+
+                <p>There are many interfaces that are defined and can be used by
+                snap developers to describe the ways their snaps should be
+                connected. Also, a snap can be connected to the host system OS
+                using plugs, too, which is how a snap can access shared user
+                documents or other services like OpenGL.</p>
+
+                <p>The interfaces are declared in the snap.yaml metadata:</p>
+
+                IMAGE
+
+                <p>Snaps can share files with other snaps from the same vendor,
+                or with community-maintained shared snaps which act as libraries
+                of common data or code, using the content-sharing interface, for
+                example. This reduces duplication while still ensuring rigorous
+                security and update control.</p>
+
+                <p>When you install a snap, the system will automatically connect
+                up the standard, safe plugs and slots. For example, your new game
+                will automatically get access to the OpenGL libraries on your
+                system because that’s considered normal behaviour for a game.
+                But there may be other plugs and slots you can connect up by
+                choice, and  snaps will document those individually.</p>
+            </div>
+            <div class="eight-col">
+                <h3>The architecture of a snappy system</h3>
+                <p>So a snappy system has a collection of snaps, each of which
+                is read-only, each of which has its own set of independent
+                writable directories, and each of which can talk to other snaps
+                and the host OS through a set of plugs and slots with matching
+                interfaces. It’s a very elegant world.</p>
+
+                IMAGE
+
+                <p>The snap system will present all the snap apps under /snap/bin/
+                so with that on your $PATH you can easily run snap commands. It
+                will also integrate all the snap daemons (services) with your
+                init system so that they are automatically started and stopped
+                as needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="wrapper">
+            <div class="eight-col">
                 <h2>Using snaps - the snappy "hello world" tour</h2>
                 <p>To install a snap, you’ll start by looking for available snaps.
                 Anybody can publish a snap, but if you search the default Ubuntu
@@ -149,15 +363,13 @@ sudo systemctl enable --now snapd.service</code></pre>
                 call these the ‘promoted’ snaps, and you can search them for a
                 matching name:</p>
 
-                <pre class="command-line">
-                    <code>
-$ snap find hello
+
+
+<pre class="command-line"><code>$ snap find hello
 Name         Version  Developer  Notes  Summary
 hello        2.10     canonical  -      GNU Hello, the "hello world" snap
 hello-huge   1.0      noise      -      A really big snap
-hello-world  6.1      canonical  -      Hello world example
-                    </code>
-                </pre>
+hello-world  6.1      canonical  -      Hello world example</code></pre>
 
                 <p>You can expand the search to include snap descriptions with
                 --broad if you don’t find what you’re looking for just based on
@@ -170,36 +382,26 @@ hello-world  6.1      canonical  -      Hello world example
 
                 <p>We’ll start by installing GNU Hello, from the Free Software Foundation:</p>
 
-                <pre class="command-line">
-                    <code>
-$ sudo snap install hello
-                    </code>
-                </pre>
+                <pre class="command-line"><code>$ sudo snap install hello</code></pre>
 
                 <p>Just like any other app, we can then launch the snap  from the
                 command line, or from the desktop if it has a launcher:</p>
 
-                <pre class="command-line">
-                    <code>
-$ hello
-Hello, world!
-                    </code>
-                </pre>
+
+<pre class="command-line"><code>$ hello
+Hello, world!</code></pre>
 
                 <p>See the snaps installed on your system with ‘snap list’, which
                 will also tell you the software version, the unique revision, the
                 developer of the installed snap, and any extra information such
                 as whether the snap is in developer mode or not:</p>
 
-                <pre class="command-line">
-                    <code>
-$ snap list
+
+<pre class="command-line"><code>$ snap list
 Name     Version   Rev     Developer     Notes
 hello    2.10      26      canonical     -
 core     16.04-55  109     canonical     -
-snapweb  0.17      21      canonical     -
-                    </code>
-                </pre>
+snapweb  0.17      21      canonical     -</code></pre>
             </div>
             <div class="eight-col">
                 <h3>Always fresh – update fast and reliably</h3>
@@ -208,15 +410,12 @@ snapweb  0.17      21      canonical     -
                 snap refresh which will bring you completely up to date for all
                 snaps, unless you specify particular snaps to refresh.</p>
 
-                <pre class="command-line">
-                    <code>
-$ sudo snap refresh krita
+
+<pre class="command-line"><code>$ sudo snap refresh krita
 krita already up to date
 $ sudo snap refresh
 core updated
-hello 64.75 MB [=====================================>___]   12s
-                    </code>
-                </pre>
+hello 64.75 MB [=====================================>___]   12s</code></pre>
             </div>
 
             <div class="eight-col">
@@ -224,17 +423,14 @@ hello 64.75 MB [=====================================>___]   12s
                 <p>With the technology built in to snappy it is simple to roll
                 back to a previous version of an application for any reason.</p>
 
-                <pre class="command-line">
-                    <code>
-$ snap list
+
+<pre class="command-line"><code>$ snap list
  Name              Version               Rev  Developer  Notes
  hello-world       6.1                   26   canonical  -
 
  $ sudo snap revert hello-world
  Name             Version                Rev  Developer  Notes
- hello-world      6.0                    25   canonical  -
-                    </code>
-                </pre>
+ hello-world      6.0                    25   canonical  -</code></pre>
             </div>
 
             <div class="eight-col">
@@ -252,31 +448,21 @@ $ snap list
                 conventionally used for regular or daily development builds that
                 have passed some lightweight smoke-testing.</p>
 
-                <pre class="command-line">
-                    <code>
-$ sudo snap refresh hello --channel=beta
-hello (beta) 1.2 installed
-                    </code>
-                </pre>
+
+<pre class="command-line"><code>$ sudo snap refresh hello --channel=beta
+hello (beta) 1.2 installed</code></pre>
 
                 <p>Now, you can run the beta version of the snap:</p>
 
-                <pre class="command-line">
-                    <code>
-$ hello
-Hello, snap padawan!
-                    </code>
-                </pre>
+
+<pre class="command-line"><code>$ hello
+Hello, snap padawan!</code></pre>
 
                 <p>You can also install a snap from the beta channel directly, with:</p>
 
-                <pre class="command-line">
-                    <code>
-$ sudo snap install hello --beta
-Hello (beta) 1.2 installed
-                    </code>
-                </pre>
 
+<pre class="command-line"><code>$ sudo snap install hello --beta
+Hello (beta) 1.2 installed</code></pre>
             </div>
         </div>
     </section>
@@ -379,7 +565,7 @@ Hello (beta) 1.2 installed
                 also handles publishing your snaps to the world.</p>
                 <p>Read how to create a snap and join the snap-crafting community
                 &mdash; we hang out in the <a class="external" href="https://webchat.freenode.net/?channels=snappy">#snappy channel on Freenode</a> or
-                <a href="mailto:snapcraft@lists.snapcraft.io">snapcraft@lists.snapcraft.io</a>.
+                <a href="mailto:snapcraft@lists.snapcraft.io">snapcraft@lists.snapcraft.io</a>.</p>
             </div>
         </div>
     </section>
