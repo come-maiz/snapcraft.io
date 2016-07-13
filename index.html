@@ -108,12 +108,18 @@ sudo systemctl enable --now snapd.service</code></pre>
     <section class="row row-grey">
         <div class="wrapper">
             <div class="twelve-col no-margin-bottom">
-                <h2>A 'snap' is a universal Linux package</h2>
+                <h2>How do snaps work?</h2>
             </div>
             <div class="seven-col">
-                <p>Snaps work on any distribution or device. Snaps are faster to install, easier to create, safer to run, and they update automatically and transactionally so your app is always fresh and never broken.</p>
+                <p>A snap is a fancy zip file containing an application together
+                with its dependencies, and a description of how it should safely
+                be run on your system, especially the different ways it should
+                talk to other software.</p>
 
-                <p>The public collection of snaps includes the latest and best apps from GitHub and beyond, so you have the whole world of Linux apps at your fingertips. Take the tour below to experience 'hello world' as a snap, or jump to the <a href="/create">developer guide</a> to create your own snaps.</p>
+                <p>Most importantly snaps are designed to be secure, sandboxed,
+                containerised applications isolated from the underlying system
+                and from other applications. Snaps allow the safe installation
+                of apps from any vendor on mission critical devices and desktops.</p>
             </div>
             <div class="five-col last-col">
                 <ul class="inline-logos">
@@ -128,89 +134,146 @@ sudo systemctl enable --now snapd.service</code></pre>
     <section class="row">
         <div class="wrapper">
             <div class="eight-col">
-                <h2>The 'hello' world tour</h2>
-                <p>This tutorial assumes you have <a href="http://www.ubuntu.com/download/" class="external">Ubuntu 16.04 LTS</a> installed on your desktop, cloud, VM or server. You may need to <code>sudo apt install snapd</code> before continuing.</p>
+                <h2>Using snaps - the snappy "hello world" tour</h2>
+                <p>To install a snap, you’ll start by looking for available snaps.
+                Anybody can publish a snap, but if you search the default Ubuntu
+                store you will only see snaps that have been reviewed and judged
+                to be of good quality, and which can be installed securely. We
+                call these the ‘promoted’ snaps, and you can search them for a
+                matching name:</p>
+
+                <pre class="command-line">
+                    <code>
+$ snap find hello
+Name         Version  Developer  Notes  Summary
+hello        2.10     canonical  -      GNU Hello, the "hello world" snap
+hello-huge   1.0      noise      -      A really big snap
+hello-world  6.1      canonical  -      Hello world example
+                    </code>
+                </pre>
+
+                <p>You can expand the search to include snap descriptions with
+                --broad if you don’t find what you’re looking for just based on
+                the name.</p>
+
+                <p>These examples use the Ubuntu store, your snap implementation
+                might be different, other stores are available and it is also easy
+                to create your own. There is an open source simple snap store
+                implementation to get you started making your own store.</p>
+
+                <p>We’ll start by installing GNU Hello, from the Free Software Foundation:</p>
+
+                <pre class="command-line">
+                    <code>
+$ sudo snap install hello
+                    </code>
+                </pre>
+
+                <p>Just like any other app, we can then launch the snap  from the
+                command line, or from the desktop if it has a launcher:</p>
+
+                <pre class="command-line">
+                    <code>
+$ hello
+Hello, world!
+                    </code>
+                </pre>
+
+                <p>See the snaps installed on your system with ‘snap list’, which
+                will also tell you the software version, the unique revision, the
+                developer of the installed snap, and any extra information such
+                as whether the snap is in developer mode or not:</p>
+
+                <pre class="command-line">
+                    <code>
+$ snap list
+Name     Version   Rev     Developer     Notes
+hello    2.10      26      canonical     -
+core     16.04-55  109     canonical     -
+snapweb  0.17      21      canonical     -
+                    </code>
+                </pre>
             </div>
             <div class="eight-col">
-                <h3>Log in to the global snap store</h3>
-                <p>The snap store holds a public collection of snaps, and delivers them to clouds, devices and private infrastructure. <a class="external" href="https://login.ubuntu.com/+login">Sign-in</a> and then you will be able to fetch snaps on demand:</p>
-
-                <pre class="command-line"><code>$ snap login me@myself.com
-Password: *********
-2-factor: ******
-Welcome!
-</code></pre>
-                <p>Snaps don&rsquo;t intrinsically depend on the Ubuntu store, that&rsquo;s just what <code>snapd</code> does today, and we expect people will have different stores for their snaps in future.</p>
-
-                <p>The store contains both public and private snaps.</p>
-
-                <p>Anybody can publish a snap, but if you search the store you will only see snaps that have been reviewed and judged to be of good quality, and which can be installed securely. We call these the &lsquo;promoted&rsquo; snaps, and you can search them for a matching name or description:</p>
-
-                <pre class="command-line"><code>$ snap find hello
-Name           Version  Developer  Notes  Summary
-hello          2.10     canonical  -      GNU Hello, the "hello world" snap
-hello-huge     1.0      noise      -      A really big snap
-hello-world    6.1      canonical  -      Hello world example</code></pre>
-
-                <p>As long as you know the name of the snap you want, and it is public or your own private snap, you can install it using its name directly. But if you search the store, you’ll only see public, promoted results.</p>
-
-                <p>Install the snap you want. We’ll start with GNU Hello, from the Free Software Foundation:</p>
-                <pre class="command-line"><code>$ snap install hello</code></pre>
-
-                <p>Each snap might include multiple related commands, with a default command that has the same name as the snap itself. Additional commands are prefixed with the snap name:</p>
-
-                <pre class="command-line"><code>$ hello
-Hello, world!
-$ hello.universe
-
-
-Hello, universe!</code></pre>
-                <p>Snaps can also install services that run in the background, such as web servers or content management systems. Those will start automatically when you install the snap.</p>
-
-                <p>See the snaps installed on your system with &lsquo;snap list&rsquo;, which will also tell you the software version, the unique revision, the developer of the installed snap, and any extra information such as whether the snap is in developer mode or not:</p>
-
-                <pre class="command-line"><code>$ snap list
-Name           Version               Rev  Developer  Notes
-hello          2.10                  26   canonical  -
-ubuntu-core    16.04+20160419.20-55  109  canonical  -
-webdm          0.17                  21   canonical  -</code></pre>
-
                 <h3>Always fresh – update fast and reliably</h3>
+                <p>Snaps are updated automatically in the background every day.
+                You can manually get the latest version of all your snaps with
+                snap refresh which will bring you completely up to date for all
+                snaps, unless you specify particular snaps to refresh.</p>
 
-                <p>Snaps are updated automatically in the background every day. You can manually get the latest version of all your snaps with snap refresh which will bring you completely up to date for all snaps, unless you specify particular snaps to refresh.</p>
+                <pre class="command-line">
+                    <code>
+$ sudo snap refresh krita
+krita already up to date
+$ sudo snap refresh
+core updated
+hello 64.75 MB [=====================================>___]   12s
+                    </code>
+                </pre>
+            </div>
 
-                <h3>Release channels &mdash; stable, candidate, beta and edge</h3>
-                <p>Developers can publish stable, release candidate, beta and edge versions of a snap, at the same time. This enables them to engage with users who are willing to test upcoming changes, and it enables users to decide how close to the leading edge of development they want to be.</p>
+            <div class="eight-col">
+                <h3>And revert if something goes wrong!</h3>
+                <p>With the technology built in to snappy it is simple to roll
+                back to a previous version of an application for any reason.</p>
 
-                <p>By default, snaps are installed from the stable channel, but there is also a candidate channel which by convention will preview the next stable release, a beta channel and an edge channel.</p>
+                <pre class="command-line">
+                    <code>
+$ snap list
+ Name              Version               Rev  Developer  Notes
+ hello-world       6.1                   26   canonical  -
 
-                <pre class="command-line"><code>$ snap refresh hello --channel=beta
-Name    Version   Rev   Developer   Notes
-hello   2.10.1    29    canonical   -
-hello  (beta) installed
-</code></pre>
+ $ sudo snap revert hello-world
+ Name             Version                Rev  Developer  Notes
+ hello-world      6.0                    25   canonical  -
+                    </code>
+                </pre>
+            </div>
 
-                <p>Run the beta version of the command:</p>
-                <pre class="command-line"><code>$ hello
-Hello, snap padawan!</code></pre>
+            <div class="eight-col">
+                <h3>Stable, candidate, beta and edge channels</h3>
+                <p>Developers can release stable, candidate, beta and edge versions
+                of a snap, at the same time, to engage with a community who are
+                willing to test upcoming changes. You decide how close to the
+                leading edge you want to be.</p>
 
-                <p>Note that you could have directly installed hello from the beta channel via:</p>
+                <p>By default, snaps are installed from the stable channel. By convention,
+                developers use the ‘candidate’ channel to provide a heads-up of
+                a new stable revision, putting it in ‘candidate’ a few days before
+                ‘stable’ so that people can test it out. The beta channel is for
+                unfinished but interesting milestones, and the edge channel is
+                conventionally used for regular or daily development builds that
+                have passed some lightweight smoke-testing.</p>
 
-                <pre class="command-line"><code>$ snap install hello --beta</code></pre>
+                <pre class="command-line">
+                    <code>
+$ sudo snap refresh hello --channel=beta
+hello (beta) 1.2 installed
+                    </code>
+                </pre>
 
-                <h3>Developer mode</h3>
-                <p>When a developer is working on a snap, they may want to let it run without the strict security confinement that is expected of stable, published snaps for general consumption. This is done by specifying <code>--devmode</code> on installation, to give permission for this snap to be run without that confinement.</p>
-                <p>Developers can publish snaps that require <code>--devmode</code> to work, but they can only publish those to beta or edge channels, not stable or candidate channels. As a user, you can install those beta or edge versions using <code>--devmode</code> as well. Bear in mind that you should NEVER do this unless you absolutely trust the developer with all the information on your system.</p>
+                <p>Now, you can run the beta version of the snap:</p>
 
-               <pre class="command-line"><code>$ snap install flubber --channel=beta
-Error: this version of foo requires devmode.
-$ snap install flubber --channel=beta --devmode
-WARNING: snaps installed in devmode are not confined. You are trusting
-all the private data on this system to the developer "frankie".
+                <pre class="command-line">
+                    <code>
+$ hello
+Hello, snap padawan!
+                    </code>
+                </pre>
 
-Do you still want to install ‘flubber’? [y/N] N</code></pre>
+                <p>You can also install a snap from the beta channel directly, with:</p>
+
+                <pre class="command-line">
+                    <code>
+$ sudo snap install hello --beta
+Hello (beta) 1.2 installed
+                    </code>
+                </pre>
+
+            </div>
         </div>
     </section>
+
 
     <section class="row">
         <div class="wrapper">
