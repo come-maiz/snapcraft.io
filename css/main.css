@@ -2697,8 +2697,7 @@ audio:not([controls]) {
 
 .row-grey {
   border: 0;
-  margin-top: -1px;
-  zoom: 1; }
+  margin-top: -1px; }
 
 .box {
   border: 1px solid #d2d2d2;
