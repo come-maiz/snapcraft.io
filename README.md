@@ -34,6 +34,16 @@ To deploy to Github Pages under your local Github username, please run;
 
 You should then be able to view the site at: `http://YOUR-GITHUB-USERNAME.github.io/snapcraft.io`
 
+## Importing documentation
+
+To import the documentation, make sure you have python 3.5 (`python3 --version`) with [python-frontmatter](https://pypi.python.org/pypi/python-frontmatter/0.2.1) installed, and run:
+
+``` bash
+./import-docs.sh
+```
+
+Then re-run the site with `gulp`.
+
 ## Licence
 
 Code licensed [LGPLv3](http://opensource.org/licenses/lgpl-3.0.html) by [Canonical Ltd.](http://www.canonical.com/).
