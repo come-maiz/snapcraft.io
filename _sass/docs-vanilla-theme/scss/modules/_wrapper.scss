@@ -1,0 +1,27 @@
+////
+/// @author       Anthony Dillon
+/// @link
+/// @since        0.0.1
+////
+
+/// Page layout styles
+/// @group Layout
+@mixin docs-wrapper {
+  .wrapper .inner-wrapper {
+    max-width: calc(100% - 240px);
+    padding-left: 240px;
+    box-sizing: border-box;
+    padding-top: 180px;
+  }
+  // scss-lint:disable QualifyingElement
+  footer.wrapper .inner-wrapper {
+    padding-top: 0;
+  }
+  // scss-lint:enable QualifyingElement
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    .wrapper .inner-wrapper {
+      padding-top: 70px;
+    }
+  }
+}

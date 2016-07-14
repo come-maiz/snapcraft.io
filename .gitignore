@@ -9,3 +9,4 @@ npm-debug.log
 translate-html/**/*.pyc
 docs/
 _includes/docs-navigation.html
+css/maps

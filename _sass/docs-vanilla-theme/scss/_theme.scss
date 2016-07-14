@@ -1,0 +1,20 @@
+
+// Theme variables
+@import 'global-settings';
+
+// import required files
+@import '../node_modules/vanilla-framework/scss/vanilla';
+
+/// cloud element styles
+@import 'modules/base';
+@import 'modules/header';
+@import 'modules/row-hero';
+@import 'modules/wrapper';
+
+@mixin docs-vanilla-theme {
+  @include vanilla;
+  @include docs-base;
+  @include docs-header;
+  @include docs-row-hero;
+  @include docs-wrapper;
+}
