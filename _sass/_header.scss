@@ -25,6 +25,11 @@
 
     ul {
       float: left;
+
+      li:last-child {
+        border-right: 1px solid #e3e3e3;
+        border-left: 1px solid #e3e3e3;
+      }
     }
   }
 }
