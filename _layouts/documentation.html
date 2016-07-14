@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+        <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+        <link rel="stylesheet" href="{{ "/css/docs.css" | prepend: site.baseurl }}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    </head>
+
+    <body>
+        {% include header.html %}
+
+        <header class="banner-docs global" role="banner">
+            <nav role="navigation" class="nav-primary nav-right" id="nav">
+                {% include docs-navigation.html %}
+            </nav>
+            <div class="nav-toggle">
+                <a href="#nav" class="nav-toggle__link open"></a>
+                <a href="#" class="nav-toggle__link close"></a>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <div id="main-content" class="inner-wrapper">
+                <div class="row row-hero">
+                    <h1>{{ page.title }}</h1>
+                </div>
+                <div class="row content">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+
+        <footer class="global clearfix no-global wrapper">
+            <nav id="main-navigation" role="navigation" class="clearfix inner-wrapper">
+                <div class="legal clearfix has-cookie">
+                    <p class="twelve-col">© 2016 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+                    <ul class="inline-list clear">
+                        <li><a href="/legal"><small>Legal information</small></a>
+                        </li>
+                        <li><a href="https://bugs.launchpad.net/ubuntu-website-content/"><small>Report a bug on this site</small></a>
+                        </li>
+                    </ul>
+                    <span class="accessibility-aid"><a href="#">Got to the top of the page</a></span>
+                </div>
+            </nav>
+        </footer>
+
+        <script src="https://assets.ubuntu.com/v1/f9e8353d-jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var hero = $('.row-hero');
+                var body = $('body');
+                if (hero) {
+                    $( window ).scroll(function() {
+                        var top = $(this).scrollTop();
+                        if (top > 100) {
+                            body.addClass('js-shink');
+                        } else if (top <= 10) {
+                            body.removeClass('js-shink');
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

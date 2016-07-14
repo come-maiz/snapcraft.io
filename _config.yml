@@ -21,6 +21,8 @@ exclude: ['LICENCE', 'README.md', 'Gulpfile.js', 'package.json', 'node_modules']
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
 
 # only build incrementally
 incremental: true
