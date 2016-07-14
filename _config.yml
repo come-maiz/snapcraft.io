@@ -17,7 +17,18 @@ navigation:
   url: /
 - text: Create
   url: /create/
-exclude: ['LICENCE', 'README.md', 'Gulpfile.js', 'package.json', 'node_modules']
+exclude: [
+  'LICENCE',
+  'README.md',
+  'Gulpfile.js',
+  'package.json',
+  'node_modules',
+  'translate-html',
+  'import-docs.sh',
+  'update-docs-layout.py',
+  'po-html'
+]
+permalink: /:title
 
 # Build settings
 markdown: kramdown
