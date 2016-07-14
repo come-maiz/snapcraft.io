@@ -2839,6 +2839,9 @@ audio:not([controls]) {
     padding: 0 1rem; }
     .banner .nav-primary ul {
       float: left; }
+      .banner .nav-primary ul li:last-child {
+        border-right: 1px solid #e3e3e3;
+        border-left: 1px solid #e3e3e3; }
 
 .inline-logos {
   padding-top: 0; }
