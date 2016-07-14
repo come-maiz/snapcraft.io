@@ -99,7 +99,7 @@ parts:
 Preparing to pull gnu-hello
 Pulling gnu-hello
 Preparing to build gnu-hello
-Building gnu-hello 
+Building gnu-hello
 ...
 Snapped hello_2.10_amd64.snap</code></pre>
 
@@ -118,7 +118,7 @@ hello_2.10_amd64.snap  parts  snap  snapcraft.yaml  prime</code></pre>
 hello 2.10 installed
 
 
-64.64 MB / 64.64 MB [=============================] 100.00 % 3.97 MB/s 
+64.64 MB / 64.64 MB [=============================] 100.00 % 3.97 MB/s
 
 Name   Version  Rev     Developer  Notes
 hello  2.10     X1</code></pre>
@@ -147,9 +147,9 @@ Hello, world!</code></pre>
 
             <pre class="command-line"><code>$ snapcraft clean
 Cleaning snapping area for gnu-hello
-Cleaning staging area for gnu-hello 
-Cleaning build for gnu-hello 
-Cleaning pulled source for gnu-hello 
+Cleaning staging area for gnu-hello
+Cleaning build for gnu-hello
+Cleaning pulled source for gnu-hello
 Cleaning up parts directory
 Cleaning up priming area
 
@@ -344,9 +344,9 @@ $ sudo snap install hello-debug_2.10_*.snap
             <p><code>snapcraft clean</code> removes the directories and data created by Snapcraft. By default it will delete all the directories and data created by Snapcraft from your snap's directory. However, you can use <code>snapcraft clean &lt;part&gt;</code> to delete a specific part:</p>
 
             <pre class="command-line"><code>$ snapcraft clean gnu-bash
-Cleaning priming area for gnu-bash 
-Cleaning staging area for gnu-bash 
-Cleaning build for gnu-bash 
+Cleaning priming area for gnu-bash
+Cleaning staging area for gnu-bash
+Cleaning build for gnu-bash
 Cleaning pulled source for gnu-bash</code></pre>
 
             <p>As you can see <code>snapcraft clean</code> has now deleted all your directories from the <code>gnu-bash</code> part.</p>
@@ -360,7 +360,7 @@ bin</code></pre>
 
             <pre class="command-line"><code>$ snapcraft pull
 Skipping pull gnu-hello (already ran)
-Preparing to pull gnu-bash 
+Preparing to pull gnu-bash
 Pulling gnu-bash </code></pre>
 
             <p>The <code>gnu-hello</code> had already been pulled, when you first built the snap, so it's not pulled again.</p>
@@ -389,8 +389,8 @@ parts/gnu-bash/ubuntu:</code></pre>
             <pre class="command-line"><code>$ snapcraft build
 Skipping pull gnu-bash (already ran)
 Skipping pull gnu-hello (already ran)
-Preparing to build gnu-bash 
-Building gnu-bash 
+Preparing to build gnu-bash
+Building gnu-bash
 ./configure --prefix= --infodir=/var/bash/info
 [...]
 Skipping build gnu-hello (already ran)</code></pre>
@@ -412,7 +412,7 @@ Skipping pull gnu-bash (already ran)
 Skipping pull gnu-hello (already ran)
 Skipping build gnu-bash (already ran)
 Skipping build gnu-hello (already ran)
-Staging gnu-bash 
+Staging gnu-bash
 Skipping stage gnu-hello (already ran)
 As you can see snapcraft stage has now added stage/bin/bash:
 $ ls stage/**
@@ -454,7 +454,7 @@ bin  command-bash.wrapper  command-hello.wrapper  meta  share  var
             <p>The default action in the Snapcraft lifecycle is to compress the <code>prime/</code> directory into a single <code>.snap</code> squashfs file.</p>
 
             <pre class="command-line"><code>$ snapcraft snap prime/
-Snapping 'hello-debug' -                                         
+Snapping 'hello-debug' -
 Snapped hello-debug_2.10_amd64.snap</code></pre>
 
             <h4 id="snapcraft-commands-recap">Recap</h4>
@@ -762,15 +762,15 @@ $ snap login you@yourdomain.com</code></pre>
             <p>Open the URL that was returned from <code>snapcraft upload</code> or open the snap from the developer portal front page: <a class="external" href="https://myapps.developer.ubuntu.com">https://myapps.developer.ubuntu.com</a></p>
 
             <p>You should see the 1.0 version in the lefthand column. Clicking on that link will bring up further details about this revision. Here you can edit the list of channels it should be released into.</p>
-            
+
             <p>Click on the <code>Edit</code> link next to the Channels field. In the page that appears, select <code>Stable</code> and click <code>Save Changes</code>.</p>
-            
+
             <p>Your upload is now ready to be released into the stable channel. Click the <code>Publish</code> button on the page you return to.</p>
-            
+
             <p>The build you uploaded is now the selected revision in the stable channel, meaning that installs of your snap will select this upload by default.</p>
-            
+
             <p>You can confirm this by installing the snap locally, replacing '<code>hello-mark</code>' with your snap name:</p>
-            
+
             <pre class="command-line"><code>$ snap install hello-mark
 Name        Version  Rev     Developer
 hello-mark  1.0      1       sabdfl</code></pre>
@@ -778,11 +778,11 @@ hello-mark  1.0      1       sabdfl</code></pre>
             <h3 id="confinement-40">40 - CONFINEMENT</h3>
 
             <h4 id="confinement">confinement: specify how the snap can be used with the security sandbox</h4>
-            
+
             <p>By default snaps run in a restrictive sandbox to ensure that snaps only access the system and other snaps in controlled ways. confinement is used in <code>snapcraft.yaml</code> to specify whether or not the snap is expected to work correctly when the specified interfaces are connected and the snap is confined. You specify strict to indicate the snap works properly when confined or devmode to indicate it only works properly when unconfined. If confinement is unspecified, the snap is assumed to work correctly when confined since developers are expected to develop their snaps for running in the sandbox. You're only allowed to upload snaps to the stable channel when strict confinement is used.</p>
-            
+
             <p>When first making a snap it is often useful to specify confinement: devmode in your YAML like so:</p>
-            
+
             <pre class="command-line"><code>name: hello-world-service
 confinement: devmode
 apps:
@@ -794,7 +794,7 @@ apps:
 ...</code></pre>
 
             <p>You then would specify <code>--devmode</code> when installing the snap for testing and development (you must always specify <code>--devmode</code> when installing in devmode regardless of how confinement is set in your yaml). Once the application is working well in devmode, install it without specifying <code>--devmode</code> and iterate until it is working properly under confinement. When satisfied, you may indicate it works under confinement with:</p>
-            
+
             <pre class="command-line"><code>name: hello-world-service
 confinement: strict
 apps:
