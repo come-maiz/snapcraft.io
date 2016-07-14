@@ -1,18 +1,24 @@
 <header class="banner global" role="banner">
-  <nav role="navigation" class="nav-primary nav-right" id="nav">
-    <span id="main-navigation-link"><a href="#main-navigation">
-        Jump to site nav</a></span>
-    <div class="logo">
-      <a href="/">
-        <img src="https://assets.ubuntu.com/v1/5b34329f-snapcraft_logotype_hex.svg" alt="Snapcraft">
-      </a>
-    </div>
-    <ul class="not-for-small">
-      <li><a href="/create">Create a snap</a></li>
-    </ul>
-  </nav>
-  <div class="nav-toggle">
-    <a href="#nav" class="nav-toggle__link open"></a>
-    <a href="#" class="nav-toggle__link close"></a>
-  </div>
+    <nav role="navigation" class="nav-primary" id="nav-primary">
+        <span class="accessibility-aid">
+            <a href="#main-content">Jump to main content</a>
+        </span>
+        <div class="logo">
+            <a href="/">
+                <img src="https://assets.ubuntu.com/v1/5b34329f-snapcraft_logotype_hex.svg" alt="Snapcraft">
+            </a>
+        </div>
+        <div id="nav">
+            <div class="nav-toggle">
+                <a href="#nav" class="nav-toggle__link open"></a>
+                <a href="#" class="nav-toggle__link close"></a>
+            </div>
+            <ul>
+                <li><a href="{{ "/community" | prepend: site.baseurl }}">Community</a></li>
+                <li><a href="{{ "/create" | prepend: site.baseurl }}">Create</a></li>
+                <li><a href="{{ "/docs" | prepend: site.baseurl }}">Docs</a></li>
+                <li><a href="#" class="external">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
