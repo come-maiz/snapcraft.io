@@ -26,121 +26,15 @@ layout: default
            </div>
         </div>
     </section>
+
     <section class="row">
         <div class="wrapper">
-            <div  id="responsive-tabs" class="responsive-tabs twelve-col">
-                <h2 class="for-small muted-heading">Enable snaps</h2>
-                <ul class="responsive-tabs__nav twelve-col clearfix">
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-1" title="View Arch Linux instructions">
-                            <img src="{{ site.asset_path }}e0b23092-archlinux.svg" class="responsive-tabs__image not-for-small" alt="Arch Linux logo" />
-                            <p class="for-small">View Arch instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-2" title="View Debian instructions">
-                            <img src="{{ site.asset_path }}2eafb62e-openlogo.svg" class="responsive-tabs__image not-for-small" alt="Debian logo" width="60" />
-                            <p class="for-small">View Debian instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-4" title="View Fedora instructions">
-                            <img src="{{ site.asset_path }}a7d04c56-Fedora_logo_and_wordmark.svg" class="responsive-tabs__image not-for-small" alt="Fedora logo" />
-                            <p class="for-small">View Fedora instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-5" title="View Gentoo instructions">
-                            <img src="{{ site.asset_path }}2235d892-gentoo.png" class="responsive-tabs__image not-for-small" alt="Gentoo logo" width="90" />
-                            <p class="for-small">View Gentoo instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-6" title="View Ubuntu instructions">
-                            <img src="{{ site.asset_path }}887474d1-ubuntu.svg" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
-                            <p class="for-small">View Ubuntu instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-7" title="View OpenSuse instructions">
-                            <img src="{{ site.asset_path }}583f0880-opensuse.png" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
-                            <p class="for-small">View OpenSuse instructions</p>
-                        </a>
-                    </li>
-                </ul>
-                <div id="responsive-tab-content-1" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Arch instructions</h3>
-                        <pre class="command-line"><code>sudo pacman -S snapd</code></pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-2" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Debian instructions</h3>
-                        <p>On Sid:</p>
-<pre class="command-line"><code>sudo apt install snapd</code></pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-4" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Fedora instructions</h3>
-                        <pre class="command-line">
-<code>sudo dnf copr enable zyga/snapcore
-sudo dnf install snapd
-
-# enable the snapd systemd service:
-sudo systemctl enable –now snapd.service
-
-# SELinux support is in beta, so currently:
-sudo setenforce 0
-
-# to persist, edit /etc/selinux/config
-to set SELINUX=permissive and reboot.</code>
-                        </pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-5" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Gentoo</h3>
-                        <p>Install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a>
-                        then <a href="https://github.com/zyga/snapd-gentoo">snapd.ebuild</a></p>
-                        <pre class="command-line">
-<code># enable the snapd systemd service:
-sudo systemctl enable --now snapd.service</code>
-                        </pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-6" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Ubuntu instructions</h3>
-                        <pre class="command-line"><code>sudo apt install snapd</code></pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-7" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">OpenSuse instructions</h3>
-                        <pre class="command-line"><code>TBC</code></pre>
-                    </div>
-                </div>
-
-            </div>
-            <div class="twelve-col align-center clearfix">
-                <p>Click for installation instructions, or <a href="http://www.github.com/snapcore/snapd">build <code>snapd</code> from source</a>.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="row row-grey">
-        <div class="wrapper">
-            <div class="twelve-col no-margin-bottom">
-                <h2>How do snaps work?</h2>
-            </div>
             <div class="seven-col">
+                <h2>How do snaps work?</h2>
                 <p>A snap is a fancy zip file containing an application together
                 with its dependencies, and a description of how it should safely
                 be run on your system, especially the different ways it should
                 talk to other software.</p>
-
                 <p>Most importantly snaps are designed to be secure, sandboxed,
                 containerised applications isolated from the underlying system
                 and from other applications. Snaps allow the safe installation
@@ -148,26 +42,16 @@ sudo systemctl enable --now snapd.service</code>
             </div>
             <div class="five-col last-col">
                 <ul class="inline-logos">
-                <li class="inline-logos__item"><img src="{{ site.asset_path }}c24cb4b9-logo-intel.svg" class="inline-logos__image" alt="Intel logo" /></li>
-                <li class="inline-logos__item"><img src="{{ site.asset_path }}15214c8e-logo-arm.png" alt="ARM logo" /></li>
-                <li class="inline-logos__item"><img src="{{ site.asset_path }}47e40767-power8.png" class="inline-logos__image" alt="POWER logo" /></li>
+                    <li class="inline-logos__item"><img src="{{ site.asset_path }}c24cb4b9-logo-intel.svg" class="inline-logos__image" alt="Intel logo" /></li>
+                    <li class="inline-logos__item"><img src="{{ site.asset_path }}15214c8e-logo-arm.png" alt="ARM logo" /></li>
+                    <li class="inline-logos__item"><img src="{{ site.asset_path }}47e40767-power8.png" class="inline-logos__image" alt="POWER logo" /></li>
                 </ul>
             </div>
         </div>
-    </section>
 
-    <section class="row">
         <div class="wrapper">
-            <div class="eight-col">
-                <h2>How do snaps work?</h2>
-                <p>A snap is a fancy zip file containing an application together
-                with its dependencies, and a description of how it should safely
-                be run on your system, especially the different ways it should
-                talk to other software.</p>
-                <p>Most importantly snaps are designed to be secure, sandboxed,
-                containerised applications isolated from the underlying system
-                and from other applications. Snaps allow the safe installation
-                of apps from any vendor on mission critical devices and desktops.</p>
+
+            <div class="eight-col last-col">
 
                 <p>Try this (you may need to <a href="#">install snapd</a>)</p>
 
@@ -353,6 +237,110 @@ apps:
                 will also integrate all the snap daemons (services) with your
                 init system so that they are automatically started and stopped
                 as needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="wrapper">
+            <div  id="responsive-tabs" class="responsive-tabs twelve-col">
+                <h2 class="for-small muted-heading">Enable snaps</h2>
+                <ul class="responsive-tabs__nav twelve-col clearfix">
+                    <li class="responsive-tabs__nav-item">
+                        <a class="responsive-tabs__link" href="#responsive-tab-content-1" title="View Ubuntu instructions">
+                            <img src="{{ site.asset_path }}887474d1-ubuntu.svg" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
+                            <p class="for-small">View Ubuntu instructions</p>
+                        </a>
+                    </li>
+                    <li class="responsive-tabs__nav-item">
+                        <a class="responsive-tabs__link" href="#responsive-tab-content-2" title="View Arch Linux instructions">
+                            <img src="{{ site.asset_path }}e0b23092-archlinux.svg" class="responsive-tabs__image not-for-small" alt="Arch Linux logo" />
+                            <p class="for-small">View Arch instructions</p>
+                        </a>
+                    </li>
+                    <li class="responsive-tabs__nav-item">
+                        <a class="responsive-tabs__link" href="#responsive-tab-content-3" title="View Debian instructions">
+                            <img src="{{ site.asset_path }}2eafb62e-openlogo.svg" class="responsive-tabs__image not-for-small" alt="Debian logo" width="60" />
+                            <p class="for-small">View Debian instructions</p>
+                        </a>
+                    </li>
+                    <li class="responsive-tabs__nav-item">
+                        <a class="responsive-tabs__link" href="#responsive-tab-content-4" title="View Fedora instructions">
+                            <img src="{{ site.asset_path }}a7d04c56-Fedora_logo_and_wordmark.svg" class="responsive-tabs__image not-for-small" alt="Fedora logo" />
+                            <p class="for-small">View Fedora instructions</p>
+                        </a>
+                    </li>
+                    <li class="responsive-tabs__nav-item">
+                        <a class="responsive-tabs__link" href="#responsive-tab-content-5" title="View Gentoo instructions">
+                            <img src="{{ site.asset_path }}2235d892-gentoo.png" class="responsive-tabs__image not-for-small" alt="Gentoo logo" width="90" />
+                            <p class="for-small">View Gentoo instructions</p>
+                        </a>
+                    </li>
+                    <li class="responsive-tabs__nav-item">
+                        <a class="responsive-tabs__link" href="#responsive-tab-content-6" title="View OpenSuse instructions">
+                            <img src="{{ site.asset_path }}583f0880-opensuse.png" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
+                            <p class="for-small">View OpenSuse instructions</p>
+                        </a>
+                    </li>
+                </ul>
+                <div id="responsive-tab-content-1" class="responsive-tab__content twelve-col clearfix">
+                    <div class="eight-col no-margin-bottom">
+                        <h3 class="accessibility-aid">Ubuntu instructions</h3>
+                        <pre class="command-line"><code>sudo apt install snapd</code></pre>
+                    </div>
+                </div>
+                <div id="responsive-tab-content-2" class="responsive-tab__content twelve-col clearfix">
+                    <div class="eight-col no-margin-bottom">
+                        <h3 class="accessibility-aid">Arch instructions</h3>
+                        <pre class="command-line"><code>sudo pacman -S snapd</code></pre>
+                    </div>
+                </div>
+                <div id="responsive-tab-content-3" class="responsive-tab__content twelve-col clearfix">
+                    <div class="eight-col no-margin-bottom">
+                        <h3 class="accessibility-aid">Debian instructions</h3>
+                        <p>On Sid:</p>
+<pre class="command-line"><code>sudo apt install snapd</code></pre>
+                    </div>
+                </div>
+                <div id="responsive-tab-content-4" class="responsive-tab__content twelve-col clearfix">
+                    <div class="eight-col no-margin-bottom">
+                        <h3 class="accessibility-aid">Fedora instructions</h3>
+                        <pre class="command-line">
+<code>sudo dnf copr enable zyga/snapcore
+sudo dnf install snapd
+
+# enable the snapd systemd service:
+sudo systemctl enable –now snapd.service
+
+# SELinux support is in beta, so currently:
+sudo setenforce 0
+
+# to persist, edit /etc/selinux/config
+to set SELINUX=permissive and reboot.</code>
+                        </pre>
+                    </div>
+                </div>
+                <div id="responsive-tab-content-5" class="responsive-tab__content twelve-col clearfix">
+                    <div class="eight-col no-margin-bottom">
+                        <h3 class="accessibility-aid">Gentoo</h3>
+                        <p>Install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a>
+                        then <a href="https://github.com/zyga/snapd-gentoo">snapd.ebuild</a></p>
+                        <pre class="command-line">
+<code># enable the snapd systemd service:
+sudo systemctl enable --now snapd.service</code>
+                        </pre>
+                    </div>
+                </div>
+                <div id="responsive-tab-content-6" class="responsive-tab__content twelve-col clearfix">
+                    <div class="eight-col no-margin-bottom">
+                        <h3 class="accessibility-aid">OpenSuse instructions</h3>
+                        <pre class="command-line"><code>TBC</code></pre>
+                    </div>
+                </div>
+
+            </div>
+            <div class="twelve-col align-center clearfix">
+                <p>Click for installation instructions, or <a href="http://www.github.com/snapcore/snapd">build <code>snapd</code> from source</a>.</p>
             </div>
         </div>
     </section>
@@ -633,9 +621,9 @@ Hello (beta) 1.2 installed</code></pre>
 <script>
     $(document).ready(function () {
         $('#responsive-tabs').responsiveTabs({
-            startCollapsed: true,
             setHash: false,
             scrollToAccordion: true,
+            active: 0
         });
     });
 </script>
