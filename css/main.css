@@ -2699,6 +2699,9 @@ audio:not([controls]) {
   border: 0;
   margin-top: -1px; }
 
+.grid-list__item img {
+  max-width: 40px; }
+
 .box {
   border: 1px solid #d2d2d2;
   -webkit-border-radius: 3px;

@@ -52,3 +52,11 @@
   border: 0;
   margin-top: -1px;
 }
+
+// grid list over ride
+.grid-list__item {
+
+  img {
+    max-width: 40px;
+  }
+}

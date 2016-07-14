@@ -5461,6 +5461,9 @@ footer.wrapper .inner-wrapper {
   border: 0;
   margin-top: -1px; }
 
+.grid-list__item img {
+  max-width: 40px; }
+
 .footer {
   padding: 2rem 1rem 1rem;
   font-size: .75rem; }
