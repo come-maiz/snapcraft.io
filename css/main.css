@@ -2741,6 +2741,8 @@ audio:not([controls]) {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
+  .box p a {
+    display: inline-block; }
   .box__txt {
     text-align: center;
     display: block;
