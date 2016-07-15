@@ -11,13 +11,14 @@
   .banner-docs {
     position: fixed;
     left: 0;
-    top: 0;
+    top: 49px;
     min-width: $navigation-width;
     width: $navigation-width;
     float: left;
     height: 100%;
     overflow-y: auto;
     border-right: 1px solid darken($brand-color, 10%);
+    padding-bottom: 3rem;
 
     .logo {
       width: 100%;
@@ -26,8 +27,15 @@
       border-bottom: 1px solid darken($brand-color, 10%);
     }
 
+    .nav-primary {
+      max-width: 1030px;
+      margin: 0 auto;
+    }
+
     .nav-primary ul {
       width: 100%;
+      margin: 1rem 0;
+      padding-left: 1rem;
 
       li {
         float: none;
@@ -36,16 +44,10 @@
         border: 0;
 
         &:hover {
-          background-color: $white;
+          background-color: $brand-color;
 
           .second-level-nav {
             display: block;
-          }
-
-          a,
-          a:link,
-          a:visited {
-            background-color: darken($brand-color, 10%);
           }
         }
 
@@ -53,6 +55,8 @@
         a:link,
         a:visited {
           text-align: left;
+          color: #333;
+          font-size: .9rem;
 
 
           &.active {
@@ -74,6 +78,18 @@
         a:link:hover {
           background-image: none;
         }
+      }
+    }
+
+    ul {
+      padding-left: 2rem;
+    }
+
+    ul > ul {
+      max-width: calc($navigation-width - 20px);
+
+      > ul {
+        max-width: calc($navigation-width - 40px);
       }
     }
   }
