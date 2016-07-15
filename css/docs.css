@@ -2817,6 +2817,22 @@ input[type='checkbox'], input[type='radio'] {
           -ms-flex-direction: column;
               flex-direction: column; } }
 
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    margin-left: 2rem !important; } }
+
+footer.global {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  position: relative;
+  z-index: -1; }
+  footer.global .legal {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-top: 1px dotted #e6e6e6; }
+  footer.global nav {
+    padding-top: 0 !important; }
+
 html,
 body,
 div,
@@ -5325,20 +5341,26 @@ body {
 .banner-docs {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 49px;
   min-width: 240px;
   width: 240px;
   float: left;
   height: 100%;
   overflow-y: auto;
-  border-right: 1px solid #e6e6e6; }
+  border-right: 1px solid #e6e6e6;
+  padding-bottom: 3rem; }
   .banner-docs .logo {
     width: 100%;
     margin: 0 0 15px;
     padding: 15px;
     border-bottom: 1px solid #e6e6e6; }
+  .banner-docs .nav-primary {
+    max-width: 1030px;
+    margin: 0 auto; }
   .banner-docs .nav-primary ul {
-    width: 100%; }
+    width: 100%;
+    margin: 1rem 0;
+    padding-left: 1rem; }
     .banner-docs .nav-primary ul li {
       float: none;
       display: block;
@@ -5348,14 +5370,12 @@ body {
         background-color: #fff; }
         .banner-docs .nav-primary ul li:hover .second-level-nav {
           display: block; }
-        .banner-docs .nav-primary ul li:hover a,
-        .banner-docs .nav-primary ul li:hover a:link,
-        .banner-docs .nav-primary ul li:hover a:visited {
-          background-color: #e6e6e6; }
       .banner-docs .nav-primary ul li a,
       .banner-docs .nav-primary ul li a:link,
       .banner-docs .nav-primary ul li a:visited {
-        text-align: left; }
+        text-align: left;
+        color: #333;
+        font-size: .9rem; }
         .banner-docs .nav-primary ul li a.active,
         .banner-docs .nav-primary ul li a:link.active,
         .banner-docs .nav-primary ul li a:visited.active {
@@ -5371,6 +5391,14 @@ body {
       .banner-docs .nav-primary ul .second-level-nav a:visited,
       .banner-docs .nav-primary ul .second-level-nav a:link:hover {
         background-image: none; }
+  .banner-docs ul {
+    padding-left: 2rem; }
+  .banner-docs ul > ul {
+    max-width: -webkit-calc($navigation-width - 20px);
+    max-width: calc($navigation-width - 20px); }
+    .banner-docs ul > ul > ul {
+      max-width: -webkit-calc($navigation-width - 40px);
+      max-width: calc($navigation-width - 40px); }
 
 .row-hero {
   -webkit-transition: all .3s;
@@ -5406,9 +5434,15 @@ body {
   .js-shink .row-hero h1 {
     font-size: 34px; }
 
+.row.row-hero {
+  padding-left: 3rem; }
+
+.row.content {
+  padding-top: 20px; }
+
 .wrapper .inner-wrapper {
-  max-width: -webkit-calc(100% - 240px);
-  max-width: calc(100% - 240px);
+  max-width: -webkit-calc(100%);
+  max-width: calc(100%);
   padding-left: 240px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5418,6 +5452,8 @@ footer.wrapper .inner-wrapper {
   padding-top: 0; }
 
 @media only screen and (max-width: 768px) {
+  .wrapper {
+    margin-left: 0 !important; }
   .wrapper .inner-wrapper {
     padding-top: 70px; } }
 

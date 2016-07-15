@@ -76,27 +76,17 @@ gulp.task('sass', function () {
  });
 
 /**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function () {
-    gulp.watch('_sass/**/*.scss', ['sass']);
-    gulp.watch('_js/*.js', ['js']);
-    gulp.watch(['**/*.html', '_posts/*'], ['jekyll-rebuild']);
-});
-
-/**
  * Recompile scss on changes
  */
  gulp.task('watch-scss', function()  {
-    gulp.watch('_sass/*.scss', ['sass']);
+    gulp.watch('_sass/**/*.scss', ['sass']);
  });
 
  /**
   * Recompile js on changes
   */
  gulp.task('watch-js', function() {
-    gulp.watch('_js/*.js', ['js']);
+    gulp.watch('_js/**/*.js', ['js']);
  })
 
 /**
