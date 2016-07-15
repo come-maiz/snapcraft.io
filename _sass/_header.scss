@@ -1,22 +1,35 @@
 // remove mo
 .banner {
   background: $white;
-  
+
   #nav:hover ul,
   .nav-toggle {
     display: none;
-    
+
     @media only screen and (min-width: 768px) {
       display: block;
     }
   }
-  
+
   .logo {
-    margin-left: 10px;
-    
+    margin-right: 1rem;
+
     @media only screen and (min-width: 984px) {
       margin-left: 0;
     }
   }
-}
 
+  .nav-primary {
+    max-width: 100%;
+    padding: 0 1rem;
+
+    ul {
+      float: left;
+
+      li:last-child {
+        border-right: 1px solid #e3e3e3;
+        border-left: 1px solid #e3e3e3;
+      }
+    }
+  }
+}

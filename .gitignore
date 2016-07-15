@@ -3,10 +3,10 @@ _site
 .jekyll-metadata
 .DS_Store
 node_modules
-css/main.css
 css/maps/main.css.map
 .publish
 npm-debug.log
 translate-html/**/*.pyc
 docs/
 _includes/docs-navigation.html
+css/maps
