@@ -2776,7 +2776,7 @@ audio:not([controls]) {
       .support .box {
         padding: 2rem; } }
   .box .external {
-    display: block; }
+    display: inline-block; }
   .box__img {
     width: 100%;
     max-width: 118px;
