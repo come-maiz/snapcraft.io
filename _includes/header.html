@@ -4,6 +4,11 @@
             <a href="#main-content">Jump to main content</a>
         </span>
         <div class="logo">
+            {% if jekyll.environment == "production" %}
+                <a href="{{site.baseurl}}/">
+            {% else %}
+                <a href="/">
+            {% endif %}
             <a href="/">
                 <img src="https://assets.ubuntu.com/v1/5b34329f-snapcraft_logotype_hex.svg" alt="Snapcraft">
             </a>
