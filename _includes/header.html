@@ -4,11 +4,7 @@
             <a href="#main-content">Jump to main content</a>
         </span>
         <div class="logo">
-            {% if jekyll.environment == "production" %}
-                <a href="{{site.baseurl}}/">
-            {% else %}
-                <a href="/">
-            {% endif %}
+            <a href="/">
                 <img src="https://assets.ubuntu.com/v1/5b34329f-snapcraft_logotype_hex.svg" alt="Snapcraft">
             </a>
         </div>
@@ -18,18 +14,9 @@
                 <a href="#" class="nav-toggle__link close"></a>
             </div>
             <ul>
-
-
-                {% if jekyll.environment == "production" %}
-                    <li><a href="{{site.baseurl}}/community">Community</a></li>
-                    <li><a href="{{site.baseurl}}/create">Create</a></li>
-                    <li><a href="{{site.baseurl}}/docs">Docs</a></li>
-                {% else %}
-                    <li><a href="/community">Community</a></li>
-                    <li><a href="/create">Create</a></li>
-                    <li><a href="/docs">Docs</a></li>
-                {% endif %}
-
+                <li><a href="/community">Community</a></li>
+                <li><a href="/create">Create</a></li>
+                <li><a href="/docs">Docs</a></li>
                 <li><a class="external" href="https://developer.ubuntu.com/en/snappy/support/faq/">FAQ</a></li>
             </ul>
         </div>
