@@ -210,9 +210,11 @@ apps:
                 to other snap slots to consume those services. Imagine two snaps
                 A and B that need to talk to each other:</p>
 
-                <p>
-                    <img src="{{ site.asset_path }}9229834c-Snapcraft-Interfaces-plugs-and-slots.svg" />
+                <p class="diagram">
+                    <img src="{{ site.asset_path }}4d5afbf9-Snapcraft-Interfaces-plugs-and-slots.svg" />
                 </p>
+                <p><b>These two snaps can be connected becuase they have a <em>plug</em>
+                and a <em>slot</em> with a matching <em>interface</em></b></p>
 
                 <p>There are <a class="external" href="http://ubuntudesign.github.io/docs-demo/snappy-dev/interfaces_list/">
                 many interfaces that are defined</a> and can be used by
@@ -222,7 +224,7 @@ apps:
                 documents or other services like OpenGL.</p>
 
                 <p>The interfaces are declared in the snap.yaml metadata:</p>
-                <p style="padding:0 1.5rem">
+                <p class="diagram">
                     <img src="{{ site.asset_path }}ac7a226c-Snapcraft%28dot%29io+-+YAML+metadata.svg" />
                 </p>
 
@@ -247,7 +249,7 @@ apps:
                 and the host OS through a set of plugs and slots with matching
                 interfaces. It’s a very elegant world.</p>
 
-                <p style="padding:0 1.5rem">
+                <p class="diagram">
                     <img src="{{ site.asset_path }}e635d3b2-Snapcraft%28dot%29io+-+Architecture.svg" />
                 </p>
 

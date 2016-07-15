@@ -5464,6 +5464,11 @@ footer.wrapper .inner-wrapper {
 .grid-list__item img {
   max-width: 40px; }
 
+.diagram {
+  padding: 0 1.5rem; }
+  .diagram img {
+    width: 100%; }
+
 .footer {
   padding: 2rem 1rem 1rem;
   font-size: .75rem; }
