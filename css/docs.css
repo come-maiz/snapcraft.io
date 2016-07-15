@@ -5517,6 +5517,17 @@ footer.wrapper .inner-wrapper {
       float: left; }
       .banner .nav-primary ul li:last-child {
         border-right: 1px solid #e3e3e3;
-        border-left: 1px solid #e3e3e3; }
+        border-left: 1px solid #e3e3e3;
+        padding-right: .5rem; }
+      .banner .nav-primary ul li a.external:link:hover {
+        background-image: url("https://assets.ubuntu.com/v1/7d47725b-external-link.svg");
+        background-position: 95% 1rem;
+        background-size: .7em .7em;
+        background-repeat: no-repeat; }
+  .banner .external {
+    color: #333;
+    background-image: url("https://assets.ubuntu.com/v1/7d47725b-external-link.svg");
+    background-position: 95% 1rem;
+    padding-right: 3rem; }
 
 /*# sourceMappingURL=maps/docs.css.map */
