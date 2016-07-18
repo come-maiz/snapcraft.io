@@ -36,12 +36,17 @@
 
 
     ul {
-      float: left;
+      float: right;
 
       li:last-child {
         border-right: 1px solid #e3e3e3;
         border-left: 1px solid #e3e3e3;
         padding-right: .5rem;
+
+        .docs & {
+          border-right: 0;
+          padding-right: 0;
+        }
       }
 
       li a.external:link:hover {
