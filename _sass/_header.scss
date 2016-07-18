@@ -14,6 +14,7 @@
 
   .logo {
     margin-right: 1rem;
+    padding-top: .25rem;
 
     @media only screen and (min-width: 984px) {
       margin-left: 0;
@@ -22,9 +23,9 @@
 
   .nav-primary {
 
-    padding: 0 1rem;
+    padding: 0 1rem 0;
 
-    @media only screen and (min-width: $breakpoint-medium) {
+    @media only screen and (min-width: $site-max-width) {
       padding: 0;
     }
 
@@ -38,10 +39,32 @@
     ul {
       float: right;
 
+      li {
+
+        a {
+          border-bottom: 3px solid #fff;
+
+          &.active {
+            background-color: #fff!important;
+            border-bottom: 3px solid #e95420;
+          }
+
+          &:hover {
+            background-color: #e3e3e3!important;
+            border-bottom: 3px solid #e3e3e3;
+          }
+        }
+      }
+
       li:last-child {
         border-right: 1px solid #e3e3e3;
         border-left: 1px solid #e3e3e3;
-        padding-right: .5rem;
+
+        a {
+          padding-right: 1rem;
+          margin-right: .5rem;
+          display: inline-block;
+        }
 
         .docs & {
           border-right: 0;
