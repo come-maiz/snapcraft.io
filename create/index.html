@@ -5,11 +5,11 @@ layout: default
 <section class="row hero-row no-border">
     <div class="wrapper">
         <div class="six-col">
-            <h1 class="hero-row__heading">Learn to make a Snap</h1>
+            <h1 class="hero-row__heading">Learn to make a snap</h1>
             <div class="five-col">
                 <img class="for-small" src="{{ site.asset_path }}e5388dd6-snaps-hero%403x-1.png?w=480" alt="" />
             </div>
-            <p class="intro">Snapcraft is a Snappy packaging tool.</p>
+            <p class="intro">Snapcraft is a snappy packaging tool.</p>
         </div>
         <div class="six-col last-col">
             <img class="not-for-small" src="{{ site.asset_path }}e5388dd6-snaps-hero%403x-1.png?w=600" alt="" />
@@ -22,8 +22,7 @@ layout: default
         <div class="eight-col">
             <h2 id="requirements">Requirements</h2>
 
-            <p>To take this tour of Snaps and Snapcraft, you'll need to have Snapcraft 2.11
-            or later installed. If you've already installed Snapcraft you can check the version:</p>
+            <p>To take this tour of snaps and Snapcraft, you'll need to have Snapcraft 2.11 or later installed. If you've already installed Snapcraft you can check the version:</p>
 
             <pre class="command-line"><code>$ snapcraft --version
 2.11</code></pre>
@@ -32,19 +31,13 @@ layout: default
 
             <pre class="command-line"><code>$ sudo apt install snapcraft</code></pre>
 
-            <p>It will also install and run on any Linux distribution with an up-to-date
-            version of <a class="external" href="http://www.ubuntu.com/cloud/lxd">LXD, the container hypervisor</a>.</p>
+            <p>It will also install and run on any Linux distribution with an up-to-date version of <a class="external" href="http://www.ubuntu.com/cloud/lxd">LXD, the container hypervisor</a>.</p>
 
-            <h2 id="tour">Take the Snapcraft tour</h2>
+            <h2 id="tour">Take the snapcraft tour</h2>
 
-            <p>This tour walks you through the making of Snaps. It starts with an overview of the Snap
-            format before introducing you to Snapcraft, the most widely used tool for creating Snaps.
-            After running through the basics of using Snapcraft the tour takes an in depth look at
-            the key components that make up a Snap. By the end of the tour you'll know how to
-            create Snaps so, if you want to, you can create them by hand or make your own Snappy tools. </p>
+            <p>This tour walks you through the making of snaps. It starts with an overview of the snap format before introducing you to Snapcraft, the most widely used tool for creating snaps. After running through the basics of using Snapcraft the tour takes an in depth look at the key components that make up a snap. By the end of the tour you'll know how to create snaps so, if you want to, you can create them by hand or make your own snappy tools. </p>
 
-            <p>The tour includes all the example source code and files in a series of subdirectories,
-              which you load using the Snapcraft tool:</p>
+            <p>The tour includes all the example source code and files in a series of subdirectories, which you load using the Snapcraft tool:</p>
 
             <pre class="command-line"><code>$ snapcraft tour
 Snapcraft tour initialized in ./snapcraft-tour/
@@ -70,22 +63,22 @@ snapcraft-tour/20-PARTS-PLUGINS:
 
             <h3 id="snapcraft-00">00 - SNAPCRAFT</h3>
 
-            <h4 id="easy-start-01">01-easy-start: a single snapcraft.yaml describes a Snap</h4>
+            <h4 id="easy-start-01">01-easy-start: a single snapcraft.yaml describes a snap</h4>
 
-            <p>Snapcraft uses a single text file to describe the entire build process for a Snap: the snapcraft.yaml file. Over the course of this tour you'll learn how to create this file for your own Snaps. You can see an example in this directory:</p>
+            <p>Snapcraft uses a single text file to describe the entire build process for a snap: the snapcraft.yaml file. Over the course of this tour you'll learn how to create this file for your own snaps. You can see an example in this directory:</p>
 
             <pre class="command-line"><code>$ cd snapcraft-tour/00-SNAPCRAFT/01-easy-start
 $ ls
 snapcraft.yaml</code></pre>
 
-            <p>Notice that <code>snapcraft.yaml</code> is the only file in the directory. Snapcraft doesn't need anything else as it will fetch everything it needs to build the Snap, using the <code>snapcraft.yaml</code> description for the Snap. Take a look inside:</p>
+            <p>Notice that <code>snapcraft.yaml</code> is the only file in the directory. Snapcraft doesn't need anything else as it will fetch everything it needs to build the snap, using the <code>snapcraft.yaml</code> description for the snap. Take a look inside:</p>
 
             <pre class="command-line"><code>$ more snapcraft.yaml
 name: hello
 version: "2.10"
 summary: GNU Hello, the "hello world" snap
 description: GNU hello prints a friendly greeting.
-  This is part of the Snapcraft tour at https://snapcraft.io/create/
+  This is part of the snapcraft tour at https://snapcraft.io/create/
 confinement: strict
 
 apps:
@@ -97,10 +90,9 @@ parts:
     plugin: autotools
     source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz</code></pre>
 
-            <p>Don't worry about everything in there just yet. The Snapcraft tool
-              will interpret this file, fetch and install everything that is needed, build it, and give you a Snap.</p>
+            <p>Don't worry about everything in there just yet. The snapcraft tool will interpret this file, fetch and install everything that is needed, build it, and give you a snap.</p>
 
-            <p>Start by building this Snap, noting that you’ll be prompted for your system password each time you run <code>snapcraft</code>:</p>
+            <p>Start by building this snap, noting that you’ll be prompted for your system password each time you run <code>snapcraft</code>:</p>
 
             <pre class="command-line"><code>$ snapcraft
 [sudo] password for [your user name]:  ***
@@ -111,13 +103,12 @@ Building gnu-hello
 ...
 Snapped hello_2.10_amd64.snap</code></pre>
 
-            <p>You'll have seen that Snapcraft fetched the source code, configured and built it. The
-            Snap is now available in your directory, along with new parts, prime, and Snap directories.</p>
+            <p>You'll have seen that Snapcraft fetched the source code, configured and built it. The snap is now available in your directory, along with new parts, prime, and snap directories.</p>
 
             <pre class="command-line"><code>$ ls
 hello_2.10_amd64.snap  parts  snap  snapcraft.yaml  prime</code></pre>
 
-            <p>As you can see a Snap is a single file. The name of the file is based on information in the <code>snapcraft.yaml</code> (its name and version) and the architecture you're building on: <code>&lt;name&gt;_&lt;version&gt;_&lt;arch&gt;.snap</code>. </p>
+            <p>As you can see a snap is a single file. The name of the file is based on information in the <code>snapcraft.yaml</code> (its name and version) and the architecture you're building on: <code>&lt;name&gt;_&lt;version&gt;_&lt;arch&gt;.snap</code>. </p>
 
             <p>Here, the snap was built on an amd64 machine, so the architecture used in the file name reflects that. The following commands use globs so you don't need to replace the architecture accordingly.</p>
 
@@ -290,7 +281,7 @@ cmake      kbuild  nil     scons</code></pre>
 
             <p>Each of these plugins knows how to drive a particular set of conventions for a particular build system. The important distinction is that Snapcraft is not itself a build system. It doesn't replace <code>make</code>, <code>autoconf</code>, or <code>scons</code>. Instead, a part describes which of those build systems to use, so that Snapcraft can drive the build system that the part author selected.</p>
 
-            <p>The next example is a more interesting Snap that uses two parts:</p>
+            <p>The next example is a more interesting snap that uses two parts:</p>
 
             <pre class="command-line"><code>$ cd ../02-parts
 $ more snapcraft.yaml
@@ -298,7 +289,7 @@ name: hello-debug
 version: "2.10"
 summary: GNU Hello with Bash for debugging
 description: GNU hello prints a friendly greeting.
-  This is part of the Snapcraft tour at https://snapcraft.io/create/
+  This is part of the snapcraft tour at https://snapcraft.io/create/
 
 apps:
   hello:
@@ -325,7 +316,7 @@ $ sudo snap install hello-debug_2.10_*.snap
             <p>The result is that two apps are exposed:</p>
 
             <ul>
-                <li>The hello app pointing to the hello binary (the command) inside the Snap. The command can be executed using <code>hello-debug.hello</code></li>
+                <li>The hello app pointing to the hello binary (the command) inside the snap. The command can be executed using <code>hello-debug.hello</code></li>
                 <li><p>The bash app pointing to the bash binary (command) and is executed using <code>hello-debug.bash</code></p>
                 <p>$ hello-debug.hello $ hello-debug.bash</p></li>
             </ul>
@@ -342,15 +333,15 @@ $ sudo snap install hello-debug_2.10_*.snap
 
             <p><code>stage/</code> is where all the content from <code>parts/&lt;part_name&gt;/install</code> is copied and consolidated in a single directory.</p>
 
-            <p><code>prime/</code> is the actual Snap content. The <code>stage/</code> directory is copied there. Binaries are stripped, wrappers are generated by Snapcraft, and the Snap metadata files are also generated there. The final <code>.snap</code> file is just a <code>squashfs</code> archive of this <code>prime/</code> directory. You can use and debug the Snap's content from here.</p>
+            <p><code>prime/</code> is the actual snap content. The <code>stage/</code> directory is copied there. Binaries are stripped, wrappers are generated by Snapcraft, and the snap metadata files are also generated there. The final <code>.snap</code> file is just a <code>squashfs</code> archive of this <code>prime/</code> directory. You can use and debug the snap's content from here.</p>
 
             <h3 id="snapcraft-commands">Snapcraft commands</h3>
 
-            <p>Snapcraft also lets you work with individual commands so you can update and customize your Snap. This section looks at some of those options and shows how you could clean and rebuild the gnu-bash part. </p>
+            <p>Snapcraft also lets you work with individual commands so you can update and customize your snap. This section looks at some of those options and shows how you could clean and rebuild the gnu-bash part. </p>
 
-            <h4 id="clean">clean: Resetting individual parts or the whole Snap</h4>
+            <h4 id="clean">clean: Resetting individual parts or the whole snap</h4>
 
-            <p><code>snapcraft clean</code> removes the directories and data created by Snapcraft. By default it will delete all the directories and data created by Snapcraft from your Snap's directory. However, you can use <code>snapcraft clean &lt;part&gt;</code> to delete a specific part:</p>
+            <p><code>snapcraft clean</code> removes the directories and data created by Snapcraft. By default it will delete all the directories and data created by Snapcraft from your snap's directory. However, you can use <code>snapcraft clean &lt;part&gt;</code> to delete a specific part:</p>
 
             <pre class="command-line"><code>$ snapcraft clean gnu-bash
 Cleaning priming area for gnu-bash
@@ -372,7 +363,7 @@ Skipping pull gnu-hello (already ran)
 Preparing to pull gnu-bash
 Pulling gnu-bash </code></pre>
 
-            <p>The <code>gnu-hello</code> had already been pulled, when you first built the Snap, so it's not pulled again.</p>
+            <p>The <code>gnu-hello</code> had already been pulled, when you first built the snap, so it's not pulled again.</p>
 
             <p>As you can see <code>snapcraft pull</code> has created some new directories and populated <code>src/</code>:</p>
 
@@ -414,7 +405,7 @@ $ ls parts/gnu-bash/install/
 
             <h4 id="stage">stage: Move the files installed from different parts into a single directory</h4>
 
-            <p>Having built all the parts for your Snap, use <code>snapcraft stage</code> to move all the relevant content into stage/ (to prepare for creating the snap package):</p>
+            <p>Having built all the parts for your snap, use <code>snapcraft stage</code> to move all the relevant content into stage/ (to prepare for creating the snap package):</p>
 
             <pre class="command-line"><code>$ snapcraft stage
 Skipping pull gnu-bash (already ran)
@@ -423,7 +414,7 @@ Skipping build gnu-bash (already ran)
 Skipping build gnu-hello (already ran)
 Staging gnu-bash
 Skipping stage gnu-hello (already ran)
-As you can see Snapcraft stage has now added stage/bin/bash:
+As you can see snapcraft stage has now added stage/bin/bash:
 $ ls stage/**
 stage/bin:
 bash  bashbug  hello
@@ -434,9 +425,9 @@ doc  info  locale  man
 stage/var:
 bash</code></pre>
 
-            <h4 id="prime">prime: Move the files needed for the Snap into place</h4>
+            <h4 id="prime">prime: Move the files needed for the snap into place</h4>
 
-            <p>Once you're satisfied with the Snap created in the <code>stage/</code> directory, create the final snap in its correct location using <code>snapcraft prime</code>:</p>
+            <p>Once you're satisfied with the snap created in the <code>stage/</code> directory, create the final snap in its correct location using <code>snapcraft prime</code>:</p>
 
             <pre class="command-line"><code>$ snapcraft prime
 Skipping pull gnu-hello (already ran)
@@ -479,11 +470,11 @@ Snapped hello-debug_2.10_amd64.snap</code></pre>
 
             <h3 id="snaps-10">10 - SNAPS</h3>
 
-            <p>Now you'll build on the knowledge you've gained about Snaps, by looking at the other types of Snap app types and some of the key technology that underpins snaps.</p>
+            <p>Now you'll build on the knowledge you've gained about snaps, by looking at the other types of snap app types and some of the key technology that underpins snaps.</p>
 
             <h4 id="apps">apps: defining services and commands</h4>
 
-            <p>The example Snap in the first part of this guide delivered a simple terminal application. However, you can deliver any type of application or service with a snap that you might do with a standard deb package. This example shows how you do this for a service:</p>
+            <p>The example snap in the first part of this guide delivered a simple terminal application. However, you can deliver any type of application or service with a snap that you might do with a standard deb package. This example shows how you do this for a service:</p>
 
             <pre class="command-line"><code>$ cd ../../10-SNAPS/01-service
 $ snapcraft
@@ -519,29 +510,29 @@ hello-world-service  0.1      x2              -</code></pre>
 
             <p>If you now open <a class="external" href="http://localhost:8000">http://localhost:8000</a> you get a 404 page with no content and it would seem that the service can't serve web requests now.</p>
 
-            <p>All Snaps run confined by default. They're able to access any functions in the Snap and data written to their own private writable area, but have restricted and secured access to the system.</p>
+            <p>All snaps run confined by default. They're able to access any functions in the snap and data written to their own private writable area, but have restricted and secured access to the system.</p>
 
             <p>The hello world service needs to listen to the network (a restricted and secured part of the system), but hasn't been setup with the additional permissions to do so yet.</p>
 
-            <p>To simplify development, <code>--devmode</code> enables you to run the Snap outside the confinement sandbox and get unrestricted access to system resources, in this case, listening to the network. However, you do need to tell the snap that it can run in devmode, by making a declaration in <code>snapcraft.yaml</code>:</p>
+            <p>To simplify development, <code>--devmode</code> enables you to run the snap outside the confinement sandbox and get unrestricted access to system resources, in this case, listening to the network. However, you do need to tell the snap that it can run in devmode, by making a declaration in <code>snapcraft.yaml</code>:</p>
 
             <pre class="command-line"><code>$ more snapcraft.yaml
 [...]
 confinement: devmode</code></pre>
 
-            <p>This enables quick iteration to perfect the functionality of the Snap before you need to worry about making it work under confinement. It should be noted that snaps uploaded to the store with confinement set to devmode are not visible with the snap find command. However, devmode snaps can still be installed if you specify the exact snap name.</p>
+            <p>This enables quick iteration to perfect the functionality of the snap before you need to worry about making it work under confinement. It should be noted that snaps uploaded to the store with confinement set to devmode are not visible with the snap find command. However, devmode snaps can still be installed if you specify the exact snap name.</p>
 
-            <h4 id="plugs-and-slots">plugs-and-slots: integration with the system and other Snaps</h4>
+            <h4 id="plugs-and-slots">plugs-and-slots: integration with the system and other snaps</h4>
 
-            <p>However, once you're happy with the functionality of your Snap you'll need to focus on its confinement.</p>
+            <p>However, once you're happy with the functionality of your snap you'll need to focus on its confinement.</p>
 
-            <p>To enable Snaps to access external resources (or make their own resources available to other Snaps) a system of plugs and slots is used. A plug is a request for access to an external interface, while a slot is an interface provided by the snap.</p>
+            <p>To enable snaps to access external resources (or make their own resources available to other snaps) a system of plugs and slots is used. A plug is a request for access to an external interface, while a slot is an interface provided by the snap.</p>
 
-            <p>The <code>hello-world-service</code> Snap needs to have access to the network, so it can listen for and serve requests, this access is requested using the [<code>network-bind</code>] plug. This plug is then declared in the <code>snapcraft.yaml</code>:</p>
+            <p>The <code>hello-world-service</code> snap needs to have access to the network, so it can listen for and serve requests, this access is requested using the [<code>network-bind</code>] plug. This plug is then declared in the <code>snapcraft.yaml</code>:</p>
 
             <pre class="command-line"><code>plugs: [network-bind]</code></pre>
 
-            <p>Specifying the <code>network-bind</code> plug essentially pokes a hole in the otherwise-complete confinement, telling Snappy that this Snap requires access to the network through the <code>network-bind</code> interface. The plug then connects to the network-bind slot provided by the base OS as an helper.</p>
+            <p>Specifying the <code>network-bind</code> plug essentially pokes a hole in the otherwise-complete confinement, telling snappy that this snap requires access to the network through the <code>network-bind</code> interface. The plug then connects to the network-bind slot provided by the base OS as an helper.</p>
 
             <p>So now, without using <code>--devmode</code>,  you can run the confined version of the hello world service:</p>
 
@@ -557,11 +548,11 @@ hello-world-service  0.1      x3              -</code></pre>
 
             <pre class="command-line"><code>confinement: strict</code></pre>
 
-            <p>To indicate that this Snap is now confined.</p>
+            <p>To indicate that this snap is now confined.</p>
 
-            <h4 id="structure">structure: the directory layout of a Snap</h4>
+            <h4 id="structure">structure: the directory layout of a snap</h4>
 
-            <p>Now you've got to grips with some basic and advanced Snap features, it's worth gaining an understanding of what's inside a Snap. And seeing the Snap's content is easy, as it's all in the <code>prime/</code> directory:</p>
+            <p>Now you've got to grips with some basic and advanced snap features, it's worth gaining an understanding of what's inside a snap. And seeing the snap's content is easy, as it's all in the <code>prime/</code> directory:</p>
 
             <pre class="command-line"><code>$ ls prime/**
 prime/CHANGELOG.md  prime/command-hello-service.wrapper  prime/LICENSE  prime/README.md
@@ -609,9 +600,9 @@ name: hello-world-service
 summary: A hello world style nodejs webserver app
 version: 0.1</code></pre>
 
-            <p>The first exception is that <code>snap.yaml</code> includes a specification of the architecture that the Snap has been built for <strong>(highlighted)</strong>. The second difference is that there is no parts definition (as the parts are now in the snap and no longer need to be defined).</p>
+            <p>The first exception is that <code>snap.yaml</code> includes a specification of the architecture that the snap has been built for <strong>(highlighted)</strong>. The second difference is that there is no parts definition (as the parts are now in the snap and no longer need to be defined).</p>
 
-            <p>Armed with this information you can, if you wish, build your Snap package more directly by:</p>
+            <p>Armed with this information you can, if you wish, build your snap package more directly by:</p>
 
             <ul>
                 <li>Creating a <code>prime/</code> directory</li>
@@ -621,17 +612,17 @@ version: 0.1</code></pre>
                 <li>Running <code>snapcraft snap prime/</code></li>
             </ul>
 
-            <p>And you'll have a hand crafted Snap file.</p>
+            <p>And you'll have a hand crafted snap file.</p>
 
             <h4 id="snaps-recap-10">Recap</h4>
 
-            <p>You've now added some depth to your knowledge of Snaps and learned about:</p>
+            <p>You've now added some depth to your knowledge of snaps and learned about:</p>
 
             <ul>
-                <li>Delivering services (in addition to apps) in your Snaps</li>
-                <li>How all Snaps are confined (unable to access system resources) but can be unconfined with <code>--devmode</code> to simplify development</li>
-                <li>How plugs and slots enable Snaps to consume resources outside the confinement (or make their own resources available to other Snaps)</li>
-                <li>The structure of a Snap's content and the option to hand build a Snap</li>
+                <li>Delivering services (in addition to apps) in your snaps</li>
+                <li>How all snaps are confined (unable to access system resources) but can be unconfined with <code>--devmode</code> to simplify development</li>
+                <li>How plugs and slots enable snaps to consume resources outside the confinement (or make their own resources available to other snaps)</li>
+                <li>The structure of a snap's content and the option to hand build a snap</li>
             </ul>
 
             <h3 id="parts-20">20 - PARTS &amp; PLUGINS</h3>
@@ -691,25 +682,20 @@ apps:</p>
             <p>In this part definition:</p>
 
             <ul>
-                <li><code>build-packages</code> lists the dependencies needed to build the contents of the Snap. These aren't packed into the final Snap. <code>qtbase5-dev</code> has been specified here since that package contains the headers, libraries, and tools needed to build the app</li>
-                <li><code>stage-packages</code> lists the dependencies needed to actually run the contents of the Snap. They'll be packed into the final Snap. Here, the requirement is for the hello-world part to download and unpack <code>libqt5gui5</code> with all its dependencies. This method can reuse any of the 48000 .deb packages that traditional Ubuntu provides. It's really that easy: just specify the packages you need embedded into your Snap</li>
+                <li><code>build-packages</code> lists the dependencies needed to build the contents of the snap. These aren't packed into the final snap. <code>qtbase5-dev</code> has been specified here since that package contains the headers, libraries, and tools needed to build the app</li>
+                <li><code>stage-packages</code> lists the dependencies needed to actually run the contents of the snap. They'll be packed into the final snap. Here, the requirement is for the hello-world part to download and unpack <code>libqt5gui5</code> with all its dependencies. This method can reuse any of the 48000 .deb packages that traditional Ubuntu provides. It's really that easy: just specify the packages you need embedded into your snap</li>
                 <li><code>after:</code> [<code>qt5conf</code>] lists the parts that must be staged before this part can be built. However, you may have noticed that this YAML doesn't actually contain the <code>qt5conf</code> part. That's because it's a part in the cloud, which is a way for collaborating, reusing, and sharing already-written parts. The previously mentioned <code>qt5-launch</code> tool comes from the <code>qt5conf</code> part, without any additional effort from you. This way you can make use of and build upon what others have created</li>
             </ul>
 
             <h4 id="sharing">sharing: Sharing your parts with other developers</h4>
 
-            <p>If you would like to publish your own parts, you can contribute them on the
-              wiki at <a class="external" href="https://wiki.ubuntu.com/snapcraft/parts">https://wiki.ubuntu.com/snapcraft/parts</a>.</p>
+            <p>If you would like to publish your own parts, you can contribute them on the wiki at <a class="external" href="https://wiki.ubuntu.com/snapcraft/parts">https://wiki.ubuntu.com/snapcraft/parts</a>.</p>
 
             <p>Your contributions will always be welcome!</p>
 
-            <h4 id="plugins">plugins: Each part is built using a Snapcraft plugin</h4>
+            <h4 id="plugins">plugins: Each part is built using a snapcraft plugin</h4>
 
-            <p>Plugins tell Snapcraft how to build the content of the Snap's parts.
-            You'll probably use the supplied plugins for most of your Snaps. However,
-            you can add your own plugins for other languages. Details of how to do
-            this are beyond this get started, but if you would like to explore more
-            here are a couple of plugin examples and basic building details: </p>
+            <p>Plugins tell Snapcraft how to build the content of the snap's parts. You'll probably use the supplied plugins for most of your snaps. However, you can add your own plugins for other languages. Details of how to do this are beyond this get started, but if you would like to explore more here are a couple of plugin examples and basic building details: </p>
 
             <h4 id="autoconf-make">autoconf-make: The standard "configure, make, make install" plugin</h4>
 
@@ -729,51 +715,40 @@ $ snapcraft help make</code></pre>
             <pre class="command-line"><code>$ snapcraft help go
 x-plugins: Local plugins</code></pre>
 
-            <p>You can build your own plugin and reference it from your part. To
-            do this, copy your plugin into <code>parts/plugins/x-&lt;plugin_name&gt;.py</code>.
-            Get inspiration from <a class="external" href="https://github.com/ubuntu-core/snapcraft/blob/master/snapcraft/plugins/go.py">https://github.com/ubuntu-core/snapcraft/blob/master/snapcraft/plugins/go.py</a></p>
+            <p>You can build your own plugin and reference it from your part. To do this, copy your plugin into <code>parts/plugins/x-&lt;plugin_name&gt;.py</code>.  Get inspiration from <a class="external" href="https://github.com/ubuntu-core/snapcraft/blob/master/snapcraft/plugins/go.py">https://github.com/ubuntu-core/snapcraft/blob/master/snapcraft/plugins/go.py</a></p>
 
             <h3 id="store-30">30 - STORE</h3>
 
-            <p>In order to share your Snaps with the world, you will need to publish them in the Store. First, create
-            an account on <a class="external" href="https://myapps.developer.ubuntu.com/">https://myapps.developer.ubuntu.com/</a>.
-            This is your developer portal. Here you can customize how your Snap is presented, review each new upload, and control publishing.</p>
+            <p>In order to share your snaps with the world, you will need to publish them in the Store. First, create an account on <a class="external" href="https://myapps.developer.ubuntu.com/">https://myapps.developer.ubuntu.com/</a>. This is your developer portal. Here you can customize how your snap is presented, review each new upload, and control publishing.</p>
 
-            <p>You'll need to choose a unique developer namespace as part of the account
-            creation process. In a future version, developer branches of reserved name
-            Snaps will be referred to by this name (for example firefox@mark).</p>
+            <p>You'll need to choose a unique developer namespace as part of the account creation process. In a future version, developer branches of reserved name snaps will be referred to by this name (for example firefox@mark).</p>
 
-            <p>Once you've confirmed your account, you're ready to start pushing
-            your Snaps to the Store. Make sure Snapcraft and Snap know about you by logging in using the email address you provided at signup:</p>
+            <p>Once you've confirmed your account, you're ready to start pushing your snaps to the Store. Make sure Snapcraft and snap know about you by logging in using the email address you provided at signup:</p>
 
             <pre class="command-line"><code>$ snapcraft login
 $ snap login you@yourdomain.com</code></pre>
 
-            <h4 id="devspace">devspace: You can generally publish your own version of a Snap</h4>
+            <h4 id="devspace">devspace: You can generally publish your own version of a snap</h4>
 
-            <p>You can publish your own version of a Snap, provided you do so under a name you have rights to. New names can be registered by clicking the New Snap button on the developer portal, or by visiting: <a class="external" href="https://myapps.developer.ubuntu.com/dev/click-apps/register-name/">https://myapps.developer.ubuntu.com/dev/click-apps/register-name/</a></p>
+            <p>You can publish your own version of a snap, provided you do so under a name you have rights to. New names can be registered by clicking the New Snap button on the developer portal, or by visiting: <a class="external" href="https://myapps.developer.ubuntu.com/dev/click-apps/register-name/">https://myapps.developer.ubuntu.com/dev/click-apps/register-name/</a></p>
 
-            <p>Use "hello-" suffixed by your name for this exercise (for example hello-mark), since you don't have rights to the "hello" Snap name.</p>
+            <p>Use "hello-" suffixed by your name for this exercise (for example hello-mark), since you don't have rights to the "hello" snap name.</p>
 
             <h4 id="names">names: you can reserve names for software you publish</h4>
 
             <p>You can follow the same registration process for names that you have rights.</p>
 
-            <p>We can, if needed, rename Snaps to ensure they match the expectations
-              of most users. If you are the publisher most users expect for a name
-              then claim it at: <a class="external" href="https://myapps.developer.ubuntu.com/dev/click-apps/register-name-dispute/">https://myapps.developer.ubuntu.com/dev/click-apps/register-name-dispute/</a></p>
+            <p>We can, if needed, rename snaps to ensure they match the expectations of most users. If you are the publisher most users expect for a name then claim it at: <a class="external" href="https://myapps.developer.ubuntu.com/dev/click-apps/register-name-dispute/">https://myapps.developer.ubuntu.com/dev/click-apps/register-name-dispute/</a></p>
 
             <h4 id="revisions">revisions: You get a new revision every time you push</h4>
 
-            <p>Once you've registered your Snap name, go back to your <code>snapcraft.yaml</code> file and update the name field.
-              Run Snapcraft again to quickly rebuild with the new name. With that done,
-              the new revision of your Snap can be uploaded to the Store:</p>
+            <p>Once you've registered your snap name, go back to your <code>snapcraft.yaml</code> file and update the name field. Run Snapcraft again to quickly rebuild with the new name. With that done, the new revision of your snap can be uploaded to the Store:</p>
 
             <pre class="command-line"><code>$ snapcraft upload hello-world_1.0_*.snap</code></pre>
 
             <h4 id="publication">publication: Users only see your published revisions</h4>
 
-            <p>Uploading your Snap won't make it immediately available for installation. You'll have to choose the channel(s) you wish to release into.</p>
+            <p>Uploading your snap won't make it immediately available for installation. You'll have to choose the channel(s) you wish to release into.</p>
 
             <p>There are four channels available for your use:</p>
 
@@ -784,23 +759,17 @@ $ snap login you@yourdomain.com</code></pre>
                 <li>Edge is for your most recent changes, probably untested and with no guarantees attached</li>
             </ul>
 
-            <p>Open the URL that was returned from <code>snapcraft upload</code> or
-              open the snap from the developer portal front page: <a class="external" href="https://myapps.developer.ubuntu.com">https://myapps.developer.ubuntu.com</a></p>
+            <p>Open the URL that was returned from <code>snapcraft upload</code> or open the snap from the developer portal front page: <a class="external" href="https://myapps.developer.ubuntu.com">https://myapps.developer.ubuntu.com</a></p>
 
-            <p>You should see the 1.0 version in the lefthand column. Clicking on that
-              link will bring up further details about this revision. Here you can
-              edit the list of channels it should be released into.</p>
+            <p>You should see the 1.0 version in the lefthand column. Clicking on that link will bring up further details about this revision. Here you can edit the list of channels it should be released into.</p>
 
-            <p>Click on the <code>Edit</code> link next to the Channels field. In
-              the page that appears, select <code>Stable</code> and click <code>Save Changes</code>.</p>
+            <p>Click on the <code>Edit</code> link next to the Channels field. In the page that appears, select <code>Stable</code> and click <code>Save Changes</code>.</p>
 
-            <p>Your upload is now ready to be released into the stable channel.
-            Click the <code>Publish</code> button on the page you return to.</p>
+            <p>Your upload is now ready to be released into the stable channel. Click the <code>Publish</code> button on the page you return to.</p>
 
-            <p>The build you uploaded is now the selected revision in the stable channel,
-            meaning that installs of your Snap will select this upload by default.</p>
+            <p>The build you uploaded is now the selected revision in the stable channel, meaning that installs of your snap will select this upload by default.</p>
 
-            <p>You can confirm this by installing the Snap locally, replacing '<code>hello-mark</code>' with your Snap name:</p>
+            <p>You can confirm this by installing the snap locally, replacing '<code>hello-mark</code>' with your snap name:</p>
 
             <pre class="command-line"><code>$ snap install hello-mark
 Name        Version  Rev     Developer
@@ -808,18 +777,11 @@ hello-mark  1.0      1       sabdfl</code></pre>
 
             <h3 id="confinement-40">40 - CONFINEMENT</h3>
 
-            <h4 id="confinement">confinement: specify how the Snap can be used with the security sandbox</h4>
+            <h4 id="confinement">confinement: specify how the snap can be used with the security sandbox</h4>
 
-            <p>By default Snaps run in a restrictive sandbox to ensure that Snaps only access
-              the system and other Snaps in controlled ways. confinement is used in <code>snapcraft.yaml</code>
-              to specify whether or not the Snap is expected to work correctly when the specified
-              interfaces are connected and the Snap is confined. You specify strict to indicate
-              the Snap works properly when confined or devmode to indicate it only works properly when unconfined.
-              If confinement is unspecified, the Snap is assumed to work correctly when confined since
-              developers are expected to develop their Snaps for running in the sandbox. You're only
-               allowed to upload Snaps to the stable channel when strict confinement is used.</p>
+            <p>By default snaps run in a restrictive sandbox to ensure that snaps only access the system and other snaps in controlled ways. confinement is used in <code>snapcraft.yaml</code> to specify whether or not the snap is expected to work correctly when the specified interfaces are connected and the snap is confined. You specify strict to indicate the snap works properly when confined or devmode to indicate it only works properly when unconfined. If confinement is unspecified, the snap is assumed to work correctly when confined since developers are expected to develop their snaps for running in the sandbox. You're only allowed to upload snaps to the stable channel when strict confinement is used.</p>
 
-            <p>When first making a Snap it is often useful to specify confinement: devmode in your YAML like so:</p>
+            <p>When first making a snap it is often useful to specify confinement: devmode in your YAML like so:</p>
 
             <pre class="command-line"><code>name: hello-world-service
 confinement: devmode
@@ -831,12 +793,7 @@ apps:
     - network-bind
 ...</code></pre>
 
-            <p>You then would specify <code>--devmode</code> when installing the Snap for
-              testing and development (you must always specify <code>--devmode</code> when
-              installing in devmode regardless of how confinement is set in your yaml).
-              Once the application is working well in devmode, install it without
-              specifying <code>--devmode</code> and iterate until it is working properly
-              under confinement. When satisfied, you may indicate it works under confinement with:</p>
+            <p>You then would specify <code>--devmode</code> when installing the snap for testing and development (you must always specify <code>--devmode</code> when installing in devmode regardless of how confinement is set in your yaml). Once the application is working well in devmode, install it without specifying <code>--devmode</code> and iterate until it is working properly under confinement. When satisfied, you may indicate it works under confinement with:</p>
 
             <pre class="command-line"><code>name: hello-world-service
 confinement: strict
@@ -848,17 +805,13 @@ apps:
     - network-bind
 ...</code></pre>
 
-            <p>When debugging your Snap when it is installed in strict mode
-            (without <code>--devmode</code>), you can look in <code>/var/log/syslog</code>
-            for sandbox denials. Alternatively, you may use the '<code>snappy-debug</code>' Snap to assist you:</p>
+            <p>When debugging your snap when it is installed in strict mode (without <code>--devmode</code>), you can look in <code>/var/log/syslog</code> for sandbox denials. Alternatively, you may use the '<code>snappy-debug</code>' snap to assist you:</p>
 
             <pre class="command-line"><code>$ sudo snap install snappy-debug
 $ sudo snap connect snappy-debug:log-observe ubuntu-core:log-observe
 $ sudo /snap/bin/snappy-debug.security scanlog hello-world-service</code></pre>
 
-            <p>This scanlog command will tail the syslog and make suggestions on what
-            interfaces to use and suggest changes to make to your Snap so it will
-            work within the sandbox.</p>
+            <p>This scanlog command will tail the syslog and make suggestions on what interfaces to use and suggest changes to make to your snap so it will work within the sandbox.</p>
 
         </div>
     </section>
