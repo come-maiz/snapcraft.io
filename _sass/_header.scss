@@ -1,6 +1,7 @@
 // remove mo
 .banner {
   background: $white;
+  max-width: $site-max-width;
 
   #nav:hover ul,
   .nav-toggle {
@@ -20,8 +21,19 @@
   }
 
   .nav-primary {
-    max-width: 100%;
+
     padding: 0 1rem;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+      padding: 0;
+    }
+
+    .docs & {
+      max-width: 100%;
+      padding: 0 1rem;
+    }
+
+
 
     ul {
       float: left;
