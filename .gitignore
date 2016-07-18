@@ -10,3 +10,5 @@ translate-html/**/*.pyc
 docs/
 _includes/docs-navigation.html
 css/maps
+css/docs.css
+css/main.css

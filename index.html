@@ -5,17 +5,20 @@ layout: default
     <section class="row hero-row no-border">
         <div class="wrapper">
             <div class="five-col">
-               <h1 class="hero-row__heading">Snapcraft</h1>
+
                 <div class="five-col">
                     <img class="for-small" src="{{ site.asset_path }}e5388dd6-snaps-hero%403x-1.png?w=480" alt="" />
                 </div>
-                <p class="intro four-col">Package any app for every Linux desktop,
-                server, cloud or device, and deliver updates directly</p>
-                <p><a class="button--primary" href="/create">Learn to craft snaps</a>
-                or <a href="/community">Join the community</a></p>
+                <div class="five-col">
+                    <h1 class="intro"><span class="accessibility-aid">Snapcraft -</span>Package any app for every Linux desktop,
+                    server, cloud or device, and deliver updates directly</h1>
+                    <p><a href="/create">Learn to craft snaps</a>
+                    or <a href="/community">Join the community</a></p>
+                </div>
+
             </div>
             <div class="six-col prepend-one last-col">
-                <img style="margin-top:4rem" src="{{ site.asset_path }}d0c2921d-hero-artwork%403x.png?w=500" />
+                <img style="margin-top:1rem" src="{{ site.asset_path }}d0c2921d-hero-artwork%403x.png?w=500" />
            </div>
         </div>
     </section>
@@ -104,10 +107,11 @@ $ tree
                 are run.</p>
 
                 <p>The only actual hard requirement on a snap structure is that you
-                have a file called meta/snap.yaml inside your snap directory, which
-                describes security requirements and how the snap should be integrated
-                with other parts of the system. Let’s take a look at that snap.yaml
-                for the hello-world snap:</p>
+                have a file called <code class="command-inline">meta/snap.yaml</code>
+                inside your snap directory, which describes security requirements
+                and how the snap should be integrated with other parts of the system.
+                Let’s take a look at that <code class="command-inline">snap.yaml</code>
+                for the <code class="command-inline">hello-world</code> snap:</p>
 
                 <pre class="command-line">
 <code>$ cat meta/snap.yaml
@@ -150,13 +154,9 @@ apps:
                 <p>A snap can declare daemons to be started as well, this one just
                 describes some apps.</p>
             </div>
-        </div>
-    </section>
 
-    <section class="row">
-        <div class="wrapper">
             <div class="eight-col">
-                <h2>Snaps are read-only and have segregated data stores</h2>
+                <h3>Snaps are read-only and have segregated data stores</h3>
                 <p>Snaps are read-only for security. We want to prevent a hostile
                 party from sneakily changing the software on your machine, so you
                 cannot modify a snap that is installed on your system. This also
@@ -216,14 +216,14 @@ apps:
                 <p><b>These two snaps can be connected becuase they have a <em>plug</em>
                 and a <em>slot</em> with a matching <em>interface</em></b></p>
 
-                <p>There are <a class="external" href="http://ubuntudesign.github.io/docs-demo/snappy-dev/interfaces_list/">
+                <p>There are <a class="external" href="/docs/reference/interfaces">
                 many interfaces that are defined</a> and can be used by
                 snap developers to describe the ways their snaps should be
                 connected. Also, a snap can be connected to the host system OS
                 using plugs, too, which is how a snap can access shared user
                 documents or other services like OpenGL.</p>
 
-                <p>The interfaces are declared in the snap.yaml metadata:</p>
+                <p>The interfaces are declared in the <code class="command-inline">snap.yaml</code> metadata:</p>
                 <p class="diagram">
                     <img src="{{ site.asset_path }}ac7a226c-Snapcraft%28dot%29io+-+YAML+metadata.svg" />
                 </p>
@@ -253,117 +253,11 @@ apps:
                     <img src="{{ site.asset_path }}e635d3b2-Snapcraft%28dot%29io+-+Architecture.svg" />
                 </p>
 
-                <p>The snap system will present all the snap apps under /snap/bin/
+                <p>The snap system will present all the snap apps under <code class="command-inline">/snap/bin/</code>
                 so with that on your $PATH you can easily run snap commands. It
                 will also integrate all the snap daemons (services) with your
                 init system so that they are automatically started and stopped
                 as needed.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="row">
-        <div class="wrapper">
-            <div  id="responsive-tabs" class="responsive-tabs twelve-col">
-                <h2 class="for-small muted-heading">Enable snaps</h2>
-                <ul class="responsive-tabs__nav twelve-col clearfix">
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-1" title="View Ubuntu instructions">
-                            <img src="{{ site.asset_path }}887474d1-ubuntu.svg" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
-                            <p class="for-small">View Ubuntu instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-2" title="View Arch Linux instructions">
-                            <img src="{{ site.asset_path }}e0b23092-archlinux.svg" class="responsive-tabs__image not-for-small" alt="Arch Linux logo" />
-                            <p class="for-small">View Arch instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-3" title="View Debian instructions">
-                            <img src="{{ site.asset_path }}2eafb62e-openlogo.svg" class="responsive-tabs__image not-for-small" alt="Debian logo" width="60" />
-                            <p class="for-small">View Debian instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-4" title="View Fedora instructions">
-                            <img src="{{ site.asset_path }}a7d04c56-Fedora_logo_and_wordmark.svg" class="responsive-tabs__image not-for-small" alt="Fedora logo" />
-                            <p class="for-small">View Fedora instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-5" title="View Gentoo instructions">
-                            <img src="{{ site.asset_path }}2235d892-gentoo.png" class="responsive-tabs__image not-for-small" alt="Gentoo logo" width="90" />
-                            <p class="for-small">View Gentoo instructions</p>
-                        </a>
-                    </li>
-                    <li class="responsive-tabs__nav-item">
-                        <a class="responsive-tabs__link" href="#responsive-tab-content-6" title="View OpenSuse instructions">
-                            <img src="{{ site.asset_path }}583f0880-opensuse.png" class="responsive-tabs__image not-for-small" alt="Ubuntu logo" width="80" />
-                            <p class="for-small">View OpenSuse instructions</p>
-                        </a>
-                    </li>
-                </ul>
-                <div id="responsive-tab-content-1" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Ubuntu instructions</h3>
-                        <pre class="command-line"><code>sudo apt install snapd</code></pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-2" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Arch instructions</h3>
-                        <pre class="command-line"><code>sudo pacman -S snapd</code></pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-3" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Debian instructions</h3>
-                        <p>On Sid:</p>
-<pre class="command-line"><code>sudo apt install snapd</code></pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-4" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Fedora instructions</h3>
-                        <pre class="command-line">
-<code>sudo dnf copr enable zyga/snapcore
-sudo dnf install snapd
-
-# enable the snapd systemd service:
-sudo systemctl enable –now snapd.service
-
-# SELinux support is in beta, so currently:
-sudo setenforce 0
-
-# to persist, edit /etc/selinux/config
-to set SELINUX=permissive and reboot.</code>
-                        </pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-5" class="responsive-tab__content twelve-col clearfix">
-                    <div class="eight-col no-margin-bottom">
-                        <h3 class="accessibility-aid">Gentoo</h3>
-                        <p>Install <a href="https://github.com/zyga/snap-confine-gentoo">snap-confine.ebuild</a>
-                        then <a href="https://github.com/zyga/snapd-gentoo">snapd.ebuild</a></p>
-                        <pre class="command-line">
-<code># enable the snapd systemd service:
-sudo systemctl enable --now snapd.service</code>
-                        </pre>
-                    </div>
-                </div>
-                <div id="responsive-tab-content-6" class="responsive-tab__content twelve-col clearfix">
-                    <div class="twelve-col no-margin-bottom">
-                        <h3 class="accessibility-aid">OpenSuse instructions</h3>
-
-<pre class="command-line"><code>sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/snappy
-sudo zypper install snapd</code></pre>
-                    </div>
-                </div>
-
-            </div>
-            <div class="twelve-col align-center clearfix">
-                <p>Click for installation instructions, or <a href="http://www.github.com/snapcore/snapd">build <code>snapd</code> from source</a>.</p>
             </div>
         </div>
     </section>
@@ -388,7 +282,7 @@ hello-huge   1.0      noise      -      A really big snap
 hello-world  6.1      canonical  -      Hello world example</code></pre>
 
                 <p>You can expand the search to include snap descriptions with
-                --broad if you don’t find what you’re looking for just based on
+                <code class="command-inline">--broad</code> if you don’t find what you’re looking for just based on
                 the name.</p>
 
                 <p>These examples use the Ubuntu store, your snap implementation
