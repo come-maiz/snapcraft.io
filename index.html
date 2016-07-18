@@ -107,10 +107,11 @@ $ tree
                 are run.</p>
 
                 <p>The only actual hard requirement on a snap structure is that you
-                have a file called meta/snap.yaml inside your snap directory, which
-                describes security requirements and how the snap should be integrated
-                with other parts of the system. Let’s take a look at that snap.yaml
-                for the hello-world snap:</p>
+                have a file called <code class="command-inline">meta/snap.yaml</code>
+                inside your snap directory, which describes security requirements
+                and how the snap should be integrated with other parts of the system.
+                Let’s take a look at that <code class="command-inline">snap.yaml</code>
+                for the <code class="command-inline">hello-world</code> snap:</p>
 
                 <pre class="command-line">
 <code>$ cat meta/snap.yaml
@@ -252,7 +253,7 @@ apps:
                     <img src="{{ site.asset_path }}e635d3b2-Snapcraft%28dot%29io+-+Architecture.svg" />
                 </p>
 
-                <p>The snap system will present all the snap apps under /snap/bin/
+                <p>The snap system will present all the snap apps under <code class="command-inline">/snap/bin/</code>
                 so with that on your $PATH you can easily run snap commands. It
                 will also integrate all the snap daemons (services) with your
                 init system so that they are automatically started and stopped
