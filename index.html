@@ -205,10 +205,16 @@ apps:
                 A and B that need to talk to each other:</p>
 
                 <p class="diagram">
-                    <img src="{{ site.asset_path }}d5dbb54e-Update-Snapcraft%28dot%29io+-+interfaces-plugs.svg" />
+                    <img src="{{ site.asset_path }}74bd0daf-interfaces-+plugs-and-slots.svg" />
                 </p>
-                <p><b>These two snaps can be connected becuase they have a <em>plug</em>
-                and a <em>slot</em> with a matching <em>interface</em></b></p>
+
+                <p style="max-width:60%;margin:0 auto 1rem;text-align:center"><em><b>These two snaps can be connected becuase they have a plug
+                and a slot with a matching interface.</b></em></p>
+
+                <p>The interfaces are declared in the <code class="command-inline">snap.yaml</code> metadata:</p>
+                <p class="diagram">
+                    <img src="{{ site.asset_path }}1c1706c0-Update-Snapcraft%28dot%29io+-+YAML+metadata.svg" />
+                </p>
 
                 <p>There are <a class="external" href="/docs/reference/interfaces">
                 many interfaces that are defined</a> and can be used by
@@ -216,11 +222,6 @@ apps:
                 connected. Also, a snap can be connected to the host system OS
                 using plugs, too, which is how a snap can access shared user
                 documents or other services like OpenGL.</p>
-
-                <p>The interfaces are declared in the <code class="command-inline">snap.yaml</code> metadata:</p>
-                <p class="diagram">
-                    <img src="{{ site.asset_path }}1c1706c0-Update-Snapcraft%28dot%29io+-+YAML+metadata.svg" />
-                </p>
 
                 <p>Snaps can share files with other snaps from the same vendor,
                 or with community-maintained shared snaps which act as libraries
