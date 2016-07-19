@@ -27,6 +27,8 @@
 
   .logo {
 
+    padding-top: .25rem;
+
     @media only screen and (max-width: 1060px) {
       padding-left: 1rem;
     }
@@ -43,26 +45,26 @@
       padding: 0 1rem;
     }
 
-
-
     ul {
       float: right;
 
       li {
 
         @media only screen and (min-width: 620px) {
+
+          border-bottom: 3px solid #fff;
+
+          &.active {
+            border-bottom: 3px solid #e95420;
+          }
+
+          &:hover {
+            background-color: #e3e3e3!important;
+            border-bottom: 3px solid #e3e3e3;
+          }
+
           a {
-            border-bottom: 3px solid #fff;
-
-            &.active {
-              background-color: #fff!important;
-              border-bottom: 3px solid #e95420;
-            }
-
-            &:hover {
-              background-color: #e3e3e3!important;
-              border-bottom: 3px solid #e3e3e3;
-            }
+            background: none!important;
           }
         }
       }
@@ -92,9 +94,9 @@
     }
   }
 
-  .external {
+  ul li .external {
     color: $cool-grey;
-    background-image:url('https://assets.ubuntu.com/v1/7d47725b-external-link.svg');
+    background-image:url('https://assets.ubuntu.com/v1/7d47725b-external-link.svg')!important;
     background-position: 95% 1rem;
     padding-right: 3rem;
   }
