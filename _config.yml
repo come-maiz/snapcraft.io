@@ -37,5 +37,3 @@ kramdown:
 
 # only build incrementally
 incremental: true
-
-port: 4002
