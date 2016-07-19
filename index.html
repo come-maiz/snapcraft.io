@@ -88,9 +88,10 @@ $ tree
                 <p>So a snap is very easy to create. Just put all the files you need
                 into a directory, use whatever subdirectory structure you want. That
                 directory will be compressed into a squashfs - a zipped directory -
-                and then it will be mounted at /snap/&lt;name&gt;/current when the snap is
-                installed. Your snap apps will know where they are mounted because
-                that is provided as the $SNAP environment variable when snap apps
+                and then it will be mounted at
+                <code class="command-inline">/snap/&lt;name&gt;/current</code> when
+                the snap is installed. Your snap apps will know where they are mounted
+                because that is provided as the $SNAP environment variable when snap apps
                 are run.</p>
 
                 <p>The only actual hard requirement on a snap structure is that you
@@ -166,8 +167,8 @@ apps:
                 revisions of the snap:</p>
 
                 <pre class="command-line">
-<code>/var/snap/<name>/current/  ← $SNAP_DATA is the versioned snap data directory
-/var/snap/<name>/common/   ← $SNAP_COMMON will not be versioned on upgrades</code></pre>
+<code>/var/snap/&lt;name&gt;/current/  ← $SNAP_DATA is the versioned snap data directory
+/var/snap/&lt;name&gt;/common/   ← $SNAP_COMMON will not be versioned on upgrades</code></pre>
 
                 <p>Typically, configuration is stored in one of these, along with
                 system-wide data for the snap.</p>
@@ -177,8 +178,8 @@ apps:
                 is specific to one user or another, separately:</p>
 
                 <pre class="command-line">
-<code>~/snap/<name>/current/      ← $SNAP_USER_DATA that can be rolled back
-~/snap/<name>/common/       ← $SNAP_USER_COMMON unversioned user-specific data</code></pre>
+<code>~/snap/&lt;name&gt;/current/      ← $SNAP_USER_DATA that can be rolled back
+~/snap/&lt;name&gt;s/common/       ← $SNAP_USER_COMMON unversioned user-specific data</code></pre>
 
                 <p>This way applications can be immutable for security reasons
                while still offering a full and rich user experience. To learn
