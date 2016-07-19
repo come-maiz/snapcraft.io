@@ -32,6 +32,14 @@
     text-transform: uppercase;
   }
 
+  @media only screen and (max-width: 600px) {
+
+    &__social,
+    &__text {
+      width: 100%;
+    }
+  }
+
   @media only screen and (min-width: $breakpoint-large) {
     padding: 2rem 0 1rem;
   }
