@@ -89,10 +89,15 @@
 }
 
 // complementing note
+
 .complementing-note {
-  max-width:60%;
-  margin:1rem auto 1rem;
-  text-align:center;
+  margin: 1rem auto 1rem;
+  text-align: center;
   font-weight: bold;
   font-style: italic;
+  width: 100%;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    max-width: 60%;
+  }
 }

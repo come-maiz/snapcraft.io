@@ -1,29 +1,21 @@
-// remove mo
+
+
 .banner {
   background: $white;
   max-width: $site-max-width;
 
-  #nav:hover ul,
   .nav-toggle {
-    display: none;
-
-    @media only screen and (min-width: 768px) {
-      display: block;
-    }
+    background-image: url("https://assets.ubuntu.com/v1/1fd83579-navigation-menu-black.svg");
   }
 
   .logo {
-    margin-right: 1rem;
-    padding-top: .25rem;
 
-    @media only screen and (min-width: 984px) {
-      margin-left: 0;
+    @media only screen and (max-width: 1060px) {
+      padding-left: 1rem;
     }
   }
 
   .nav-primary {
-
-    padding: 0 1rem 0;
 
     @media only screen and (min-width: calc($site-max-width + 2rem)) {
       padding: 0;
@@ -41,17 +33,19 @@
 
       li {
 
-        a {
-          border-bottom: 3px solid #fff;
+        @media only screen and (min-width: 620px) {
+          a {
+            border-bottom: 3px solid #fff;
 
-          &.active {
-            background-color: #fff!important;
-            border-bottom: 3px solid #e95420;
-          }
+            &.active {
+              background-color: #fff!important;
+              border-bottom: 3px solid #e95420;
+            }
 
-          &:hover {
-            background-color: #e3e3e3!important;
-            border-bottom: 3px solid #e3e3e3;
+            &:hover {
+              background-color: #e3e3e3!important;
+              border-bottom: 3px solid #e3e3e3;
+            }
           }
         }
       }
@@ -87,4 +81,8 @@
     background-position: 95% 1rem;
     padding-right: 3rem;
   }
+}
+
+.banner .nav-primary {
+    padding: 0!important;
 }
