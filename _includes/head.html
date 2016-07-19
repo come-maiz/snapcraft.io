@@ -4,6 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} - Snaps are universal Linux packages</title>
+
+    <script>
+    /* HTML5 element support */
+    for(var e,l='article aside footer header nav section time'.split(' ');e=l.pop();document.createElement(e));
+    </script>
+
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.asset_path }}3361409d-apple-touch-icon-144x144-precomposed.png" />
