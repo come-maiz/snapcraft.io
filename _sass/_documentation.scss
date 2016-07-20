@@ -252,3 +252,19 @@
         width: $navigation-width;
     }
 }
+
+// Make main section fill the vertical space (sticky footer)
+.docs {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.docs .wrapper {
+  flex: 1;
+  display: flex;
+}
+
+.documentation {
+  flex: 1;
+}
