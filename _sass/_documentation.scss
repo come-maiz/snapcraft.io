@@ -11,13 +11,13 @@
         $gutter: 20px;
         $button-width: 10px;
 
-        font-size: 1.2em;
+        // To enabling hiding of the bottom-most border in the navigation
+        overflow: hidden;
 
         @media only screen and (min-width: $breakpoint-medium) {
             border-right: 1px solid #ccc;
             width: $navigation-width;
             min-width: $navigation-width;
-            padding-top: $gutter;
         }
 
         ul {
@@ -26,65 +26,102 @@
             padding-left: 0;
             padding-right: 0;
 
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
             li {
                 padding-left: $gutter;
                 padding-right: $gutter;
+                padding-top: 7px;
 
                 margin: 0;
                 position: relative;
 
                 a {
                     display: block;
-                    color: #333;
+                    color: #333333;
 
-                    &:hover {
-                      color: #e95420;
+                    &:hover, &:focus {
                       text-decoration: none;
+                    }
+
+                    &:hover, &.active {
+                        color: #e95420;
                     }
                 }
 
-                &.collapsed ul {
-                  display: none;
-                }
-
-
-                &.expanded > ul {
-                  display: block;
-                }
-
                 &:after {
-                  width: $button-width;
-                  display: block;
-                  position: absolute;
-                  top: 0;
-                  right: $gutter;
-                  cursor: pointer;
+                    width: $button-width;
+                    height: 1.5em;
+                    display: block;
+                    position: absolute;
+                    top: $gutter / 2;
+                    right: $gutter;
+                    cursor: pointer;
                 }
-                &.collapsed:after {
-                  content: '+';
+
+                &.collapsed {
+                    padding-right: $gutter + $button-width;
+
+                    & > ul {
+                        display: none;
+                    }
+
+                    &:after {
+                        content: '+';
+                    }
                 }
-                &.expanded:after {
-                  content: '-';
+
+                &.expanded {
+                    & > ul {
+                        display: block;
+                    }
+                    &:after {
+                        content: '-';
+                    }
                 }
             }
         }
 
-        // & > ul {
-        //     & > li {
-        //         padding-top: $gutter / 2;
-        //         padding-bottom: $gutter / 2;
-        //         border-bottom: 1px solid #333;
-        //
-        //         &.collapsed:after {
-        //             content: '';
-        //             background-image: url('https://assets.ubuntu.com/v1/04d2075a-chevron_down.svg');
-        //         }
-        //         &.expanded:after {
-        //             content: '';
-        //             background-image: url('https://assets.ubuntu.com/v1/f3f43376-chevron_up.svg');
-        //         }
-        //     }
-        // }
+        & > ul {
+            // Hide the bottom-most border
+            // only if it's pushing right up against the footer
+            // so we don't get an ugly double-border effect
+            margin-bottom: -1px;
+
+            & > li {
+                border-bottom: 1px dotted #b2b2b2;
+                padding-top: $gutter / 2;
+                padding-bottom: $gutter / 2;
+
+                & > a {
+                  font-size: 1.25em;
+                }
+
+                & > ul {
+                    & > li {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+
+                &:after {
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+                &.collapsed:after {
+                    content: '';
+                    background-image: url('https://assets.ubuntu.com/v1/04d2075a-chevron_down.svg');
+                }
+                &.expanded:after {
+                    content: '';
+                    background-image: url('https://assets.ubuntu.com/v1/f3f43376-chevron_up.svg');
+                }
+            }
+        }
 
         // Top level sections get bottom padding.
         .section {
@@ -245,11 +282,6 @@
                 color: $mid-grey;
             }
         }
-    }
-
-    &__toc {
-        min-width: $navigation-width;
-        width: $navigation-width;
     }
 }
 
