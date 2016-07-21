@@ -4,6 +4,10 @@
   margin: auto;
   padding: 1rem;
 
+  .docs & {
+    padding: 0;
+  }
+
   @media only screen and (min-width: $breakpoint-medium) {
     padding: 0;
   }
@@ -61,16 +65,16 @@
 
 // inline code blocks
 .command-inline {
-    position: relative;
-    display: inline;
-    border-radius: 4px;
-    background-color: none;
-    overflow: hidden;
-    font-size: 1em;
-    font-family: Ubuntu Mono;
-    font-weight: 300;
-    padding: 0;
-    width: 100%;
+  position: relative;
+  display: inline;
+  border-radius: 4px;
+  background-color: none;
+  overflow: hidden;
+  font-size: 1em;
+  font-family: Ubuntu Mono;
+  font-weight: 300;
+  padding: 0;
+  width: 100%;
 }
 
 // complementing note

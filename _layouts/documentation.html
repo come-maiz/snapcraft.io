@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% assign css_path = '/css/docs.css' %}
+    {% include head.html %}
 
-        <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-
+    <body class="docs">
         <script>
           /**
            * Polyfills:
@@ -16,9 +12,6 @@
            * String.startsWith requires polyfill for all IEs
            * Element.addEventListener requires polyfill for IE8
            */
-
-          /* HTML5 element support */
-          for(var e,l='article aside footer header nav section time'.split(' ');e=l.pop();document.createElement(e));
 
           /* Element.prototype.classList polyfill, by Eli Grey, http://eligrey.com
            * https://github.com/eligrey/classList.js */
@@ -32,52 +25,48 @@
           String.prototype.startsWith||!function(){"use strict";var t=function(){try{var t={},r=Object.defineProperty,e=r(t,t,t)&&r}catch(n){}return e}(),r={}.toString,e=function(t){if(null==this)throw TypeError();var e=String(this);if(t&&"[object RegExp]"==r.call(t))throw TypeError();var n=e.length,i=String(t),a=i.length,o=arguments.length>1?arguments[1]:void 0,h=o?Number(o):0;h!=h&&(h=0);var u=Math.min(Math.max(h,0),n);if(a+u>n)return!1;for(var g=-1;++g<a;)if(e.charCodeAt(u+g)!=i.charCodeAt(g))return!1;return!0};t?t(String.prototype,"startsWith",{value:e,configurable:!0,writable:!0}):String.prototype.startsWith=e}();
         </script>
 
-        <link rel="stylesheet" href="{{ "/css/docs.css" | prepend: site.baseurl }}">
-        <link rel="canonical" href="{{ page.url }}">
-        <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-    </head>
-
-    <body class="docs">
         {% include header.html %}
 
         <div class="wrapper">
-            <div class="content">
-                <div class="row documentation no-border">
-                    <nav class="documentation__nav">
-                        {% include docs-navigation.html %}
+            <div class="row documentation no-border">
+                <nav class="documentation__nav">
+                    {% include docs-navigation.html %}
 
-                        <script>
-                            function expandCollapse(clickEvent) {
-                                var item = clickEvent.target;
-                                var link = item.querySelector('[href]');
-                                var linkWidth = link.offsetWidth;
-                                var clickOffset = clickEvent.offsetX;
+                    <script>
+                        function expandCollapse(clickEvent) {
+                            var item = clickEvent.target;
+                            var link = item.querySelector('[href]');
+                            var linkWidth = link.offsetWidth;
+                            var clickOffset = clickEvent.offsetX;
 
-                                if (clickOffset > linkWidth) {
-                                    collapsed = ! item.classList.toggle('expanded');
-                                    item.classList.toggle('collapsed', collapsed);
-                                }
+                            if (clickOffset > linkWidth) {
+                                collapsed = ! item.classList.toggle('expanded');
+                                item.classList.toggle('collapsed', collapsed);
+                            }
+                        }
+
+                        var items = document.querySelectorAll('.documentation__nav ul li');
+
+                        for(var num = 0; num < items.length; num++) {
+                            var item = items[num];
+                            var link = item.querySelector('[href]');
+
+                            if (! link) {continue;}
+
+                            // Get paths, removing leading and trailing slashes for consistency
+                            linkPath = link.pathname.replace(/(^\/|\/$)/g, "");
+                            currentPath = location.pathname.replace(/(^\/|\/$)/g, "");
+
+                            // Make current navigation item appear active
+                            // @TODO: Replace this with a static JS-less solution
+                            //        once we have a more intelligent
+                            //        docs navigation mechanism.
+                            if (linkPath == currentPath) {
+                                link.classList.add('active');
                             }
 
-                            var items = document.querySelectorAll('.documentation__nav ul li');
-
-                            for(var num = 0; num < items.length; num++) {
-                                var item = items[num];
-
-                                // only act on items with child lists
-                                if (! item.querySelector('ul')) {
-                                    continue;
-                                }
-
-                                var link = item.querySelector('[href]');
-
-                                linkPath = link.pathname;
-                                currentPath = location.pathname;
-
-                                if (linkPath.substring(0, 1) != '/') {
-                                  linkPath = '/' + linkPath;
-                                }
-
+                            // For lists with child lists, add expand/collapse functionality
+                            if (item.querySelector('ul')) {
                                 if (currentPath.startsWith(linkPath)) {
                                     item.classList.add('expanded');
                                 } else {
@@ -86,32 +75,20 @@
 
                                 item.addEventListener('click', expandCollapse);
                             }
-                        </script>
-                    </nav>
-                    <main class="documentation__content">
-                        <h1 id="introduction">{{ page.title }}</h1>
-                        {{ content }}
-                    </main>
-                    <aside class="jujudocs__toc">
-                    </aside>
-                </div>
+                        }
+                    </script>
+                </nav>
+                <main class="documentation__content">
+                    <h1 id="introduction">{{ page.title }}</h1>
+                    {{ content }}
+                </main>
             </div>
         </div>
 
-        <footer class="global clearfix no-global wrapper">
-            <nav id="main-navigation" role="navigation" class="clearfix">
-                <div class="legal clearfix has-cookie">
-                    <p class="twelve-col">© 2016 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
-                    <ul class="inline-list clear">
-                        <li><a href="/legal"><small>Legal information</small></a>
-                        </li>
-                        <li><a href="https://bugs.launchpad.net/ubuntu-website-content/"><small>Report a bug on this site</small></a>
-                        </li>
-                    </ul>
-                    <span class="accessibility-aid"><a href="#">Got to the top of the page</a></span>
-                </div>
-            </nav>
+        <footer class="footer-wrapper">
+            {% include footer-legal.html %}
         </footer>
+
         {% include analytics.html %}
     </body>
 </html>
