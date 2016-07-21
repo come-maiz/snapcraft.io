@@ -4,6 +4,10 @@
   margin: auto;
   padding: 1rem;
 
+  .docs & {
+    padding: 0;
+  }
+
   @media only screen and (min-width: $breakpoint-medium) {
     padding: 0;
   }
