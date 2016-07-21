@@ -1,0 +1,13 @@
+$highlight-blue: #19B6EE;
+$highlight-green: #38B44A;
+$highlight-purple: #77216F;
+$highlight-red: #DF382C;
+$highlight-grey: #888888;
+
+.directory-highlight {color: $highlight-blue;}
+.bin-highlight {color: $highlight-green;}
+.image-highlight {color: $highlight-purple;}
+.key-highlight {color: $highlight-blue;}
+.key-l2-highlight {color: $highlight-red;}
+.key-l3-highlight {color: $highlight-grey;}
+.string-highlight {color: $highlight-green;}
