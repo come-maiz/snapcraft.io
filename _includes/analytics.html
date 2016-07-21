@@ -8,6 +8,15 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   /**
+   * Add IDs to all links
+   */
+  anchors = document.querySelectorAll('a[href]');
+  for (var aNum = 0; aNum < anchors.length; aNum++) {
+    anchor = anchors[aNum];
+    anchor.id = anchor.innerText.split(' ').join('-');
+  }
+
+  /**
    * Register our Google Analytics ID
    */
   ga('create', 'UA-1018242-33', 'auto');
