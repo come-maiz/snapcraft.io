@@ -74,16 +74,16 @@ layout: default
 
 $ tree
 .
-├── bin                 ← this directory structure is just for convenience
-│   ├── echo               there is no hardcoded structure requirement other
-│   ├── env                than meta/snap.yaml
-│   ├── evil
-│   ├── sh
-│   ├── showdev
-│   └── usehw
-└── meta                 ← your snap must have this directory
-    ├── icon.png         ← no prizes for guessing what this is
-    └── snap.yaml        ← this is the required metadata</code></pre>
+├── <span class="directory-highlight">bin</span>                 ← this directory structure is just for convenience
+│   ├── <span class="bin-highlight">echo</span>              there is no hardcoded structure requirement other
+│   ├── <span class="bin-highlight">env</span>               than meta/snap.yaml
+│   ├── <span class="bin-highlight">evil</span>
+│   ├── <span class="bin-highlight">sh</span>
+│   ├── <span class="bin-highlight">showdev</span>
+│   └── <span class="bin-highlight">usehw</span>
+└── <span class="directory-highlight">meta</span>                ← your snap must have this directory
+    ├── <span class="image-highlight">icon.png</span>        ← no prizes for guessing what this is
+    └── snap.yaml       ← this is the required metadata</code></pre>
 
                 <p>So a snap is very easy to create. Just put all the files you need
                 into a directory, use whatever subdirectory structure you want. That
@@ -103,26 +103,26 @@ $ tree
 
                 <pre class="command-line">
 <code>$ cat meta/snap.yaml
-name: hello-world
-version: 6.1
-architectures: [ all ]
-summary: "The 'hello-world' of snaps"
-description: |
+<span class="key-highlight">name:</span> hello-world
+<span class="key-highlight">version:</span> 6.1
+<span class="key-highlight">architectures:</span> [ all ]
+<span class="key-highlight">summary:</span> <span class="string-highlight">"The 'hello-world' of snaps"</span>
+<span class="key-highlight">description:</span> <span class="string-highlight">|
     This is a simple snap example that includes a few interesting binaries
     to demonstrate snaps and their confinement.
     * hello-world.env  - dump the env of commands run inside app sandbox
     * hello-world.evil - show how snappy sandboxes binaries
     * hello-world.sh   - enter interactive shell that runs in app sandbox
-    * hello-world      - simply output text
-apps:
- env:
-   command: bin/env
- evil:
-   command: bin/evil
- sh:
-   command: bin/sh
- hello-world:
-   command: bin/echo</code></pre>
+    * hello-world      - simply output text</span>
+<span class="key-highlight">apps:</span>
+  <span class="key-l2-highlight">env:</span>
+    <span class="key-l3-highlight">command:</span> bin/env
+  <span class="key-l2-highlight">evil:</span>
+    <span class="key-l3-highlight">command:</span> bin/evil
+  <span class="key-l2-highlight">sh:</span>
+    <span class="key-l3-highlight">command:</span> bin/sh
+  <span class="key-l2-highlight">hello-world:</span>
+    <span class="key-l3-highlight">command:</span> bin/echo</code></pre>
 
                 <p>The top metadata is easy, that’s just descriptive. One thing to
                 remember is that the version is purely for humans, the snap system
