@@ -3,9 +3,10 @@
 
   .inline-logos__item {
     margin: 0;
+
     @media only screen and (min-width: $breakpoint-medium) {
       margin-right: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 60px;
     }
   }
 }
@@ -13,7 +14,7 @@
 @media only screen and (min-width: $breakpoint-medium) {
   .inline-logos .inline-logos__image {
     max-height: 90px;
-    max-width: 240px;
+    max-width: 160px;
   }
 }
 
